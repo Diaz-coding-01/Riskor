@@ -49,7 +49,7 @@ h1{
 }
 
 #txtSearch{
-    padding: 12px;
+    padding: 10px;
     border-radius: 5px;
     border: solid 1px #7B96C7;
     flex: 5;
@@ -86,6 +86,11 @@ h1{
     border-radius: 12px;
     box-shadow: 2px 2px 4px #0004;
     height: 33%;
+    transition: translate .5s ease;
+}
+
+.training:hover{
+    translate: 0 -5px;
 }
 
 .trainingName{
@@ -121,4 +126,73 @@ h1{
 
 .user3{
     right: 10%;
+}
+
+/*modales*/
+
+.containerModalAddTraining{
+    z-index: 30;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: #0005;
+}
+
+.modalAddTraining{
+    display: flex;
+    position: relative;
+    border-radius: 12px;
+    padding: 45px 70px;
+    box-sizing: border-box;
+    gap: 15px;
+    flex-direction: column;
+    background-color: #F2F9FE;
+    width: clamp(400px, 90%, 850px);
+}
+
+#btnCloseAddTraining{
+    position: absolute;
+    cursor: pointer;
+    background-color: transparent;border: none;
+    margin: 20px;
+    right: 0;
+    top: 0;
+}
+
+.modalAddTraining > div{
+    display: flex;
+    gap: 15px;
+}
+
+.containerInputAddTraining{
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.containerInputAddTraining label{
+    font-size: 1.1em;
+    color: var(--color-txt);
+    font-weight: 500;
+}
+
+.containerInputAddTraining label + *{
+    font-family: 'poppins';
+    font-weight: 500;
+    font-size: 1.05em;
+    color: var(--color-txt-title);
+    padding: 7px;
+    border-radius: 5px;
+    border: solid 1px #7B96C7;
+}
+
+.containerModalAddTrainingOpen{
+    display: flex;
+}
+
+.containerModalAddTrainingClose{
+    display: none;
 }
