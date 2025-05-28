@@ -59,7 +59,7 @@ nav.innerHTML = `
                     <li class="nav-link">
                             <a href="#" class="links activeNavbarItem">
                             <img src="../media/sidebar/AreasEmpresa.svg" alt="" class="nav-icon">
-                            <span class="text nav-text">Areas </span>
+                            <span class="text nav-text">Áreas </span>
                             </a> 
                     </li>
                     <li class="nav-link">
@@ -71,7 +71,7 @@ nav.innerHTML = `
                     <li class="nav-link">
                             <a href="#" class="links activeNavbarItem">
                             <img src="../media/sidebar/Configuracion.svg" alt="" class="nav-icon">
-                            <span class="text nav-text">Configuracion</span>
+                            <span class="text nav-text">Configuración</span>
                             </a> 
                     </li>
                 </div>

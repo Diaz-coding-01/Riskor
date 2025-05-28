@@ -1,96 +1,124 @@
-@import url('globalStyles.css');
-
-/*
-.interfaceHeader{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-*/    
-
-.breadcrumb{
-    padding: 3rem 4.5rem;                                       /*Distancia de los bordes*/
-    font-size: 2.2em;                                           /*Tamaño del título de la pag (Breadcrumb)*/
-    font-weight: 600;                                           /*Peso del titulo*/
-}
-
-.breadcrumb a{
-    text-decoration: none;                                      /*Cambiamos el estilo del enlace*/
-    color: var(--color-breadcrumb);                             /*Asignamos el color del breadcrumb segun var Global*/
-}
+@import url('globalStyles.css');  
 
 /*Contenedor padre del btn primario*/
-.container-btn-primary{             
-    display: flex;                                              /*Uso de flexbox*/   
+.containerBtnPrimary{             
+    display: flex;                                               
     justify-content: flex-end;                                  /*Enviar el btn al final*/
     padding-right: 5em;                                         /*Este atributo y el siguiente son para distanciar el botón del contenedor y del borde*/
     margin-bottom: 3em;
 }
 
-/*Botón heredado de clase global*/
-.btn-primary{
-    height: 3.5em;                                              /*Altura del btn*/
-    width: 12em;                                                /*Ancho del btn*/
-}
-
-.btn-primary:hover{
-    background: #6980e9; /*Cambiar color de hover luego*/
-    color: var(--color-btn-text);
-    cursor: pointer;                                            /*Poner el cursor como puntero*/
-}
-
-/*Contenedor de contenido por debajo del botón*/
-.card-container{
-    display: flex;                                              /*Uso de flexbox*/
-    align-content: space-evenly;                                /*Distancia del contenedor con el resto de la interfaz bien distribuida*/
-    align-items: center;                                        /*Centrar el div*/
-    flex-direction: column;                                     /*Evito que se hagan a los lados por cada registro y se vean como columna*/
-}
-
-/*Contenedor de paneles*/
-.pnl-container{
-    width: 85%;                                                 /*El contenedor de paneles usará el 85% del espacio que se le asigne*/
-    border-radius: 12px;                                        /*Redondeo de esquinas de 12px*/
+/*Asignar el btn crear y searchBar
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     padding: 20px;
-    --color-bg-tb: rgba(254, 254, 255, 0.35);                 /*Se modifica la variable global solamente cambiando la transparencia*/  
-    background-color: var(--color-bg-tb);                       /*Color del contenedor (Neutro y semi-transparente)*/
-    box-shadow: var(--shadow-pnl-container);                    /*Sombra usando la var global*/
-    height: 60vh;                                               /*Altura del contenedor*/
-    overflow: auto;                                             /*Crear scroll dentro de panel*/
+}
+    
+
+.headerContent{
+    width: var(--width-container);
+    display: flex;
+    flex-direction: column;
 }
 
-/*Clase para eliminar la decoración del enlace y no se vea por defecto azul*/
+.breadcrumb{
+    padding: 1rem 0;                                            
+    font-size: 2.2em;                                           
+    font-weight: 600;                                           
+}
+
+.breadcrumb a{
+    text-decoration: none;                                      
+    color: var(--color-breadcrumb);                             
+}
+    
+
+.headerContentButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 0 1rem 0;
+}
+
+.searchContainer{
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--bg-containers);
+    border-radius: 12px;
+    box-shadow: var(--shadow-search-container);
+}
+    */
+
+
+#txtSearch{
+    background-image: url('../media/globalMedia/searchbar-icon.svg');
+    background-position: 12px 12px; 
+    background-repeat: no-repeat;
+    padding: 12px;
+    border-radius: 5px;
+    border: solid 1px #7B96C7;
+    flex: 5;
+    padding-left: 45px;
+    font-size: 1em;
+    color: var(--color-txt);
+}
+
+#txtSearch:focus {
+  border: 1px solid #343968;
+  font-size: 1em;
+  color: var(--color-txt);
+  outline: none;
+  border: 1px solid var(--color-txt);
+}
+
+/*Contenedor de contenido por debajo del botón
+.cardContainer{
+    display: flex;                                              
+    align-items: center;                                        /*Centrar el div
+    flex-direction: column;                                     /*Evito que se hagan a los lados por cada registro y se vean como columna
+    width: var(--width-container);                              /*El contenedor de paneles usará el 85% del espacio que se le asigne
+}
+
+/*Contenedor de paneles
+.pnlContainer{
+    width: 100%;
+    border-radius: 12px;                                        
+    padding: 20px;
+    --color-bg-tb: rgba(254, 254, 255, 0.35);                 /*Se modifica la variable global solamente cambiando la transparencia
+    background-color: var(--color-bg-tb);                       /*Color del contenedor (Neutro y semi-transparente)
+    box-shadow: var(--shadow-pnl-container);                    
+    height: 60vh;                                               /*Altura del contenedor
+    overflow: auto;                                             /*Crear scroll dentro de panel
+    scrollbar-width: none;                                      /*Ocultar scrollbar interna del contenedor: Firefox 
+    -ms-overflow-style: none;                                   /*Ocultar scrollbar interna del contenedor: Explorer 
+}
+
+.pnlContainer::-webkit-scrollbar {
+    display: none;                                              /*Ocultar scrollbar interna del contenedor:  Chrome, Safari y Edge 
+}
+*/
+
+/*Clase para eliminar la decoración del enlace*/
 .recordEmployee{
     text-decoration: none;
-    color: var(--color-txt);                                    /*Al texto se le asignará el color del texto normal según la var*/
-}
-
-.Employee{
-    display: flex;                                              /*Uso de flexbox*/
-    align-items: center;                                        /*Centra los elementos, Evitando que la img y la flecha se vayan hacia arriba*/
-    font-weight: 500;                                           /*Peso de la fuente del título*/
-    font-size: 1.2em;                                           /*Estándar de peso dentro del pnl*/
-    padding: 1em 1.2em;                                         /*Espacio interno a los elementos*/
-    border-radius: 12px;                                        /*Redondeo de esquinas de 12px a los pnl*/
-    box-shadow: var(--shadow-pnl);                              /*Sombra de los pnl según la var Global*/
-    margin-bottom: 0.7em;                                       /*Distancia entre un panel a otro*/
-    background-color: var(--color-neutral);                     /*Color del panel neutro (Blanco por defecto)*/
-    transition: transform 0.3s ease, box-shadow 0.3s ease;      /*Animación de regreso una vez termine hover*/
-}
-
-.Employee:hover {
-    transform: translateY(-4px);                                /*Levanta un poco */
-    box-shadow: 0 5px 10px rgba(133, 155, 208, 0.3);          /*Sombra más fuerte */
+    color: var(--color-txt);                                    
 }
 
 .info{
-    display: flex;                                              /*Uso de flexbox*/
+    display: flex;                                              
     flex-direction: column;                                     /*Coloca la info debajo del título, sin eso iría a la derecha*/
     padding: 0.8em;                                             /*Espacio para que respire el contenido*/
 }
 
 .dataEmployee{
-    display: flex;                                              /*Uso de flexbox para colocar la info de manera horizontal*/
+    display: flex;                                              
     font-weight: 400;                                           /*Peso de los títulos de información, NO las variables*/
 }
 
@@ -101,12 +129,12 @@
 }
 
 .pictureEmployee{
-    border-radius: 50%;                                         /*Redondeo de bordes de la img*/
+    border-radius: 50%;                                         
     border: var(--color-img-border);                            /*Borde característico de la carga de imágenes*/
     height: 70px;                                               /*Alto img*/
     width: 70px;                                                /*Ancho img*/
     object-fit: cover;                                          /*Evitar distorsión en la img*/
-    margin-left: 0.5em;                                         /*Distancia un poco el borde izquierdo*/
+    margin-left: 0.5em;                                         
 }
 
 .arrow{

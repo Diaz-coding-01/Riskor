@@ -24,36 +24,111 @@ body{
     Desde root se declaran las variables como (--Nombre: Valor)
 */
 
+/*No tocar*/
 :root{
     --color-bg-int: #f2f7ff;                    /*Color del fondo de cada interfaz*/
-    --color-txt: #81859E;                       /*Color de texto simple.                Ej. Texto ingresado en formulario*/
-    --color-txt-title: #5E6489;                 /*Color de titulos.                     Ej. Títulos de tablas, título de pregunta de formulario, etc.*/
-    --color-bg-tb: rgba(254, 254, 255, 0.9);    /*Color del fondo de las tablas.        Ej. Empleados, Mantenimientos, etc.*/
-    --color-neutral: #FFFFFF;                   /*Color neutro que implica muchos tipos de elementos, blanco.*/
-
-    --color-btn-primary: linear-gradient(134deg,rgba(120, 132, 237, 1) 0%, rgba(97, 111, 239, 1) 100%); /*Color de la mayoria de botones*/
-    --color-breadcrumb: #7884ED;                /*Color del breadcrumb actual y color de los bordes de botones fantasma.      Ej. "Detalles", "Editar", etc.*/
-    --color-btn-text: #F2F9FE;                  /*Color del texto de los botones                    Ej. Todos los botones principales*/
-
-    --color-img-border: 3px solid #8F90DE;                /*Color del borde de las imagenes de los empleados. Ej. Registro de empleado, Selección de empleado, etc.*/
-
-    --shadow-pnl: 3px 3px 8px 0px rgba(100, 173, 211, 0.45);
-    --shadow-btn-primary: 0px 0px 15px 1px rgba(120, 132, 237, 0.65);   /*Sombra utilizada en los botones principales.      Ej. "Agregar", "Enviar", etc.*/
-    --shadow-btn-secondary: 0px 0px 5px 1px rgba(120, 132, 237, 0.45);  /*Sombra utilizada en los botones secundarios.      Ej. "Evidencias", "Buscar", etc.*/
+    --color-bg-tb: rgba(254, 254, 255, 0.9);    /*Color del fondo de las tablas.                                  Ej. Empleados, Mantenimientos, etc.*/
+    --color-btn-primary: linear-gradient(134deg,rgba(120, 132, 237, 1) 0%, rgba(97, 111, 239, 1) 100%);         /*Color de la mayoria de botones*/
+    --color-btn-text: #F2F9FE;                  /*Color del texto de los botones.                                 Ej. Todos los botones principales*/
+    --color-breadcrumb: #7884ED;                /*Color del breadcrumb y color de botones fantasma.               Ej. "Detalles", "Editar", etc.*/
+    --color-img-border: 3px solid #8F90DE;      /*Borde de las imagenes de los empleados.                         Ej. Registro de empleado, Selección de empleado, etc.*/
+    --color-modal-container: rgba(133, 133, 172, 0.5);
+    --color-neutral: #FFFFFF;                   /*Implica muchos tipos de elementos, blanco.*/
+    --color-txt: #81859E;                       /*Color de texto simple.                                          Ej. Texto ingresado en formulario*/
+    --color-txt-title: #5E6489;                 /*Color de titulos.                                               Ej. Títulos de tablas, título de pregunta de formulario, etc.*/
+    
+    --font-size-base: 1.1em;                      /*Tamaño de letra estándar.                                       Ej. Mostrar información, forms, etc.*/
+    --font-size-title: 2.2em;                     /*Tamaño de los títulos.                                          Ej. Breadcrumb*/
+    
+    --shadow-btn-primary: 0px 0px 15px 1px rgba(120, 132, 237, 0.65);   /*Sombra de los botones principales.      Ej. "Agregar", "Enviar", etc.*/
+    --shadow-btn-secondary: 0px 0px 5px 1px rgba(120, 132, 237, 0.45);  /*Sombra de los botones secundarios.      Ej. "Evidencias", "Buscar", etc.*/
+    --shadow-hover: 0 5px 10px rgba(133, 155, 208, 0.3);
+    --shadow-pnl: 2px 2px 4px 0px rgba(133, 155, 208, 0.25);            /*Sombra de los paneles dentro de un contenedor.    Ej. Registros médicos, Permisos área de la empresa, etc.*/
     --shadow-pnl-container: 5px 5px 4px 0px rgba(140, 158, 200, 0.35);  /*Sombra del contenedor que muestra los paneles.    Ej. Capacitaciones, Permisos, Regulaciones, etc.*/
-    --shadow-pnl: 2px 2px 4px 0px rgba(133, 155, 208, 0.25);            /*Sombra de los paneles dentro de los contenedores  Ej. Registros médicos, Permisos área de la empresa, etc.*/
+    --shadow-search-container: 4px 4px 3px 0px rgba(140, 158, 200, 0.25); /*Sombra de contenedor de búsqueda                Ej. Regulaciones, Áreas, etc.*/
 
+    --transition-base: transform 0.3s ease, box-shadow 0.3s ease;
+    --width-container: 90%;                       /*Tamaño del contenedor de todo el contenido    Ej. Clases: ["card-container", "headerContent"]*/    
 }
 
-.btn-primary{
-    background: var(--color-btn-primary);                       /*Gradiente del fondo del btn*/
-    border: 0px;                                                /*Quitamos el borde del botón (El primario no lo necesita)*/
-    border-radius: 12px;                                        /*Redondeo de esquinas de 12px*/
-    box-shadow: var(--shadow-btn-primary);                      /*Sombra del btn reutilizada con las var globales*/
-    color: var(--color-btn-text);                               /*Color del texto del btn*/
-    font-weight: 500;                                           /*Peso de la letra*/
-    font-size: 1.1em;                                           /*Tamaño de la letra*/
+/*
+  ESTRUCTURA <HTML> DE CONTENIDO - Interfaces principales
+  ------------------------------------------------------------
+
+  content 
+    headerContent 
+      breadcrumb 
+      /breadcrumb 
+      headerContentButtons 
+      /headerContentButtons 
+    /headerContent 
+    cardContainer 
+      pnlContainer 
+        PANELS
+      /pnlContainer
+    /cardContainer 
+  /content 
+
+*/
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
 }
+
+.headerContent{
+    width: var(--width-container);
+    display: flex;
+    flex-direction: column;
+}
+
+.breadcrumb{
+    padding: 1rem 0;                                            
+    font-size: var(--font-size-title);                                           
+    font-weight: 600;                                           
+}
+
+.breadcrumb a{
+    text-decoration: none;                                      
+    color: var(--color-breadcrumb);                             
+}
+
+.headerContentButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 0 1rem 0;
+}
+
+.cardContainer{
+    display: flex;                                              
+    align-items: center;                                        /*Centrar el div*/
+    width: var(--width-container);                              /*El contenedor de paneles usará el 90% del espacio que se le asigne*/
+}
+
+.pnlContainer{
+    width: 100%;
+    border-radius: 12px;                                        
+    padding: 20px;
+    --color-bg-tb: rgba(254, 254, 255, 0.35);                 /*Se modifica la variable global solamente cambiando la transparencia*/  
+    background-color: var(--color-bg-tb);                       /*Color del contenedor (Neutro y semi-transparente)*/
+    box-shadow: var(--shadow-pnl-container);                    
+    height: 60vh;                                               /*Altura del contenedor*/
+    overflow: auto;                                             /*Crear scroll dentro de panel*/
+    scrollbar-width: none;                                      /*Ocultar scrollbar interna del contenedor: Firefox */
+    -ms-overflow-style: none;                                   /*Ocultar scrollbar interna del contenedor: Explorer */
+}
+
+.pnlContainer::-webkit-scrollbar {
+    display: none;                                              /*Ocultar scrollbar interna del contenedor:  Chrome, Safari y Edge */
+}
+
+/*
+  Sidebar - Menú de navegación
+*/
 
 html,
 .contenedor-sidebar{
@@ -75,19 +150,106 @@ html,
   padding: 1rem 0rem 0 1em; 
 }
 
+/*
+  Botón primario - Agregar elementos, guardar información, etc
+*/
+
+.btn-primary{
+  background: var(--color-btn-primary);                       /*Gradiente del fondo del btn*/
+  border: 0px;                                                /*Quitamos el borde del botón (El primario no lo necesita)*/
+  border-radius: 12px;                                        /*Redondeo de esquinas de 12px*/
+  box-shadow: var(--shadow-btn-primary);                      /*Sombra del btn reutilizada con las var globales*/
+  color: var(--color-btn-text);                               /*Color del texto del btn*/
+  font-weight: 500;                                           /*Peso de la letra*/
+  font-size: var(--font-size-base);                                           /*Tamaño de la letra*/
+  cursor: pointer;                                            /*El cursor cambiará al estar en el btn*/
+  transition: var(--transition-base);
+}
+
+.btn-primary:hover{
+  --color-btn-primary: #6876f2;
+  background: var(--color-btn-primary); 
+  transform: translateY(-3px);          
+  box-shadow: var(--shadow-btn-primary);
+}
+
+/*
+  Búsqueda - Contenedor 
+*/
+
+.searchContainer{
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    width: 50%;
+    padding: 20px;                                              /*Al modificar el padding se hace como si no existiera, útil para tablas como Empleados*/
+    box-sizing: border-box;
+    background-color: var(--bg-containers);
+    border-radius: 12px;
+    box-shadow: var(--shadow-search-container);
+}
+
+/*
+  Botón filtro - Filtrar datos mostrados dentro de una interfaz
+*/
+
+#btnFilter{
+    background-color: transparent;
+    border: none;
+    transition: var(--transition-base);
+}
+
+#btnFilter:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+/*
+  Paneles comunes - Mostrar información en lugar de una tabla
+*/
+
+.informationPnl{
+    display: flex;                                              
+    align-items: center;                                        /*Centra los elementos, Evitando que la img y la flecha se vayan hacia arriba*/
+    font-weight: 500;           
+    --font-size-base: 1.2em;                               
+    font-size: var(--font-size-base);                                           
+    padding: 1em 1.2em;                                         
+    border-radius: 12px;                                        
+    box-shadow: var(--shadow-pnl);                              
+    margin-bottom: 0.7em;                                       /*Distancia entre un panel a otro*/
+    background-color: var(--color-neutral);                     /*Color del panel neutro (Blanco por defecto)*/
+    transition: var(--transition-base);      /*Animación de regreso una vez termine hover*/
+}
+
+.informationPnl:hover {
+    transform: translateY(-4px);                                /*Levanta un poco */
+    box-shadow: var(--shadow-hover);          /*Sombra más fuerte */
+}
+
+/*
+  Modal - Contenedor (Sombra del contenedor)
+*/
+
+.containerModalAddTraining{
+    z-index: 30;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: var(--color-modal-container);
+}
 
 /*
     Variables agregadas:
         --color-btn-text: #F2F9FE;
         --shadow-pnl: 2px 2px 4px 0px rgba(133, 155, 208, 0.25);
         --color-img-border 3px solid #8F90DE;
+        --width-container: 90%;
 */  
 
 /*
-    Clases necesarias aplicar a globales:
-        -Titulo de apartado.
-        -Contentedor de paneles.
-        -Paneles básicos como Permisos, Incapacidad, etc.
-        -Tablas commo Empleado, CSSO, etc.
-        -Apartado de busqueda
+  Pendiente:
+    -clase para inputs globales
 */

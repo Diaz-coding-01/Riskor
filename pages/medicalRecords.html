@@ -31,7 +31,7 @@
                             </a> 
                     </li>
                     <li class="nav-link dropdown">
-                        <a href="#" class="links dropdown-toggle">
+                        <a href="employee.html" class="links dropdown-toggle">
                                 <img src="../media/sidebar/Empleado.svg" alt="" class="navbar-icon" />
                                 <span class="text nav-text">Empleados</span>
                         </a>
@@ -43,7 +43,7 @@
                             </a> 
                     </li>
                     <li class="nav-link">
-                            <a href="#" class="links activeNavbarItem">
+                            <a href="trainings.html" class="links activeNavbarItem">
                             <img src="../media/sidebar/capacitaciones.svg" alt="" class="navbar-icon">
                             <span class="text nav-text">Capacitaciones</span>
                             </a> 
@@ -69,7 +69,7 @@
                     <li class="nav-link">
                             <a href="#" class="links activeNavbarItem">
                             <img src="../media/sidebar/AreasEmpresa.svg" alt="" class="nav-icon">
-                            <span class="text nav-text">Areas </span>
+                            <span class="text nav-text">Áreas </span>
                             </a> 
                     </li>
                     <li class="nav-link">
@@ -81,7 +81,7 @@
                     <li class="nav-link">
                             <a href="#" class="links activeNavbarItem">
                             <img src="../media/sidebar/Configuracion.svg" alt="" class="nav-icon">
-                            <span class="text nav-text">Configuracion</span>
+                            <span class="text nav-text">Configuración</span>
                             </a> 
                     </li>
                 </div>
@@ -94,27 +94,38 @@
         </div>
     </nav>
         </div>
-        <!--<div class="menu">RISKOR</div>-->
+        
         <div class="contenedor-cuerpo">
         <div class="content">
-            <!--<div class="interfaceHeader"> Contenedor que divide la interfaz en 2, (Titulo, crear, busqueda) y (Paneles) </div>-->   
-            <div class="breadcrumb"> <!--Div que contendrá el breadcrumb-->
-                <a href="medicalRecords.html">Expedientes médicos</a>
-            </div>
-            <div class="container-btn-primary">
-                <button type="button" class="btn-primary">Crear</button>
+            <!--Contenedor que divide la interfaz en 2, (Titulo, crear, busqueda) y (Paneles) -->
+            <div class="headerContent">
+                <div class="breadcrumb"> <!--Div que contendrá el breadcrumb-->
+                    <a href="medicalRecords.html">Expedientes médicos</a>
+                </div>
+                <div class="headerContentButtons">
+                    <div class="searchContainer">
+                        <input type="text" id="txtSearch">
+                        <button id="btnFilter">
+                            <img src="../media/filtrar.svg" title="Filtrar">
+                        </button>
+                        <button class="btn-primary" style="flex: 2;">Buscar</button>
+                    </div>
+                    <div>
+                        <button class="btn-primary" onclick="cargarCarta()" style="height: 3.5em; width: 12em">Crear</button>
+                    </div>
+                </div>
             </div>
             
-            <div class="card-container"> <!--Contenedor padre / Centra el contenedor-->
-                <div class="pnl-container"> <!--Contenedor de paneles/tarjetas / Posee los registros-->
-                    <a href="#" id="recordEmployee" class="recordEmployee"> <!--Enlace/div que permite que al momento de dar click en el div se mande a la siguiente interfaz-->
-                        <div id="Employee" class="Employee"> <!--Empleado-->
+            <div class="cardContainer"> <!--Contenedor padre / Centra el contenedor-->
+                <div class="pnlContainer"> <!--Contenedor de paneles/tarjetas / Posee los registros-->
+                    <a href="#" id="recordEmployee" class="recordEmployee"> <!--Registro-->
+                        <div id="Employee" class="informationPnl"> <!--Empleado-->
 
                             <div class="image"> <!--Div dirigido a la imagen del empleado-->
                                 <img src="../media/133866211092483860.jpg" alt="fotoEmpleado" class="pictureEmployee">
                             </div>
 
-                            <div class="info"> <!---->
+                            <div class="info"> 
                                 <div class="name" style="font-size: 1.2em; margin-left: 0.3em;"> <!--Nombre del empleado (Título del panel)-->
                                     Edwin Adrián Díaz
                                 </div>
@@ -130,113 +141,11 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#" id="recordEmployee" class="recordEmployee"> <!--Enlace/div que permite que al momento de dar click en el div se mande a la siguiente interfaz-->
-                        <div id="Employee" class="Employee"> <!--Empleado-->
-                            <div class="image"> <!--Div dirigido a la imagen del empleado-->
-                                <img src="../media/133866211092483860.jpg" alt="fotoEmpleado" class="pictureEmployee">
-                            </div>
-                            <div class="info"> <!---->
-                                <div class="name" style="font-size: 1.2em; margin-left: 0.3em;"> <!--Nombre del empleado (Título del panel)-->
-                                    Edwin Adrián Díaz
-                                </div>
-                                <div class="dataEmployee"> <!--Datos del empleado en la parte inferior del panel-->
-                                    <p>DUI: <b>12345678-9</b></p>
-                                    <p>Tipo de sangre: <b>A+</b></p>
-                                    <p>Estado: <b>Activo</b></p>
-                                </div>
-                            </div>
-                            <div class="arrow"> <!--Flecha apuntando a la derecha como svg para no perder calidad-->
-                                <img src="../media/grey_arrow_right.svg" alt="arrow.svg">
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" id="recordEmployee" class="recordEmployee"> <!--Enlace/div que permite que al momento de dar click en el div se mande a la siguiente interfaz-->
-                        <div id="Employee" class="Employee"> <!--Empleado-->
-                            <div class="image"> <!--Div dirigido a la imagen del empleado-->
-                                <img src="../media/133866211092483860.jpg" alt="fotoEmpleado" class="pictureEmployee">
-                            </div>
-                            <div class="info"> <!---->
-                                <div class="name" style="font-size: 1.2em; margin-left: 0.3em;"> <!--Nombre del empleado (Título del panel)-->
-                                    Edwin Adrián Díaz
-                                </div>
-                                <div class="dataEmployee"> <!--Datos del empleado en la parte inferior del panel-->
-                                    <p>DUI: <b>12345678-9</b></p>
-                                    <p>Tipo de sangre: <b>A+</b></p>
-                                    <p>Estado: <b>Activo</b></p>
-                                </div>
-                            </div>
-                            <div class="arrow"> <!--Flecha apuntando a la derecha como svg para no perder calidad-->
-                                <img src="../media/grey_arrow_right.svg" alt="arrow.svg">
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" id="recordEmployee" class="recordEmployee"> <!--Enlace/div que permite que al momento de dar click en el div se mande a la siguiente interfaz-->
-                        <div id="Employee" class="Employee"> <!--Empleado-->
-                            <div class="image"> <!--Div dirigido a la imagen del empleado-->
-                                <img src="../media/133866211092483860.jpg" alt="fotoEmpleado" class="pictureEmployee">
-                            </div>
-                            <div class="info"> <!---->
-                                <div class="name" style="font-size: 1.2em; margin-left: 0.3em;"> <!--Nombre del empleado (Título del panel)-->
-                                    Edwin Adrián Díaz
-                                </div>
-                                <div class="dataEmployee"> <!--Datos del empleado en la parte inferior del panel-->
-                                    <p>DUI: <b>12345678-9</b></p>
-                                    <p>Tipo de sangre: <b>A+</b></p>
-                                    <p>Estado: <b>Activo</b></p>
-                                </div>
-                            </div>
-                            <div class="arrow"> <!--Flecha apuntando a la derecha como svg para no perder calidad-->
-                                <img src="../media/grey_arrow_right.svg" alt="arrow.svg">
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" id="recordEmployee" class="recordEmployee"> <!--Enlace/div que permite que al momento de dar click en el div se mande a la siguiente interfaz-->
-                        <div id="Employee" class="Employee"> <!--Empleado-->
-                            <div class="image"> <!--Div dirigido a la imagen del empleado-->
-                                <img src="../media/133866211092483860.jpg" alt="fotoEmpleado" class="pictureEmployee">
-                            </div>
-                            <div class="info"> <!---->
-                                <div class="name" style="font-size: 1.2em;"> <!--Nombre del empleado (Título del panel)-->
-                                    Edwin Adrián Díaz
-                                </div>
-                                <div class="dataEmployee"> <!--Datos del empleado en la parte inferior del panel-->
-                                    <p>DUI: <b>12345678-9</b></p>
-                                    <p>Tipo de sangre: <b>A+</b></p>
-                                    <p>Estado: <b>Activo</b></p>
-                                </div>
-                            </div>
-                            <div class="arrow"> <!--Flecha apuntando a la derecha como svg para no perder calidad-->
-                                <img src="../media/grey_arrow_right.svg" alt="arrow.svg">
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" id="recordEmployee" class="recordEmployee"> <!--Enlace/div que permite que al momento de dar click en el div se mande a la siguiente interfaz-->
-                        <div id="Employee" class="Employee"> <!--Empleado-->
-                            <div class="image"> <!--Div dirigido a la imagen del empleado-->
-                                <img src="../media/133866211092483860.jpg" alt="fotoEmpleado" class="pictureEmployee">
-                            </div>
-                            <div class="info"> <!---->
-                                <div class="name" style="font-size: 1.2em; margin-left: 0.3em;"> <!--Nombre del empleado (Título del panel)-->
-                                    Edwin Adrián Díaz
-                                </div>
-                                <div class="dataEmployee"> <!--Datos del empleado en la parte inferior del panel-->
-                                    <p>DUI: <b>12345678-9</b></p>
-                                    <p>Tipo de sangre: <b>A+</b></p>
-                                    <p>Estado: <b>Activo</b></p>
-                                </div>
-                            </div>
-                            <div class="arrow"> <!--Flecha apuntando a la derecha como svg para no perder calidad-->
-                                <img src="../media/grey_arrow_right.svg" alt="arrow.svg">
-                            </div>
-                        </div>
-                    </a>
-                    
                 </div>
             </div>
         </div>
         </div>
         </div>
-        
     </main>
 
     <script src="../js/medicalRecords.js"></script>
