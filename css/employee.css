@@ -1,105 +1,89 @@
 @import url('globalStyles.css'); /*Se importa el estilo principal del sitio web*/
 
 
-.breadcrumb{           
-    margin-bottom: 2rem;                           /*Distancia de los bordes*/
-    font-size: 2.2em;                                           /*Tamaño del título de la pag (Breadcrumb)*/
-    font-weight: 600;                                           /*Peso del titulo*/
-}
-
-.breadcrumb a{
-    text-decoration: none;                                      /*Cambiamos el estilo del enlace*/
-    color: var(--color-breadcrumb);                             /*Asignamos el color del breadcrumb segun var Global*/
-}
-
-.content {
-  padding: 2em;
-}
 
 .title {
-  color: #5a5fd9;
-  font-size: 2em;
-  margin-bottom: 1em;
+  color: #5a5fd9;           /* Color morado claro para el título */
+  font-size: 2em;           /* Tamaño del texto grande para destacar */
+  margin-bottom: 1em;       /* Espaciado inferior para separarlo del siguiente elemento */
 }
 
 .top-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1em;
-  margin-bottom: 1.5em;
+  display: flex;                   /* Usa flexbox para alinear los elementos horizontalmente */
+  align-items: center;            /* Centra verticalmente los elementos dentro del contenedor */
+  justify-content: space-between;/* Distribuye el espacio entre los elementos para que estén separados */
+  flex-wrap: wrap;                /* Permite que los elementos bajen de línea en pantallas pequeñas */
+  gap: 8em;                       /* Espacio entre los elementos */
+  margin-bottom: 1.5em;           /* Margen inferior para separarla del contenido que sigue */
 }
 
-.search-container {
-  display: flex;
-  gap: 0.5em;
-  flex: 1;
+.search-section input {
+  flex-grow: 1;             /* Permite que el input crezca para ocupar el espacio disponible */
+  padding: 0.5em 1em;       /* Espaciado interno horizontal y vertical */
+  border-radius: 8px;       /* Bordes redondeados */
+  border: 1px solid #ccc;   /* Borde gris claro */
+  font-size: 1em;           /* Tamaño de fuente estándar */
+  outline: none;            /* Elimina el contorno azul al hacer clic */
 }
 
-.search-container input {
-  width: 100%;
-  padding: 0.5em;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+.actions-section {
+  display: flex;            /* Alineación horizontal */
+  align-items: center;      /* Centrado vertical */
+  gap: 8em;                 /* Espaciado entre los elementos dentro de esta sección */
 }
 
 .search-container button {
-  background-color: #6b6bfa;
-  color: white;
-  border: none;
-  padding: 0.5em 1em;
-  border-radius: 6px;
-  cursor: pointer;
+  background-color: #6b6bfa;  /* Color de fondo morado */
+  color: white;               /* Texto blanco*/
+  border: none;               /* Sin borde */
+  padding: 0.5em 1em;         /* Espaciado interno */
+  border-radius: 6px;         /* Bordes redondeados */
+  cursor: pointer;            /* Muestra un puntero al pasar el ratón */
 }
-
-.btn-primary {
-  background-color: #6b6bfa;
-  color: white;
-  padding: 0.5em 1.2em;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+.icons {
+  display: flex;  /* Muestra los íconos en línea horizontal */
+  gap: 1em;       /* Espacio entre íconos */
 }
 
 .icons img {
-  width: 30px;
-  margin-left: 1em;
+  width: 30px;    /* Ancho fijo de 30px*/
+  margin-left: 1em; /* Espacio a la izquierda del ícono*/
 }
 
 .table-container {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px #dcdcdc;
-  overflow-x: auto;
+  background-color: white;           /* Fondo blanco para la tabla */
+  border-radius: 10px;               /* Bordes redondeados */
+  box-shadow: 0px 0px 10px #dcdcdc;  /* Sombra suave para efecto de tarjeta */
+  overflow-x: auto;                  /* Permite desplazamiento horizontal si es necesario */
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
+  width: 100%;                /* Ocupa todo el ancho del contenedor */
+  border-collapse: collapse;  /* Elimina espacios entre celdas*/
 }
 
 thead {
-  background-color: #f0f4ff;
+  background-color: #f0f4ff;  /* Color de fondo para encabezado de tabla*/
 }
 
 th, td {
-  text-align: left;
-  padding: 1em;
+  text-align: left;           /* Alineación a la izquierda para celdas*/
+  padding: 1em;               /* Espaciado interno uniforme */
 }
 
 td:last-child {
-  display: flex;
-  gap: 1em;
-  align-items: center;
+  display: flex;              /* Los íconos de acción dentro de esta celda están alineados horizontalmente */
+  gap: 1em;                   /* Espacio entre íconos*/
+  align-items: center;        /* Centrado vertical*/
 }
 
 td img {
-  cursor: pointer;
-  width: 20px;
+  cursor: pointer;            /* Muestra el puntero de clic */
+  width: 20px;                /* Tamaño reducido para íconos de acción */
 }
 
 tr:hover {
-  background-color: #f9f9f9;
+  background-color: #f9f9f9;  /* Cambio de fondo al pasar el ratón por encima */
 }
 
 

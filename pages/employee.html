@@ -5,58 +5,81 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Empleados</title>
+    <link rel="stylesheet" href="../css/employee.css" />
     <link rel="stylesheet" href="../css/sidebar.css">
-    <link rel="stylesheet" href="../css/employee.css">
 </head>
 
 <body>
     <main>
-
+        <!--Clase contenedor para la seccion-->
         <div class="contenedor-seccion">
+            <!--Clase contenedor para sidebar-->
+            <div class="contenedor-sidebar">
+                <nav id="sidebar"></nav>
+            </div>
+            <!--Clase contenedor para el cuerpo-->
+            <div class="contenedor-cuerpo">
+                <!--Contenido-->
+                <div class="content">
 
-        <div class="contenedor-sidebar">
-         <nav id="sidebar"></nav>
-        </div>
-        
-        <div class="contenedor-cuerpo">
-        <div class="content">
-            <div class="breadcrumb"> <!--Div que contendrá el breadcrumb-->
-                <a href="employee.html">Empleados</a>
-            </div>
+                    <div class="headerContent">
+                        <!--Creación de la clase breadcrumb el cual servira para indicar la ruta que ha seguido el usuario para llegar a esa página-->
+                        <div class="breadcrumb">
+                            <a href="employee.html">Empleados</a>
+                        </div>
+                        <!--botones de header-->
+                        <div class="headerContentButtons">
+                            <div class="top-bar">
+                                <!--Creación del boton para busqueda del empleado-->
+                                <div class="search-container">
+                                    <input type="text" id="searchInput" placeholder="Buscar empleado..." />
+                                    <!--Al dar click al boton se ejecuta la funcion searchEmployee creada en el archivo js-->
+                                    <button class="btn-primary" onclick="searchEmployee()">Buscar</button>
+                                </div>
+                                <div class="actions-section">
+                                <!--Al momento de dar click se ejecuta la función addEmployee creada en el archivo js-->
+                                <button class="btn-primary" onclick="addEmployee()">Registrar empleado</button>
+                                <!--Clase para la ruta de los iconos-->
+                                <div class="icons">
+                                    <img src="../media/Vector (1).svg" alt="Notificaciones" />
+                                    <img src="../media/Frame 59.png" alt="Perfil" />
+                                </div>
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="top-bar">
-                <div class="search-container">
-                    <input type="text" id="searchInput" placeholder="Buscar empleado..." />
-                    <button onclick="searchEmployee()">Buscar</button>
-                </div>
-                <button class="btn-primary" onclick="addEmployee()">Registrar empleado</button>
-                <!--Iconos-->
-                <div class="icons">
-                    <img src="../media/Vector (1).svg" alt="Notificaciones" />
-                    <img src="../media/Frame 59.png" alt="Perfil" />
+                    </div>
+                    <!--Clase contenedor para la carta-->
+                    <div class="cardContainer">
+                        <!--Clase contenedor del panel-->
+                        <div class="pnlContainer">
+                            <!--Clase contenedor para la tabla-->
+                            <div class="table-container">
+                                <!--Creación de la tabla-->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <!--Componentes que contiene la tabla-->
+                                            <th>DUI</th>
+                                            <th>Nombre completo</th>
+                                            <th>Correo electrónico</th>
+                                            <th>Cargo</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="employeeTableBody">
+                                        <!-- Datos mostrados en el archivo js -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-<!--Creación de la tabla empleados-->
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>DUI</th>
-                            <th>Nombre completo</th>
-                            <th>Correo electrónico</th>
-                            <th>Cargo</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody id="employeeTableBody">
-                        <!-- Datos mostrados en el archivo js -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        </div>
         </div>
     </main>
+
 
     <script src="../js/employee.js"></script>
     <script src="../js/sidebar.js"></script>
