@@ -133,15 +133,12 @@ body{
   Sidebar - Menú de navegación
 */
 
-html,
 .contenedor-sidebar{
   height: 100%;
 }
 
 .contenedor-sidebar{
   display: flex;
-  width: 20%;
-  min-height: 0vh;
 }
 
 .contenedor-seccion{
@@ -149,8 +146,7 @@ html,
 }
 
 .contenedor-cuerpo{
-  width: 100%;
-  padding: 1rem 0rem 0 1em; 
+  width: 100%; 
 }
 
 /*
