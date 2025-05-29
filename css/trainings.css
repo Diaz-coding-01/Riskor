@@ -12,16 +12,6 @@ h1{
     font-weight: 600;     
 }
 
-.content{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    height: 100dvh;
-    padding: 20px;
-}
 
 .headerContent{
     width: var(--width-container);
@@ -46,18 +36,6 @@ h1{
     background-color: var(--bg-containers);
     border-radius: 12px;
     box-shadow: 2px 2px 4px #0004;
-}
-
-#txtSearch{
-    padding: 10px;
-    border-radius: 5px;
-    border: solid 1px #7B96C7;
-    flex: 5;
-}
-
-#btnFilter{
-    background-color: transparent;
-    border: none;
 }
 
 .bodyContent{
@@ -137,7 +115,7 @@ h1{
     align-items: center;
     width: 100dvw;
     height: 100dvh;
-    background-color: #0005;
+    background-color: #8585AC88;
 }
 
 .modalAddTraining{
@@ -155,7 +133,8 @@ h1{
 #btnCloseAddTraining{
     position: absolute;
     cursor: pointer;
-    background-color: transparent;border: none;
+    background-color: transparent;
+    border: none;
     margin: 20px;
     right: 0;
     top: 0;
@@ -180,9 +159,8 @@ h1{
 }
 
 .containerInputAddTraining label + *{
-    font-family: 'poppins';
     font-weight: 500;
-    font-size: 1.05em;
+    font-size: var(--font-size-base);
     color: var(--color-txt-title);
     padding: 7px;
     border-radius: 5px;

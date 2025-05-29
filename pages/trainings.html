@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capacitaciones</title>
-    <link rel="stylesheet" href="../css/globalStyles.css">
     <link rel="stylesheet" href="../css/trainings.css">
     <link rel="stylesheet" href="../css/sidebar.css">
 </head>
@@ -24,95 +23,103 @@
                     <input type="text" name="" id="txtAddTrainerName">
                 </div>
             </div>
-                <div>
-                    <div class="containerInputAddTraining">                
-                        <label for="txtAddTrainingDescription">Descripcion</label>
-                        <input type="text" name="" id="txtAddTrainingDescription"></div>
-                    </div>
-                <div>
-                    <div class="containerInputAddTraining">
-                        <label for="cmbAddTrainingModality">Modalidad</label>
-                        <select name="" id="cmbAddTrainingModality"></select>
-                    </div>
-                    <div class="containerInputAddTraining">
-                        <label for="dtAddTrainingDate">Fecha</label>
-                        <input type="date" id="dtAddTrainingDate">
-                    </div>
-                    <div class="containerInputAddTraining">
-                        <label for="tmAddTrainingDuration">Duración</label>
-                        <input type="time" id="tmAddTrainingDuration">
-                    </div>
+            <div>
+                <div class="containerInputAddTraining">
+                    <label for="txtAddTrainingDescription">Descripcion</label>
+                    <input type="text" name="" id="txtAddTrainingDescription">
                 </div>
-                <div>
-                    <div class="containerInputAddTraining">
-                        <label for="txtAddTrainingPlace">Lugar</label>
-                        <input type="text" name="" id="txtAddTrainingPlace">
-                    </div>
+            </div>
+            <div>
+                <div class="containerInputAddTraining">
+                    <label for="cmbAddTrainingModality">Modalidad</label>
+                    <select name="" id="cmbAddTrainingModality"></select>
+                </div>
+                <div class="containerInputAddTraining">
+                    <label for="dtAddTrainingDate">Fecha</label>
+                    <input type="date" id="dtAddTrainingDate">
+                </div>
+                <div class="containerInputAddTraining">
+                    <label for="tmAddTrainingDuration">Duración</label>
+                    <input type="time" id="tmAddTrainingDuration">
+                </div>
+            </div>
+            <div>
+                <div class="containerInputAddTraining">
+                    <label for="txtAddTrainingPlace">Lugar</label>
+                    <input type="text" name="" id="txtAddTrainingPlace">
+                </div>
             </div>
             <input type="submit" class="btn-primary" style="align-self: end; padding: 15px 40px;">
         </form>
     </div>
-    <main style="display: flex;">
-        <div id="sidebar"></div>  
-        <div class="content">
-            <div class="headerContent">
-                <div>
-                    <h1>Capacitaciones</h1>
-                </div>
-                <div class="headerContentButtons">
-                    <div class="searchContainer">
-                        <input type="text" id="txtSearch">
-                        <button id="btnFilter">
-                            <img src="../media/filtrar.svg" alt="">
-                        </button>
-                        <button class="btn-primary" style="flex: 2;">Buscar</button>
+
+    <main>
+        <div class="contenedor-seccion">
+            <div class="contenedor-sidebar">
+                <div id="sidebar"></div>
+            </div>
+            <div class="contenedor-cuerpo">
+                <div class="content">
+                    <div class="headerContent">
+                        <div>
+                            <h1>Capacitaciones</h1>
+                        </div>
+                        <div class="headerContentButtons">
+                            <div class="searchContainer">
+                                <input type="text" id="txtSearch">
+                                <button id="btnFilter">
+                                    <img src="../media/filtrar.svg" alt="">
+                                </button>
+                                <button class="btn-primary" style="flex: 2;">Buscar</button>
+                            </div>
+                            <div>
+                                <button class="btn-primary" id="btnOpenAddTraining" style="height: 3.5em; width: 12em">Crear</button>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <button class="btn-primary" id="btnOpenAddTraining" style="height: 3.5em; width: 12em">Crear</button>
+                    <div class="bodyContent">
+                        <div class="containerTraining">
+                            <div class="training">
+                                <span class="trainingName">Ética laboral</span>
+                                <div class="containerMoreInfoTraining">
+                                    <div class="containerTrainingUsers">
+                                        <img src="../media/Frame 59.png" alt="" class="userTraining user1">
+                                        <img src="../media/Frame 59.png" alt="" class="userTraining user2">
+                                        <img src="../media/Frame 59.png" alt="" class="userTraining user3">
+                                    </div>
+                                    <img src="../media/grey_arrow_right.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="training">
+                                <span class="trainingName">Ética laboral</span>
+                                <div class="containerMoreInfoTraining">
+                                    <div class="containerTrainingUsers">
+                                        <img src="../media/Frame 59.png" alt="" class="userTraining user1">
+                                        <img src="../media/Frame 59.png" alt="" class="userTraining user2">
+                                        <img src="../media/Frame 59.png" alt="" class="userTraining user3">
+                                    </div>
+                                    <img src="../media/grey_arrow_right.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="training">
+                                <span class="trainingName">Ética laboral</span>
+                                <div class="containerMoreInfoTraining">
+                                    <div class="containerTrainingUsers">
+                                        <img src="../media/Frame 59.png" alt="" class="userTraining user1">
+                                        <img src="../media/Frame 59.png" alt="" class="userTraining user2">
+                                        <img src="../media/Frame 59.png" alt="" class="userTraining user3">
+                                    </div>
+                                    <img src="../media/grey_arrow_right.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="bodyContent">
-                <div class="containerTraining">
-                    <div class="training">
-                        <span class="trainingName">Ética laboral</span>
-                        <div class="containerMoreInfoTraining">
-                            <div class="containerTrainingUsers">
-                                <img src="../media/Frame 59.png" alt="" class="userTraining user1">
-                                <img src="../media/Frame 59.png" alt="" class="userTraining user2">
-                                <img src="../media/Frame 59.png" alt="" class="userTraining user3">
-                            </div>
-                            <img src="../media/grey_arrow_right.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="training">
-                        <span class="trainingName">Ética laboral</span>
-                        <div class="containerMoreInfoTraining">
-                            <div class="containerTrainingUsers">
-                                <img src="../media/Frame 59.png" alt="" class="userTraining user1">
-                                <img src="../media/Frame 59.png" alt="" class="userTraining user2">
-                                <img src="../media/Frame 59.png" alt="" class="userTraining user3">
-                            </div>
-                            <img src="../media/grey_arrow_right.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="training">
-                        <span class="trainingName">Ética laboral</span>
-                        <div class="containerMoreInfoTraining">
-                            <div class="containerTrainingUsers">
-                                <img src="../media/Frame 59.png" alt="" class="userTraining user1">
-                                <img src="../media/Frame 59.png" alt="" class="userTraining user2">
-                                <img src="../media/Frame 59.png" alt="" class="userTraining user3">
-                            </div>
-                            <img src="../media/grey_arrow_right.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>  
+        </div>
     </main>
-</body>
 
     <script src="../js/trainings.js"></script>
     <script src="../js/sidebar.js"></script>
+</body>
 </html>
