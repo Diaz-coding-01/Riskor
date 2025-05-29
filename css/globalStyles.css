@@ -190,6 +190,31 @@ html,
 }
 
 /*
+  Input - Barra de búsqueda
+*/
+
+#txtSearch{
+    background-image: url('../media/globalMedia/searchbar-icon.svg');
+    background-position: 12px 12px; 
+    background-repeat: no-repeat;
+    padding: 12px;
+    border-radius: 5px;
+    border: solid 1px #7B96C7;
+    flex: 5;
+    padding-left: 45px;
+    font-size: var(--font-size-base);
+    color: var(--color-txt);
+}
+
+#txtSearch:focus {
+  border: 1px solid #343968;
+  font-size: var(--font-size-base);
+  color: var(--color-txt);
+  outline: none;
+  border: 1px solid var(--color-txt);
+}
+
+/*
   Botón filtro - Filtrar datos mostrados dentro de una interfaz
 */
 
