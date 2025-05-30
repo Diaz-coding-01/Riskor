@@ -1,60 +1,58 @@
 @import url('globalStyles.css'); /*Se importa el estilo principal del sitio web*/
 
-
-
-.title {
-  color: #5a5fd9;           /* Color morado claro para el título */
-  font-size: 2em;           /* Tamaño del texto grande para destacar */
-  margin-bottom: 1em;       /* Espaciado inferior para separarlo del siguiente elemento */
+.topHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.profilePicture{
+  border-radius: 50%;          
+  --color-img-border: 3px solid #8F90DE;                               
+  border: var(--color-img-border);                            /*Borde característico de la carga de imágenes*/
+  object-fit: cover;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  box-shadow: 2px 2px 8px 2px rgba(151, 167, 231, 0.35);
+}
+
+.searchContainer{
+    padding: 20px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.btn-primary{
+  border-radius: 8px;
+  height: 2.7em; 
+  width: 13em;
+}
+
 
 .top-bar {
   display: flex;                   /* Usa flexbox para alinear los elementos horizontalmente */
   align-items: center;            /* Centra verticalmente los elementos dentro del contenedor */
   justify-content: space-between;/* Distribuye el espacio entre los elementos para que estén separados */
   flex-wrap: wrap;                /* Permite que los elementos bajen de línea en pantallas pequeñas */
-  gap: 8em;                       /* Espacio entre los elementos */
-  margin-bottom: 1.5em;           /* Margen inferior para separarla del contenido que sigue */
+  /* gap: 8em;                       Espacio entre los elementos Este atributo causa problemas*/
+  /* margin-bottom: 1.5em;           Margen inferior para separarla del contenido que sigue */
 }
 
-.search-section input {
-  flex-grow: 1;             /* Permite que el input crezca para ocupar el espacio disponible */
-  padding: 0.5em 1em;       /* Espaciado interno horizontal y vertical */
-  border-radius: 8px;       /* Bordes redondeados */
-  border: 1px solid #ccc;   /* Borde gris claro */
-  font-size: 1em;           /* Tamaño de fuente estándar */
-  outline: none;            /* Elimina el contorno azul al hacer clic */
-}
-
-.actions-section {
-  display: flex;            /* Alineación horizontal */
-  align-items: center;      /* Centrado vertical */
-  gap: 8em;                 /* Espaciado entre los elementos dentro de esta sección */
-}
-
-.search-container button {
-  background-color: #6b6bfa;  /* Color de fondo morado */
-  color: white;               /* Texto blanco*/
-  border: none;               /* Sin borde */
-  padding: 0.5em 1em;         /* Espaciado interno */
-  border-radius: 6px;         /* Bordes redondeados */
-  cursor: pointer;            /* Muestra un puntero al pasar el ratón */
-}
 .icons {
-  display: flex;  /* Muestra los íconos en línea horizontal */
-  gap: 1em;       /* Espacio entre íconos */
+  display: flex;                  /* Muestra los íconos en línea horizontal */
+  align-items: center;
 }
 
 .icons img {
-  width: 30px;    /* Ancho fijo de 30px*/
-  margin-left: 1em; /* Espacio a la izquierda del ícono*/
+  margin-left: 2em; /* Espacio a la izquierda del ícono*/
 }
 
 .table-container {
-  background-color: white;           /* Fondo blanco para la tabla */
-  border-radius: 10px;               /* Bordes redondeados */
-  box-shadow: 0px 0px 10px #dcdcdc;  /* Sombra suave para efecto de tarjeta */
-  overflow-x: auto;                  /* Permite desplazamiento horizontal si es necesario */
+  background-color: white;            /* Fondo blanco para la tabla */
+  border-radius: 10px;                  /* Bordes redondeados */
+  box-shadow: 0px 0px 10px #dcdcdc;   /* Sombra suave para efecto de tarjeta */
+  overflow-x: auto;                     /* Permite desplazamiento horizontal si es necesario */
 }
 
 table {
@@ -85,6 +83,5 @@ td img {
 tr:hover {
   background-color: #f9f9f9;  /* Cambio de fondo al pasar el ratón por encima */
 }
-
 
 /*Formulario de registro*/

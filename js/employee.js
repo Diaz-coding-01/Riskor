@@ -40,7 +40,7 @@ function refreshTable() {
 }
 /*Función de busqueda segun los registros de la tabla*/
 function searchEmployee() {
-  const texto = document.getElementById('searchInput').value.toLowerCase();
+  const texto = document.getElementById('txtSearch').value.toLowerCase();
   const cuerpo = document.getElementById('employeeTableBody');
   cuerpo.innerHTML = '';
   employees
@@ -68,3 +68,4 @@ function addEmployee() {
 
 // Cargar tabla al inicio
 document.addEventListener('DOMContentLoaded', refreshTable);
+/*Agregar el evento onclick*/

@@ -1,0 +1,13 @@
+@import url('globalStyles.css');
+
+.formTop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.employeePicture{
+    height: 320px;
+    width: 320px;
+    border-radius: 25%;
+    object-fit: cover;
+}

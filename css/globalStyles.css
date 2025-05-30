@@ -39,7 +39,10 @@ body{
     
     --font-size-base: 1.1em;                      /*Tamaño de letra estándar.                                       Ej. Mostrar información, forms, etc.*/
     --font-size-title: 2.2em;                     /*Tamaño de los títulos.                                          Ej. Breadcrumb*/
-    
+    --font-weight-Semibold: 600;
+    --font-weight-Medium: 500;
+    --font-weight-Regular: 400;
+
     --shadow-btn-primary: 0px 0px 15px 1px rgba(120, 132, 237, 0.65);   /*Sombra de los botones principales.      Ej. "Agregar", "Enviar", etc.*/
     --shadow-btn-secondary: 0px 0px 5px 1px rgba(120, 132, 237, 0.45);  /*Sombra de los botones secundarios.      Ej. "Evidencias", "Buscar", etc.*/
     --shadow-hover: 0 5px 10px rgba(133, 155, 208, 0.3);
@@ -130,15 +133,12 @@ body{
   Sidebar - Menú de navegación
 */
 
-html,
 .contenedor-sidebar{
   height: 100%;
 }
 
 .contenedor-sidebar{
   display: flex;
-  width: 20%;
-  min-height: 0vh;
 }
 
 .contenedor-seccion{
@@ -146,8 +146,7 @@ html,
 }
 
 .contenedor-cuerpo{
-  width: 100%;
-  padding: 1rem 0rem 0 1em; 
+  width: 100%; 
 }
 
 /*
