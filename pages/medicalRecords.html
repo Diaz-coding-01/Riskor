@@ -12,6 +12,9 @@
 <body>
     <div class="containerModalOpen containerModalClose">
         <form class="modalAdd closeAdd" id="addRecord">
+            <button id="btnClose" type="button">
+                <img src="../media/closeIcon.svg" alt="cerrarModal">
+            </button>
             <div>
                 <img src="../media/133866211092483860.jpg" alt="EmployeePicture" class="employeePicture">
             </div>
@@ -21,29 +24,29 @@
                     <input type="text" name="" id="txtEmployee">
                 </div>
                 <div class="formField">
-                    <label for="txtContact">Persona de contacto</label>
-                    <input type="text" name="" id="txtEmployee">
+                    <label for="txtEmergencyContact">Persona de contacto</label>
+                    <input type="text" name="" id="txtEmergencyContact">
                 </div>
                 <div class="formField">
-                    <label for="txtEmployee">Empleado</label>
-                    <input type="text" name="" id="txtEmployee">
+                    <label for="txtAllergies">Alergias</label>
+                    <input type="text" name="" id="txtAllergies">
                 </div>
             </div>
             <div class="shortFields">
                 <div class="formField">
                     <label for="txtEmployeeDocument">DUI del empleado</label>
-                    <input type="text" name="" id="txtEmployeeDocument">
+                    <input type="number" name="" id="txtEmployeeDocument">
                 </div>
                 <div class="formField">
-                    <label for="txtEmployeeDocument">Número de contacto</label>
-                    <input type="text" name="" id="txtEmployeeDocument">
+                    <label for="txtEmergencyContact">Número de contacto</label>
+                    <input type="number" name="" id="txtEmergencyContact">
                 </div>
                 <div class="formField">
-                    <label for="txtEmployeeDocument">Sangre</label>
-                    <input type="" name="" id="txtEmployeeDocument">
+                    <label for="cmbBloodType">Sangre</label>
+                    <select name="" id="cmbBloodType"></select>
                 </div>
-                <input type="submit" class="btn-primary" style="align-self: end; padding: 15px 40px;">
             </div>
+            <input type="submit" class="btn-primary" style="align-self: end; padding: 15px 40px;">
         </form>
     </div> 
 
