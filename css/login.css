@@ -1,0 +1,282 @@
+@import url('globalStyles.css');
+
+#capa2 { 
+    animation: moverCapa2 400s linear infinite, saltoCapa 8s ease-in-out infinite alternate;
+    transform-origin: center bottom;
+    transform: scaleY(1.12);
+}
+#capa3 { 
+    animation: moverCapa3 600s linear infinite, saltoCapa 10s ease-in-out infinite alternate;
+    transform-origin: center bottom;
+    transform: scaleY(1.18);
+}
+#capa4 { 
+    animation: moverCapa4 800s linear infinite, saltoCapa 12s ease-in-out infinite alternate;
+    transform-origin: center bottom;
+    transform: scaleY(1.24);
+}
+#capa5 { 
+    animation: moverCapa5 1000s linear infinite, saltoCapa 14s ease-in-out infinite alternate;
+    transform-origin: center bottom;
+    transform: scaleY(1);
+}
+
+@keyframes moverCapa2 { 0% { transform: translateX(0) scaleY(1.12); } 100% { transform: translateX(-1920px) scaleY(1.12); } }
+@keyframes moverCapa3 { 0% { transform: translateX(0) scaleY(1.18); } 100% { transform: translateX(-1920px) scaleY(1.18); } }
+@keyframes moverCapa4 { 0% { transform: translateX(0) scaleY(1.24); } 100% { transform: translateX(-1920px) scaleY(1.24); } }
+@keyframes moverCapa5 { 0% { transform: translateX(0) scaleY(0); } 100% { transform: translateX(-1920px) scaleY(0); } }
+
+@keyframes saltoCapa {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.box-login{
+    position: relative;
+    width: 520px;
+    height: 650px;
+    background-color: #f2f9fed0;
+    border: 2px solid rgb(242, 249, 254, .5) ;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.box-login form {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-login h2{
+    font-size: 2.2em;
+    color: #474A53;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.input-box{
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: 15px 0;
+    background-color: #F2F9FE;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px 0px rgba(40, 58, 141, 0.15);
+    backdrop-filter: blur(5px);
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: var(--font-size-base);
+    color: #474A53;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -15px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #474A53;
+    padding: 0 45px 0 15px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    color: #474A53;
+    font-size: 1.2em;
+    line-height: 57px;
+    margin-right: 10px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+.blink {
+    animation: blink 0.3s;
+}
+
+.recuerdame{
+    margin: 0px 25px 15px;
+    font-size: .9em;
+    color: #474A53;
+    align-self: flex-start;
+}
+
+.recuerdame label input{
+    margin-right: 5px;
+}
+
+.recuerdame a{
+    color: #474A53;
+    text-decoration: none;
+}
+
+.recuerdame a:hover{
+    text-decoration: none;
+}
+
+.recuerdame input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #8787EA;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    vertical-align: middle;
+    transition: border-color 0.2s;
+}
+
+.recuerdame input[type="checkbox"]:checked {
+    background: transparent;
+    border-color: #8787EA;
+}
+
+.recuerdame input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 4px;    
+    top: 1px;     
+    width: 4px;
+    height: 8px;
+    border: solid #8787EA;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+.button-login{
+    margin-top: 40px;
+    width: 91%;
+    height: 55px;
+    background: linear-gradient(122deg,rgba(120, 132, 237, 1) 0%, rgba(120, 132, 237, 1) 100%);
+    box-shadow: 2px 2px 2px 0 rgba(131, 149, 223, 0.15);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition-base);
+}
+
+.button-login:hover {
+  transform: translateY(-3px);          
+  box-shadow: 2px 2px 5px 0 rgba(131, 149, 223 , 0.5);
+}
+
+.button-google{
+    margin-top: 15px;
+    width: 91%;
+    height: 55px;
+    background: #F3F6FF;
+    box-shadow: 2px 2px 5px 0 rgba(131, 149, 223 , 0.5);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color: rgb(134, 158, 255);
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: #8395DF;
+    transition: var(--transition-base);
+}
+
+.button-google:hover {
+  transform: translateY(-3px);          
+  box-shadow: 2px 2px 5px 0 rgba(131, 149, 223 , 0.5);
+}
+
+.icon-google img{
+    width: 25px;
+    height: 25px;
+    display: block;
+}   
+
+.registrate{
+    font-size: 1.1em;
+    color: #474A53;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.registrate p a{
+    color: #474A53;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.registrate p a:hover{
+    text-decoration: underline;
+}
+
+.olvidar-contraseña{
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.olvidar-contraseña p a{
+    color: #383bfd7a;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.olvidar-contraseña p a:hover {
+    color: #383bfd;
+}
+
+@media (max-width: 360px) {
+    .box-login{
+        width: 100%;
+    }
+}
