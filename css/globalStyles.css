@@ -252,10 +252,14 @@ body{
 }
 
 /*
+
+  Modal -------------------------------------------------------------------------------------
+
   Modal - Contenedor (Sombra del contenedor)
+
 */
 
-.containerModalAddTraining{
+.containerModal{
     z-index: 30;
     position: absolute;
     justify-content: center;
@@ -265,15 +269,43 @@ body{
     background-color: var(--color-modal-container);
 }
 
-/*
-    Variables agregadas:
-        --color-btn-text: #F2F9FE;
-        --shadow-pnl: 2px 2px 4px 0px rgba(133, 155, 208, 0.25);
-        --color-img-border 3px solid #8F90DE;
-        --width-container: 90%;
-*/  
+.modalAdd{
+    display: flex;
+    position: relative;
+    border-radius: 12px;
+    padding: 45px 70px;
+    box-sizing: border-box;
+    gap: 15px;
+    flex-direction: column;
+    background-color: var(--color-btn-text);
+}
+
+.containerModalOpen{
+    display: flex;
+}
+
+
+
+.formField{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formField label{
+  font-weight: var(--font-weight-Medium);
+  font-size: var(--font-size-base);
+  color: var(--color-txt);
+}
 
 /*
-  Pendiente:
-    -clase para inputs globales
+  Fotografía del empleado desplegada - Usada en Registros médicos, dashboard, config, empleados, etc.
 */
+
+.employeePicture{
+    height: 320px;
+    width: 320px;
+    border-radius: 25%; /*En caso de empleados debe cambiarse el border radius*/
+    object-fit: cover;
+    border: var(--color-img-border);
+}

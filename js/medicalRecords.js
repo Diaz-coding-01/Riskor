@@ -76,4 +76,24 @@ function loadRecords(records){
     document.getElementById("recordEmployeContainer").innerHTML = container;
 }
 
+
 loadRecords(registros);
+
+
+let BtnOpenModal = document.getElementById('loadModal');
+let formAddRecord = document.getElementById('addRecord');
+let modal = document.querySelector('containerModalOpen');
+
+BtnOpenModal.addEventListener('click', () => {
+    modal.classList.replace('containerModalClose', 'containerModalOpen');
+})
+
+formAddRecord.addEventListener('submit', (e) => {
+    e.preventDefault();
+})
+
+document.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        modal.classList.replace('containerModalOpen', 'containerModalClose');
+    }
+})

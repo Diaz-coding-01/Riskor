@@ -44,3 +44,9 @@
     margin-left: auto;                                          /*Lo envia a la derecha*/
     margin-right: 0.5em;                                        /*Distancia un poco el borde derecho*/
 }
+
+/*Modal*/
+
+.modalAdd{
+    flex-direction: row; /*Al ser 3 elementos se pasan a fila para no estar en columna*/
+}
