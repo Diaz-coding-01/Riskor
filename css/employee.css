@@ -1,5 +1,13 @@
 @import url('globalStyles.css'); /*Se importa el estilo principal del sitio web*/
 
+body {
+  color: #4a4a4a;
+  font-size: 14px;
+}
+h2{
+  text-decoration: none;                                      
+    color: var(--color-breadcrumb);       
+}
 .topHeader{
   display: flex;
   justify-content: space-between;
@@ -29,16 +37,6 @@
   width: 13em;
 }
 
-
-.top-bar {
-  display: flex;                   /* Usa flexbox para alinear los elementos horizontalmente */
-  align-items: center;            /* Centra verticalmente los elementos dentro del contenedor */
-  justify-content: space-between;/* Distribuye el espacio entre los elementos para que estén separados */
-  flex-wrap: wrap;                /* Permite que los elementos bajen de línea en pantallas pequeñas */
-  /* gap: 8em;                       Espacio entre los elementos Este atributo causa problemas*/
-  /* margin-bottom: 1.5em;           Margen inferior para separarla del contenido que sigue */
-}
-
 .icons {
   display: flex;                  /* Muestra los íconos en línea horizontal */
   align-items: center;
@@ -62,6 +60,16 @@ table {
 
 thead {
   background-color: #f0f4ff;  /* Color de fondo para encabezado de tabla*/
+  font-weight: bold;
+  border-bottom: 2px solid #dcdcdc;
+  color: #4a4a4a;
+}
+
+td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px; 
 }
 
 th, td {
@@ -70,9 +78,10 @@ th, td {
 }
 
 td:last-child {
-  display: flex;              /* Los íconos de acción dentro de esta celda están alineados horizontalmente */
-  gap: 1em;                   /* Espacio entre íconos*/
-  align-items: center;        /* Centrado vertical*/
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.8em;
 }
 
 td img {
@@ -85,3 +94,115 @@ tr:hover {
 }
 
 /*Formulario de registro*/
+.containerModalAddEmployee{
+    z-index: 30;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: #8585AC88;
+}
+
+.modalAddEmployee{
+    display: flex;
+    background-color: #F2F9FE;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #F2F9FE;
+    border-radius: 15px;
+    padding: 40px;
+    width: clamp(500px, 85%, 1200px);
+    position: relative;
+    box-shadow: 0 0 15px #aaa;
+}
+
+#closeAddEmployee{
+    position: absolute;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin: 20px;
+    right: 0;
+    top: 0;
+}
+
+.modalAddEmployee > div{
+    display: flex;
+    gap: 15px;
+}
+
+.containerInputAddEmployee{
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.containerInputAddEmployee label{
+    font-size: 1.1em;
+    color: var(--color-txt);
+    font-weight: 500;
+}
+
+.containerInputAddEmployee label + *{
+    font-weight: 500;
+    font-size: var(--font-size-base);
+    color: var(--color-txt-title);
+    padding: 7px;
+    border-radius: 5px;
+    border: solid 1px #7B96C7;
+}
+
+.formGrid {
+  display: flex;
+  gap: 30px;
+}
+
+.photoSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photoButtons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 8px;
+}
+
+.btnDeletePhoto {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btnDeletePhoto {
+  background-color: transparent;
+  color: #444;
+  text-decoration: none;
+}
+
+.inputGrid {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.fullWidth {
+  grid-column: span 3;
+}
+.containerModalAddEmployeeOpen{
+    display: flex;
+}
+
+.containerModalAddEmployeeClose{
+    display: none;
+}
+

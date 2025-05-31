@@ -10,6 +10,91 @@
 </head>
 
 <body>
+    <!--Modales para agregar el registro del empleado-->
+    <div class="containerModalAddEmployee containerModalAddEmployeeClose">
+        <form class="modalAddEmployee closeAddEmployee" id="formAddEmployee">
+            <button id="closeAddEmployee" type="button">
+                <img src="../media/closeIcon.svg" alt="Close">
+            </button>
+            <h2 id="FullName">Empleado</h2>
+            <div class="formGrid">
+                <!-- Columna izquierda: Avatar -->
+                <div class="photoSection">
+                    <div>
+                        <img src="../media/133866211092483860.jpg" alt="Empleado" class="employeePicture">
+                    </div>
+                    <div class="photoButtons">
+                        <input type="file" id="fotoEmpleado" accept="image/*" style="display: none">
+                        <button type="button" id="btnAgregarFoto" class="btn btn-primary">Agregar foto</button>
+                        <button type="button" class="btnDeletePhoto">Eliminar foto</button>
+                    </div>
+                </div>
+
+                <!-- Columna derecha: Formulario -->
+                <div class="inputGrid">
+                    <div class="containerInputAddEmployee">
+                        <label for="txtAddEmployeeName">Nombres</label>
+                        <input type="text" id="txtAddEmployeeName">
+                    </div>
+                    <div class="containerInputAddEmployee">
+                        <label for="txtAddEmployeeLastName">Apellidos</label>
+                        <input type="text" id="txtAddEmployeeLastName">
+                    </div>
+                    <div class="containerInputAddEmployee">
+                        <label for="txtAddEmployeeDocument">Documento</label>
+                        <input type="text" id="txtAddEmployeeDocument" placeholder="12345678-9">
+                    </div>
+                    <div class="containerInputAddEmployee">
+                        <label for="dtAddEmployeeBirthDate">Fecha de nacimiento</label>
+                        <input type="date" id="dtAddEmployeeBirthDate">
+                    </div>
+                    <div class="containerInputAddEmployee">
+                        <label for="cmbAddEmployeeGender">Género</label>
+                        <select id="cmbAddEmployeeGender">
+                            <option>Hombre</option>
+                            <option>Mujer</option>
+                        </select>
+                    </div>
+                    <div class="containerInputAddEmployee">
+                        <label for="txtAddEmployeeISSS">N° de Afiliación ISSS</label>
+                        <input type="text" id="txtAddEmployeeISSS" placeholder="123456789">
+                    </div>
+                    <div class="containerInputAddEmployee">
+                        <label for="txtAddEmployeeEmail">Correo Electrónico</label>
+                        <input type="email" id="txtAddEmployeeEmail" placeholder="direccion@correo.com">
+                    </div>
+                    <div class="containerInputAddEmployee">
+                        <label for="txtAddEmployeePhone">Teléfono</label>
+                        <input type="text" id="txtAddEmployeePhone" placeholder="7099-4377">
+                    </div>
+                    <div class="containerInputAddEmployee fullWidth">
+                        <label for="txtAddEmployeeAddress">Domicilio</label>
+                        <input type="text" id="txtAddEmployeeAddress" placeholder="Avenida de las Rosas No. 1234, Edificio Torre Central, Col. Bella Vista, San Salvador, El Salvador">
+                    </div>
+                    <div class="containerInputAddEmployee">
+                        <label for="txtAddEmployeeUser">Usuario</label>
+                        <input type="text" id="txtAddEmployeeUser">
+                    </div>
+                    <div class="containerInputAddEmployee">
+                        <label for="cmbAddEmployeeAccess">Nivel de acceso</label>
+                        <select id="cmbAddEmployeeAccess">
+                            <option>Gerente</option>
+                            <option>Empleado</option>
+                        </select>
+                    </div>
+                    <div class="containerInputAddEmployee">
+                        <label for="cmbAddEmployeePosition">Cargo</label>
+                        <select id="cmbAddEmployeePosition">
+                            <option>Administrador</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                    <input type="submit" class="btn-primary" style="align-self:last baseline; padding: 15px 40px;" value="Enviar">
+                </div>
+            </div>
+        </form>
+    </div>
+
     <main>
         <!--Clase contenedor para la seccion-->
         <div class="contenedor-seccion">
@@ -30,33 +115,28 @@
                             </div>
                             <div class="icons">
                                 <div class="notifications">
-                                    <img src="../media/Vector (1).svg" alt="Notificaciones"/>
+                                    <img src="../media/Vector (1).svg" alt="Notificaciones" />
                                 </div>
                                 <div class="profile">
-                                    <img src="../media/133866211092483860.jpg" alt="Perfil" class="profilePicture"/>
+                                    <img src="../media/133866211092483860.jpg" alt="Perfil" class="profilePicture" />
                                 </div>
                             </div>
                         </div>
-                       
+
 
                         <!--botones de header-->
                         <div class="headerContentButtons">
-                            <div class="top-bar">
-                                <!--Creación del boton para busqueda del empleado-->
-                                <div class="searchContainer" style="flex-grow: 1;">
-                                    <input type="text" id="txtSearch" placeholder="Buscar empleado..." />
-                                    <button id="btnFilter">
-                                        <img src="../media/filtrar.svg" title="Filtrar">
-                                    </button>
-                                    <!--Al dar click al boton se ejecuta la funcion searchEmployee creada en el archivo js, quitar el evento onclick y ponerlo como id-->
-                                    <button class="btn-primary" onclick="searchEmployee()" style="flex: 2;">Buscar</button> 
-                                </div>
-                                <div>
-                                    <!--Al momento de dar click se ejecuta la función addEmployee creada en el archivo js-->
-                                    <button class="btn-primary" onclick="addEmployee()" style="height: 3.5em; width: 14em">Registrar empleado</button>
-                                
-                                </div>
-                            </div>
+                            <!--Creación del boton para busqueda del empleado-->
+                            <div class="searchContainer">
+                                <input type="text" id="txtSearch" placeholder="Buscar empleado..." />
+                                <button id="btnFilter">
+                                    <img src="../media/filtrar.svg" title="Filtrar">
+                                </button>
+                                <!--Al dar click al boton se ejecuta la funcion searchEmployee creada en el archivo js, quitar el evento onclick y ponerlo como id-->
+                            <button id="searchEmployee" class="btn-primary" style="flex: 2;">Buscar</button>                             </div>
+                            <!--Al momento de dar click se ejecuta la función addEmployee creada en el archivo js-->
+                            <button class="btn-primary" id="addEmployee" style="height: 3.5em; width: 12em">Registrar
+                                Empleado</button>
                         </div>
 
                     </div>
@@ -67,7 +147,7 @@
                             <!--Clase contenedor para la tabla-->
                             <div class="table-container">
                                 <!--Creación de la tabla-->
-                                <table>
+                                <table id="tablaEmpleados" class="table">
                                     <thead>
                                         <tr>
                                             <!--Componentes que contiene la tabla-->
@@ -85,12 +165,10 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </main>
-
     <script src="../js/employee.js"></script>
     <script src="../js/sidebar.js"></script>
 </body>
