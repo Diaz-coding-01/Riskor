@@ -206,7 +206,7 @@ section{
 }
 
 .button-login:hover {
-  transform: translateY(-3px);          
+  transform: translateY(-1px);          
   box-shadow: 2px 2px 5px 0 rgba(131, 149, 223 , 0.5);
 }
 
@@ -232,7 +232,7 @@ section{
 }
 
 .button-google:hover {
-  transform: translateY(-3px);          
+  transform: translateY(-1px);          
   box-shadow: 2px 2px 5px 0 rgba(131, 149, 223 , 0.5);
 }
 
