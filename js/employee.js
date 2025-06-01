@@ -27,6 +27,24 @@ const employees = [ /*Variable que registra los empleados*/
     correo: 'v.maria@correo.com',
     cargo: 'Contador',
   },
+  {
+    dui: '12345678-9',
+    nombre: 'José Maximiliano Fernández',
+    correo: 'jose@correo.com',
+    cargo: 'Gerente',
+  },
+  {
+    dui: '12345678-8',
+    nombre: 'Fernando Ignacio Mendoza',
+    correo: 'fer.m@correo.com',
+    cargo: 'Contador',
+  },
+  {
+    dui: '12345678-7',
+    nombre: 'Isidora Valentina María Morales',
+    correo: 'v.maria@correo.com',
+    cargo: 'Contador',
+  },
 ];
 /*Datos cargados de la tabla*/
 function refreshTable() {

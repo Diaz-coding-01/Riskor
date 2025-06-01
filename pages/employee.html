@@ -18,7 +18,7 @@
             </button>
             <h2 id="FullName">Empleado</h2>
             <div class="formGrid">
-                <!-- Columna izquierda: Avatar -->
+                <!-- Columna izquierda: Foto -->
                 <div class="photoSection">
                     <div>
                         <img src="../media/133866211092483860.jpg" alt="Empleado" class="employeePicture">
@@ -69,7 +69,8 @@
                     </div>
                     <div class="containerInputAddEmployee fullWidth">
                         <label for="txtAddEmployeeAddress">Domicilio</label>
-                        <input type="text" id="txtAddEmployeeAddress" placeholder="Avenida de las Rosas No. 1234, Edificio Torre Central, Col. Bella Vista, San Salvador, El Salvador">
+                        <input type="text" id="txtAddEmployeeAddress"
+                            placeholder="Avenida de las Rosas No. 1234, Edificio Torre Central, Col. Bella Vista, San Salvador, El Salvador">
                     </div>
                     <div class="containerInputAddEmployee">
                         <label for="txtAddEmployeeUser">Usuario</label>
@@ -89,9 +90,10 @@
                             <option>Otro</option>
                         </select>
                     </div>
-                    <input type="submit" class="btn-primary" style="align-self:last baseline; padding: 15px 40px;" value="Enviar">
                 </div>
             </div>
+            <input type="submit" class="btn-primary" style="align-self:last baseline; padding: 15px 40px;"
+                value="Guardar">
         </form>
     </div>
 
@@ -133,37 +135,32 @@
                                     <img src="../media/filtrar.svg" title="Filtrar">
                                 </button>
                                 <!--Al dar click al boton se ejecuta la funcion searchEmployee creada en el archivo js, quitar el evento onclick y ponerlo como id-->
-                            <button id="searchEmployee" class="btn-primary" style="flex: 2;">Buscar</button>                             </div>
+                                <button id="searchEmployee" class="btn-primary" style="flex: 2;">Buscar</button>
+                            </div>
                             <!--Al momento de dar click se ejecuta la función addEmployee creada en el archivo js-->
                             <button class="btn-primary" id="addEmployee" style="height: 3.5em; width: 12em">Registrar
                                 Empleado</button>
                         </div>
 
                     </div>
-                    <!--Clase contenedor para la carta-->
-                    <div class="cardContainer">
-                        <!--Clase contenedor del panel-->
-                        <div class="pnlContainer">
-                            <!--Clase contenedor para la tabla-->
-                            <div class="table-container">
-                                <!--Creación de la tabla-->
-                                <table id="tablaEmpleados" class="table">
-                                    <thead>
-                                        <tr>
-                                            <!--Componentes que contiene la tabla-->
-                                            <th>DUI</th>
-                                            <th>Nombre completo</th>
-                                            <th>Correo electrónico</th>
-                                            <th>Cargo</th>
-                                            <th>Acciones</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="employeeTableBody">
-                                        <!-- Datos mostrados en el archivo js -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                    <!--Clase contenedor para la tabla-->
+                    <div class="table-container">
+                        <!--Creación de la tabla-->
+                        <table>
+                            <thead>
+                                <tr>
+                                    <!--Componentes que contiene la tabla-->
+                                    <th>DUI</th>
+                                    <th>Nombre completo</th>
+                                    <th>Correo electrónico</th>
+                                    <th>Cargo</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="employeeTableBody">
+                                <!-- Datos mostrados en el archivo js -->
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>

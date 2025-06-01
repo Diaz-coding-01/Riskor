@@ -1,17 +1,20 @@
 @import url('globalStyles.css'); /*Se importa el estilo principal del sitio web*/
 
 body {
-  color: #4a4a4a;
+  color: #81859E;
   font-size: 14px;
 }
+
 h2{
   text-decoration: none;                                      
     color: var(--color-breadcrumb);       
 }
+
 .topHeader{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1%;
 }
 
 .profilePicture{
@@ -47,22 +50,24 @@ h2{
 }
 
 .table-container {
-  background-color: white;            /* Fondo blanco para la tabla */
-  border-radius: 10px;                  /* Bordes redondeados */
-  box-shadow: 0px 0px 10px #dcdcdc;   /* Sombra suave para efecto de tarjeta */
-  overflow-x: auto;                     /* Permite desplazamiento horizontal si es necesario */
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px 0px rgba(49, 58, 141, 0.25);
+  overflow-x: auto;
+  width: 90%;
+  max-width: 100%;
+  margin: 0 auto; /* Centrado */
 }
 
 table {
-  width: 100%;                /* Ocupa todo el ancho del contenedor */
-  border-collapse: collapse;  /* Elimina espacios entre celdas*/
+  width: 100%;
+  min-width: 150px; 
+  border-collapse: collapse;
 }
 
 thead {
-  background-color: #f0f4ff;  /* Color de fondo para encabezado de tabla*/
   font-weight: bold;
-  border-bottom: 2px solid #dcdcdc;
-  color: #4a4a4a;
+  border-bottom: 2px solid #94ACDA;
 }
 
 td {
@@ -86,7 +91,8 @@ td:last-child {
 
 td img {
   cursor: pointer;            /* Muestra el puntero de clic */
-  width: 20px;                /* Tamaño reducido para íconos de acción */
+  width: 1em;                /* Tamaño reducido para íconos de acción */
+  margin-left: 0.3em;
 }
 
 tr:hover {
