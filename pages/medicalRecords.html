@@ -10,43 +10,56 @@
 </head>
 
 <body>
-    <div class="containerModalOpen containerModalClose">
+    <div class="containerModalAdd containerModalClose">
         <form class="modalAdd closeAdd" id="addRecord">
-            <button id="btnClose" type="button">
-                <img src="../media/closeIcon.svg" alt="cerrarModal">
-            </button>
+            <button id="btnCloseAdd" type="button">
+                    <img src="../media/closeIcon.svg" alt="cerrarModal">
+                </button>
             <div>
-                <img src="../media/133866211092483860.jpg" alt="EmployeePicture" class="employeePicture">
+                <img src="../media/133866211092483860.jpg" alt="EmployeePicture" class="employeePicture" style="margin-bottom: 15px;">
             </div>
-            <div class="mediumFields">
-                <div class="formField">
-                    <label for="txtEmployee">Empleado</label>
-                    <input type="text" name="" id="txtEmployee">
+            <div class="leftForm">
+                <div class="firstRow">
+                    <div class="formField">
+                        <label for="txtEmployee">Empleado</label>
+                        <input type="text" name="" id="txtEmployee" class="txtTextboxBig">
+                    </div>
+                    <div class="formField">
+                        <label for="txtEmployeeDocument">DUI del empleado</label>
+                        <input type="number" name="" id="txtEmployeeDocument" class="txtTextbox">
+                    </div>
+                </div>
+
+                <div class="secRow">
+                    <div class="formField">
+                        <label for="txtEmergencyContact">Persona de contacto</label>
+                        <input type="text" name="" id="txtEmergencyContact" class="txtTextboxBig">
+                    </div>
+                    <div class="formField">
+                        <label for="txtEmergencyContact">Número de contacto</label>
+                        <input type="number" name="" id="txtEmergencyNumber" class="txtTextbox">
+                    </div>
+                </div>
+
+                <div class="thirdRow">
+                    <div class="formField">
+                        <label for="txtAllergies">Alergias</label>
+                        <input type="text" name="" id="txtAllergies" class="txtTextboxBig">
+                    </div>
+                    <div class="formField">
+                        <label for="combobox">Sangre</label>
+                        <select name="" id="combobox"></select class="txtTextbox">
+                    </div>
                 </div>
                 <div class="formField">
-                    <label for="txtEmergencyContact">Persona de contacto</label>
-                    <input type="text" name="" id="txtEmergencyContact">
+                    <label for="txtSpecialNeeds">Necesidades especiales</label> 
+                    <textarea type="text" name="" id="txtSpecialNeeds" class="txtTextbox" style="width: auto; resize: none;"> </textarea>
                 </div>
-                <div class="formField">
-                    <label for="txtAllergies">Alergias</label>
-                    <input type="text" name="" id="txtAllergies">
+                <div class="btnContainer">
+                    <input type="submit" class="btn-primary" style="border-radius: 5px; width: 10em; height: 3em; box-shadow: none;" class="txtTextbox">
                 </div>
             </div>
-            <div class="shortFields">
-                <div class="formField">
-                    <label for="txtEmployeeDocument">DUI del empleado</label>
-                    <input type="number" name="" id="txtEmployeeDocument">
-                </div>
-                <div class="formField">
-                    <label for="txtEmergencyContact">Número de contacto</label>
-                    <input type="number" name="" id="txtEmergencyContact">
-                </div>
-                <div class="formField">
-                    <label for="cmbBloodType">Sangre</label>
-                    <select name="" id="cmbBloodType"></select>
-                </div>
-            </div>
-            <input type="submit" class="btn-primary" style="align-self: end; padding: 15px 40px;">
+
         </form>
     </div> 
 

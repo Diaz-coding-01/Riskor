@@ -47,6 +47,84 @@
 
 /*Modal*/
 
-.modalAdd{
-    flex-direction: row; /*Al ser 3 elementos se pasan a fila para no estar en columna*/
+.containerModalAdd{
+    z-index: 30;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: #8585AC88;
 }
+
+.modalAdd{
+    position: relative;
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    /*flex-direction: row; /*Al ser 3 elementos se pasan a fila para no estar en columna*/
+    width: clamp(400px, 90%, 1080px);
+    
+}
+
+.formField{
+    margin-left: 15px;
+}
+
+.firstRow{
+    display: flex;
+}
+
+.secRow{
+    display: flex;
+}
+
+.thirdRow{
+    display: flex;
+}
+
+.btnContainer{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.txtTextbox{
+  border-radius: 5px;
+  border: 1px solid #7B96C7;
+  width: 100%;
+  padding: 7px;
+  font-size: var(--font-size-base);
+  color: var(--color-txt);
+  font-weight: var(--font-weight-Regular);
+}
+
+.txtTextbox:focus{
+  border: 2px solid #7B96C7;
+  padding: 7px;
+}
+
+.txtTextboxBig{
+  border-radius: 5px;
+  border: 1px solid #7B96C7;
+  width: 400px;
+  padding: 7px;
+  font-size: var(--font-size-base);
+  color: var(--color-txt);
+  font-weight: var(--font-weight-Regular);
+}
+
+.txtTextboxBig:focus{
+  border: 2px solid #7B96C7;
+  padding: 7px;
+}
+
+select{
+    border-radius: 5px;
+    border: 1px solid #7B96C7;
+    padding: 7px;
+    width: 250px;
+    font-size: var(--font-size-base);
+    color: var(--color-txt);
+    font-weight: var(--font-weight-Regular);
+}
+

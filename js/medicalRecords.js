@@ -76,24 +76,33 @@ function loadRecords(records){
     document.getElementById("recordEmployeContainer").innerHTML = container;
 }
 
-
 loadRecords(registros);
 
+let loadModal = document.getElementById('loadModal');               // Botón que abre el modal
+let btnClose = document.getElementById('btnCloseAdd');                 // Botón dentro del modal que lo cierra
+let modal = document.querySelector('.containerModalAdd');           // Div del modal
+let formAdd = document.getElementById('addRecord');                 // Formulario dentro del modal
 
-let BtnOpenModal = document.getElementById('loadModal');
-let formAddRecord = document.getElementById('addRecord');
-let modal = document.querySelector('containerModalOpen');
-
-BtnOpenModal.addEventListener('click', () => {
+// Abrir modal
+loadModal.addEventListener('click', () => {
     modal.classList.replace('containerModalClose', 'containerModalOpen');
-})
+});
 
-formAddRecord.addEventListener('submit', (e) => {
-    e.preventDefault();
-})
+// Cerrar modal con botón de cerrar
+btnClose.addEventListener('click', () => {
+    modal.classList.replace('containerModalOpen', 'containerModalClose');
+});
 
+// Cerrar al hacer clic fuera del formulario
 document.addEventListener('click', (e) => {
     if (e.target === modal) {
         modal.classList.replace('containerModalOpen', 'containerModalClose');
     }
-})
+});
+
+// Cancelar envío por defecto (opcional)
+formAdd.addEventListener('submit', (e) => {
+    e.preventDefault();
+    // Aquí puedes agregar la lógica para guardar
+    console.log('Formulario enviado');
+});
