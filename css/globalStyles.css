@@ -38,6 +38,8 @@ body{
     --color-txt: #81859E;                       /*Color de texto simple.                                          Ej. Texto ingresado en formulario*/
     --color-txt-title: #5E6489;                 /*Color de titulos.                                               Ej. Títulos de tablas, título de pregunta de formulario, etc.*/
     
+    --border-radius: 12px;                        /*Permite cambiar el borde a los elementos más fácil*/
+
     --font-size-base: 1.1em;                      /*Tamaño de letra estándar.                                       Ej. Mostrar información, forms, etc.*/
     --font-size-title: 2.2em;                     /*Tamaño de los títulos.                                          Ej. Breadcrumb*/
     --font-weight-Semibold: 600;
@@ -208,7 +210,7 @@ body{
 .btn-primary{
   background: var(--color-btn-primary);                       /*Gradiente del fondo del btn*/
   border: 0px;                                                /*Quitamos el borde del botón (El primario no lo necesita)*/
-  border-radius: 12px;                                        /*Redondeo de esquinas de 12px*/
+  border-radius: var(--border-radius);                                        /*Redondeo de esquinas de 12px*/
   box-shadow: var(--shadow-btn-primary);                      /*Sombra del btn reutilizada con las var globales*/
   color: var(--color-btn-text);                               /*Color del texto del btn*/
   font-weight: var(--font-weight-Medium);                                           /*Peso de la letra*/

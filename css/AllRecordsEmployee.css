@@ -1,0 +1,70 @@
+@import url('globalStyles.css');
+
+.table-container {
+  background-color: white;
+  box-shadow: 0px 4px 8px 0px rgba(49, 58, 141, 0.25);
+  overflow-x: auto;
+  width: 90%;
+  max-width: 100%;
+  border: 1px solid var(--color-txt);
+  margin: 0 auto; /* Centrado */
+}
+
+table {
+  width: 100%;
+  min-width: 150px; 
+  border-collapse: collapse;
+  font-size: var(--font-size-base);
+  color: var(--color-txt-title);
+  border-radius: 5px;
+}
+
+thead {
+  font-weight: var(--font-weight-Semibold);
+  color: var(--color-txt-title);
+  border-bottom: 2px solid #94ACDA;
+}
+
+td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px; 
+}
+
+th, td {
+  text-align: left;           /* Alineación a la izquierda para celdas*/
+  padding: 1.2em;               /* Espaciado interno uniforme */
+}
+
+td:last-child {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.8em;
+}
+
+td img {
+  cursor: pointer;            /* Muestra el puntero de clic */
+  width: 1em;                /* Tamaño reducido para íconos de acción */
+  margin-left: 0.3em;
+}
+
+tr:hover {
+  background-color: #f9f9f9;  /* Cambio de fondo al pasar el ratón por encima */
+}
+
+.bottomButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 100%;
+}
+
+.btn-primary{
+    height: 3em;
+    width: 15em;
+    margin-top: 0.5em;
+    --border-radius: 5px;
+}

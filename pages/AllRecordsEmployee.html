@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Expedientes</title>
+    <link rel="stylesheet" href="../css/AllRecordsEmployee.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+</head>
+<body>
+    <main>
+        <div class="contenedor-seccion">
+            <div class="contenedor-sidebar">
+                <nav id="sidebar"></nav>
+            </div>
+            <div class="contenedor-cuerpo">
+                <div class="content">
+
+                    <div class="headerContent">
+                        <!--Clase breadcrumb-->
+                        <div class="topHeader">
+                            <div class="breadcrumb">
+                                <a href="medicalRecords.html">Expedientes médicos </a><a href="AllRecordsEmployee.html">nombreEmpleado</a>
+                            </div>
+                            <div class="icons">
+                                <div class="notifications">
+                                    <img src="../media/Vector (1).svg" alt="Notificaciones" />
+                                </div>
+                                <div class="profile">
+                                    <img src="../media/133866211092483860.jpg" alt="Perfil" class="profilePicture" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Clase contenedor para la tabla-->
+                    <div class="table-container">
+                        <!--Creación de la tabla-->
+                        <table>
+                            <thead>
+                                <tr>
+                                    <!--Componentes que contiene la tabla-->
+                                    <th>Inicio del tratamiento</th>
+                                    <th>Fin del tratamiento</th>
+                                    <th>Empleado</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recordEmployeeTableBody">
+                                <!-- Datos mostrados en el archivo js -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bottomButtons">
+                        <button type="button" class="btn-primary">Registro médico</button>
+                        <button type="button" class="btn-primary">Crear</button>
+                    </div>
+                </div>
+            </div>
+        </div>                
+    </main>
+    <script src="../js/AllRecordsEmployee.js"></script>
+    <script src="../js/sidebar.js"></script>
+</body>
+</html>
