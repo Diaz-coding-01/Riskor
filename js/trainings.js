@@ -1,16 +1,29 @@
 'use strict';
 
 let btnOpenAddTraining = document.getElementById('btnOpenAddTraining');
-let btnCloseAddTraining = document.getElementById('btnCloseAddTraining');
+let btnCloseModal = document.querySelectorAll('.btnCloseModal');
 let formAddTraining = document.getElementById('formAddTraining');
-let modal = document.querySelector('.containerModalAddTraining');
+let modalAddTraining = document.querySelector('.containerModalAddTraining');
+let modalTraining = document.querySelector('.containerModalTraining');
+let trainings = document.querySelectorAll('.informationPnl');
+
+btnCloseModal.forEach(btn => {
+    btn.addEventListener('click', () => {
+        let modalClass = btn.dataset.modal;
+        let modal = document.querySelector(`.${modalClass}`);
+        if (!modal) return;
+        modal.classList.replace('showModal', 'hideModal');
+    });
+});
+
+trainings.forEach(training => {
+    training.addEventListener('click', () => {
+        modalTraining.classList.replace('hideModal', 'showModal');
+    });
+});
 
 btnOpenAddTraining.addEventListener('click', () => {
-    modal.classList.replace('containerModalAddTrainingClose', 'containerModalAddTrainingOpen');
-})
-
-btnCloseAddTraining.addEventListener('click', () => {
-    modal.classList.replace('containerModalAddTrainingOpen', 'containerModalAddTrainingClose');
+    modalAddTraining.classList.replace('hideModal', 'showModal');
 })
 
 formAddTraining.addEventListener('submit', (e) => {
@@ -18,7 +31,13 @@ formAddTraining.addEventListener('submit', (e) => {
 })
 
 document.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        modal.classList.replace('containerModalAddTrainingOpen', 'containerModalAddTrainingClose');
+    if (e.target === modalAddTraining) {
+        modalAddTraining.classList.replace('showModal', 'hideModal');
+    }
+})
+
+document.addEventListener('click', (e) => {
+    if (e.target === modalTraining) {
+        modalTraining.classList.replace('showModal', 'hideModal');
     }
 })

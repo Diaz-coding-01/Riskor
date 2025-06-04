@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capacitaciones</title>
-    <link rel="stylesheet" href="../css/trainings.css">
     <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/trainings.css">
 </head>
 <body>
-    <div class="containerModalAddTraining containerModalAddTrainingClose">
-        <form class="modalAddTraining closeAddTraining" id="formAddTraining">
-            <button id="btnCloseAddTraining" type="button">
+    <div class="containerModal containerModalAddTraining hideModal">
+        <form class="modalAddTraining" id="formAddTraining">
+            <button class="btnCloseModal" type="button" data-modal="containerModalAddTraining">
                 <img src="../media/closeIcon.svg" alt="">
             </button>
             <div>
@@ -50,6 +50,11 @@
                 </div>
             </div>
             <input type="submit" class="btn-primary" style="align-self: end; padding: 15px 40px;">
+        </form>
+    </div>
+
+                </div>
+            </div>
         </form>
     </div>
 

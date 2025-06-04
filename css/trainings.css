@@ -4,24 +4,6 @@ body{
     --bg-containers: #FEFEFF77;
 }
 
-h1{
-    color: var(--color-breadcrumb);                              
-    font-size: 2.2em;                                           
-    font-weight: 600;     
-}
-
-.searchContainer{
-    display: flex;
-    align-items: stretch;
-    gap: 10px;
-    width: 50%;
-    padding: 20px;
-    box-sizing: border-box;
-    background-color: var(--bg-containers);
-    border-radius: 12px;
-    box-shadow: 2px 2px 4px #0004;
-}
-
 .bodyContent{
     flex: 1;
     background-color: var(--bg-containers);
@@ -31,30 +13,12 @@ h1{
     box-sizing: border-box;
 }
 
-.containerTraining{
+.informationPnl{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 20px;
-    height: 60vh;
-    padding: 20px;
-}
-
-.training{
-    background-color: #FFF;
-    display: flex;
+    border: none;
+    cursor: pointer;
     justify-content: space-between;
-    align-items: center;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 2px 2px 4px #0004;
-    height: 33%;
-    transition: translate .5s ease;
-}
-
-.training:hover{
-    translate: 0 -5px;
+    height: clamp(100px, 33%, 150px); /*Este estilo no esta del todo confirmado*/
 }
 
 .trainingName{
@@ -71,7 +35,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 30%;
+    width: 40%;
 }
 
 .userTraining{
@@ -94,15 +58,6 @@ h1{
 
 /*modales*/
 
-.containerModalAddTraining{
-    z-index: 30;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    width: 100dvw;
-    height: 100dvh;
-    background-color: #8585AC88;
-}
 
 .modalAddTraining{
     display: flex;
@@ -116,7 +71,7 @@ h1{
     width: clamp(400px, 90%, 850px);
 }
 
-#btnCloseAddTraining{
+.btnCloseModal{
     position: absolute;
     cursor: pointer;
     background-color: transparent;
@@ -153,10 +108,73 @@ h1{
     border: solid 1px #7B96C7;
 }
 
-.containerModalAddTrainingOpen{
+.showModal{
     display: flex;
 }
 
-.containerModalAddTrainingClose{
+.hideModal{
     display: none;
+}
+
+/*Modal capacitacion*/
+
+.modalTraining{
+    display: flex;
+    position: relative;
+    border-radius: 12px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+    background-color: #F2F9FE;
+    width: clamp(400px, 90%, 850px);
+}
+
+.headerModalTraining{
+    display: flex;
+    padding: 15px;
+}
+
+.trainer{
+    font-size: 1.2em;
+}
+
+#trainingName{
+    font-size: 1.6em;
+    color: var(--color-txt);
+    font-weight: 600;
+    width: 100%;
+    text-align: start;
+}	
+
+.headerModalTraining > div{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.bodyModalTraining{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 35px;
+    box-sizing: border-box;
+}
+
+.bodyModalTraining > div{
+    display: flex;
+    gap: 15px;
+}
+
+.containerButtonsModalTraining{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}	
+
+.containerButtonsModalTraining button{
+    height: 2.5em;
+    width: 10em;
+    box-shadow: none; 
+    border-radius: 5px;
 }
