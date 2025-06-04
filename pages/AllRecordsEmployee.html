@@ -19,21 +19,18 @@
                     <div class="headerContent">
                         <!--Clase breadcrumb-->
                         <div class="topHeader">
-                            <div class="breadcrumb">
-                                <a href="medicalRecords.html">Expedientes médicos </a><a href="AllRecordsEmployee.html">nombreEmpleado</a>
-                            </div>
-                            <div class="icons">
-                                <div class="notifications">
-                                    <img src="../media/Vector (1).svg" alt="Notificaciones" />
-                                </div>
-                                <div class="profile">
-                                    <img src="../media/133866211092483860.jpg" alt="Perfil" class="profilePicture" />
-                                </div>
-                            </div>
+
+                            <nav class="breadcrumb">
+                                <ul>
+                                    <li><a href="medicalRecords.html">Expedientes médicos ></a></li>
+                                    <li style="margin-left: 0.4em;"><a>Edwin Díaz</a></li>
+                                </ul>
+                            </nav>
+                            
                         </div>
                     </div>
                     <!--Clase contenedor para la tabla-->
-                    <div class="table-container">
+                    <div class="table-container" style="margin-top: 2em;">
                         <!--Creación de la tabla-->
                         <table>
                             <thead>
@@ -52,8 +49,11 @@
                         </table>
                     </div>
                     <div class="bottomButtons">
-                        <button type="button" class="btn-primary">Registro médico</button>
-                        <button type="button" class="btn-primary">Crear</button>
+                        <button type="button" class="btn-primary">Registro médico</button> 
+
+                        <div id="paginacion" class="paginacion-container"></div>
+                        
+                        <a href="recordEmployee.html"><button type="button" class="btn-primary">Crear</button></a>
                     </div>
                 </div>
             </div>

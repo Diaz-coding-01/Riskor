@@ -38,6 +38,7 @@ body{
     --color-txt: #81859E;                       /*Color de texto simple.                                          Ej. Texto ingresado en formulario*/
     --color-txt-title: #5E6489;                 /*Color de titulos.                                               Ej. Títulos de tablas, título de pregunta de formulario, etc.*/
     
+    --content-gap: 20px;                          /*Permite controlar un margen incluido en todas las interfaces*/
     --border-radius: 12px;                        /*Permite cambiar el borde a los elementos más fácil*/
 
     --font-size-base: 1.1em;                      /*Tamaño de letra estándar.                                       Ej. Mostrar información, forms, etc.*/
@@ -66,8 +67,8 @@ body{
     headerContent 
       breadcrumb 
       /breadcrumb 
-      headerContentButtons 
-      /headerContentButtons 
+      headerContentButtons ---Ya no
+      /headerContentButtons --Ya no
     /headerContent 
     cardContainer 
       pnlContainer 
@@ -82,7 +83,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: var(--content-gap);
     padding: 20px;
 }
 
@@ -93,21 +94,45 @@ body{
 }
 
 .breadcrumb{
-    padding: 1rem 0;                                            
+    padding: 1em 0em;
     font-size: var(--font-size-title);                                           
     font-weight: var(--font-weight-Semibold);                                           
 }
 
 .breadcrumb a{
+    font-size: var(--font-size-title);
     text-decoration: none;                                      
     color: var(--color-breadcrumb);                             
+}
+
+h2, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb > h2, ul {
+  display: inline-flex;
+  font-size: initial;
+  list-style: none;
+}
+
+.breadcrumb ul > li a[href] {
+    text-decoration: none;
+    position: relative;
+    color: gray;
+}
+
+.headerContentButtons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 0 1rem 0;
 }
 
 .topHeader{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1%;
 }
 
 .profilePicture{
@@ -128,13 +153,6 @@ body{
 
 .icons img {
   margin-left: 2em; /* Espacio a la izquierda del ícono*/
-}
-
-.headerContentButtons{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5rem 0 1rem 0;
 }
 
 .cardContainer{
@@ -404,4 +422,13 @@ body{
     border-radius: 20%; /*En caso de empleados debe cambiarse el border radius*/
     object-fit: cover;
     border: var(--color-img-border);
+}
+
+#btnNotifications{
+    border: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 15px;
+    background-color: transparent;
+    cursor: pointer;
 }

@@ -1,13 +1,40 @@
 @import url('globalStyles.css');
 
+.content{
+  --content-gap: 10px;
+}
+
+h2, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb > h2, ul {
+  display: inline-flex;
+  font-size: initial;
+  list-style: none;
+}
+
+.breadcrumb ul > li a[href] {
+    text-decoration: none;
+    position: relative;
+    color: gray;
+}
+
+/*
+----------------------------------------------------------------------------
+*/
+
 .table-container {
-  background-color: white;
+  background-color: var(--color-neutral);
   box-shadow: 0px 4px 8px 0px rgba(49, 58, 141, 0.25);
   overflow-x: auto;
   width: 90%;
   max-width: 100%;
   border: 1px solid var(--color-txt);
   margin: 0 auto; /* Centrado */
+  overflow: hidden;
+  min-height: 60vh;
 }
 
 table {
@@ -17,6 +44,7 @@ table {
   font-size: var(--font-size-base);
   color: var(--color-txt-title);
   border-radius: 5px;
+  margin-top: 0.2em;
 }
 
 thead {
@@ -54,6 +82,37 @@ tr:hover {
   background-color: #f9f9f9;  /* Cambio de fondo al pasar el ratón por encima */
 }
 
+/* Distribución personalizada por columnas */
+thead th:nth-child(1),
+tbody td:nth-child(1) {
+  width: 10%;
+}
+
+thead th:nth-child(2),
+tbody td:nth-child(2) {
+  width: 10%;
+}
+
+thead th:nth-child(3),
+tbody td:nth-child(3) {
+  width: 45%;
+}
+
+thead th:nth-child(4),
+tbody td:nth-child(4) {
+  width: 15%;
+}
+
+thead th:nth-child(5),
+tbody td:nth-child(5) {
+  width: 60%;
+}
+
+
+/*
+-------------------------------------------------------------------------------------------
+*/
+
 .bottomButtons{
     display: flex;
     justify-content: space-between;
@@ -65,6 +124,10 @@ tr:hover {
 .btn-primary{
     height: 3em;
     width: 15em;
-    margin-top: 0.5em;
+    margin-top: 1.2em;
     --border-radius: 5px;
+}
+
+a{
+  text-decoration: none;
 }

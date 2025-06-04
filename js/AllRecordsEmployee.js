@@ -6,22 +6,21 @@ const employees = [
   {
     inicioT: '19-08-2025',
     finT: '19-08-2025',
-    empleado: 'Edwin Adrián Díaz',
+    empleado: 'Edwin Díaz',
     estado: 'Activo',
   },
   {
     inicioT: '22-06-2025',
     finT: '22-07-2025',
-    empleado: 'Edwin Adrián Díaz',
+    empleado: 'Edwin Díaz Henríquez Edwin Díaz Henríquez Edwin Díaz Henríquez', //Prueba de longitud de carácteres
     estado: 'Finalizado',
   },
   {
     inicioT: '22-06-2025',
     finT: '22-07-2025',
-    empleado: 'Edwin Adrián Díaz',
+    empleado: 'Edwin Díaz',
     estado: 'Finalizado',
-  },
-  
+  }
 ];
 
 function refreshTable() {
@@ -35,9 +34,9 @@ function refreshTable() {
         <td>${e.empleado}</td>
         <td>${e.estado}</td>
         <td>
-           <img src="../media/famicons_eye-sharp.svg" title="Ver">
-            <img src="../media/ri_edit-fill.svg" title="Editar">
-            <img src="../media/Vector.svg" title="Eliminar">
+           <img src="../media/globalMedia/actions/read-Icon.svg" title="Ver">
+            <img src="../media/globalMedia/actions/update-Icon.svg" title="Editar">
+            <img src="../media/globalMedia/actions/delete-Icon.svg" title="Eliminar">
         </td>
       </tr>
     `;

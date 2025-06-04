@@ -43,7 +43,7 @@ function loadRecords(records){
     `;
     records.forEach(record => {
         container += `
-            <a href="#" id="recordEmployee" class="recordEmployee"> <!--Registro-->
+            <a href="AllRecordsEmployee.html" id="recordEmployee" class="recordEmployee"> <!--Registro-->
                 <div id="Employee" class="informationPnl"> <!--Empleado-->
 
                     <div class="image"> <!--Div dirigido a la imagen del empleado-->
