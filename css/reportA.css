@@ -1,0 +1,40 @@
+@import url('globalStyles.css'); /*Se importa el estilo principal del sitio web*/
+
+.topHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+}
+
+.profilePicture{
+  border-radius: 50%;          
+  --color-img-border: 3px solid #8F90DE;                               
+  border: var(--color-img-border);                            /*Borde característico de la carga de imágenes*/
+  object-fit: cover;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  box-shadow: 2px 2px 8px 2px rgba(151, 167, 231, 0.35);
+}
+
+.searchContainer{
+    padding: 20px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.btn-primary{
+  border-radius: 8px;
+  height: 2.7em; 
+  width: 13em;
+}
+
+.icons {
+  display: flex;                  /* Muestra los íconos en línea horizontal */
+  align-items: center;
+}
+
+.icons img {
+  margin-left: 2em; /* Espacio a la izquierda del ícono*/
+}
