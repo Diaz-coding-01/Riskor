@@ -1,16 +1,30 @@
-@import url('globalStyles.css'); /*Se importa el estilo principal del sitio web*/
+@import url('globalStyles.css');
+/*Se importa el estilo principal del sitio web*/
 
-.topHeader{
+
+body {
+  color: #81859E;
+  font-size: 14px;
+}
+
+
+h2 {
+  text-decoration: none;
+  color: var(--color-breadcrumb);
+}
+
+.topHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1%;
 }
 
-.profilePicture{
-  border-radius: 50%;          
-  --color-img-border: 3px solid #8F90DE;                               
-  border: var(--color-img-border);                            /*Borde característico de la carga de imágenes*/
+.profilePicture {
+  border-radius: 50%;
+  --color-img-border: 3px solid #8F90DE;
+  border: var(--color-img-border);
+  /*Borde característico de la carga de imágenes*/
   object-fit: cover;
   cursor: pointer;
   height: 60px;
@@ -18,23 +32,148 @@
   box-shadow: 2px 2px 8px 2px rgba(151, 167, 231, 0.35);
 }
 
-.searchContainer{
-    padding: 20px;
-    background-color: transparent;
-    box-shadow: none;
+.searchContainer {
+  padding: 20px;
+  background-color: transparent;
+  box-shadow: none;
 }
 
-.btn-primary{
+.btn-primary {
   border-radius: 8px;
-  height: 2.7em; 
+  height: 2.7em;
   width: 13em;
 }
 
 .icons {
-  display: flex;                  /* Muestra los íconos en línea horizontal */
+  display: flex;
+  /* Muestra los íconos en línea horizontal */
   align-items: center;
 }
 
 .icons img {
-  margin-left: 2em; /* Espacio a la izquierda del ícono*/
+  margin-left: 2em;
+  /* Espacio a la izquierda del ícono*/
+}
+
+
+/*Modal, evidencia, partes del cuerpo*/
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.form-section {
+  margin-bottom: 40px;
+}
+
+.left-panel {
+  padding: 40px;
+}
+
+
+.left-panel,
+.right-panel {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 48%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.left-panel input,
+.left-panel textarea,
+.left-panel select {
+  width: 95%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.evidence-section {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+
+.right-panel h3 {
+  margin-bottom: 20px;
+}
+
+.body-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.body-selector img {
+  width: 160px;
+  height: auto;
+}
+
+.nav-btn {
+  font-size: 20px;
+  border: none;
+  background-color: #eee;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.submit-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.closeAddAccidente {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.drop-zone {
+  border: 2px dashed #ccc;
+  padding: 40px;
+  border-radius: 10px;
+  cursor: pointer;
 }

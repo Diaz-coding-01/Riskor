@@ -10,6 +10,19 @@
 </head>
 
 <body>
+    <!-- Modal -->
+    <div id="modalEvidencias" class="modal">
+        <div class="modal-content">
+            <span class="closeAddAccidente">&times;</span>
+            <h3>Evidencias</h3>
+            <div class="drop-zone" id="dropZone">
+                <input type="file" id="fileInput" hidden />
+                <div class="upload-icon"></div>
+                <button id="examinarBtn" class="btn-primary">Examinar</button>
+                <p>o arrastra archivos aquí</p>
+            </div>
+        </div>
+    </div>
     <main>
         <!--Clase contenedor para la seccion-->
         <div class="contenedor-seccion">
@@ -38,8 +51,51 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="container">
+                            <!-- Columna Izquierda -->
+                            <div class="left-panel">
+
+                                <div class="form-section">
+                                <label>Víctima</label>
+                                <input type="text" id="txtVictimName">
+
+                                <label>Descripción</label>
+                                <textarea rows="4"></textarea>
+
+                                <label>Fecha del acontecimiento</label>
+                                <input type="date" id="dtAddAccidentDate">
+
+                                <label for="cmbAddlocation">Ubicación</label>
+                                <select id="cmbAddlocation">
+                                    <option value="zona1">Zona 1</option>
+                                    <option value="zona2">Zona 2</option>
+                                </select>
+                                </div>
+
+                                <div class="evidence-section">
+                                    <h3>Evidencias</h3>
+                                    <button id="btnAgregar" class="btn-primary">Agregar</button>
+                                </div>
+                            </div>
+
+                            <!-- Columna Derecha -->
+                            <div class="right-panel">
+                                <h3>Selecciona las partes afectadas</h3>
+                                <div class="body-selector">
+                                    <button class="nav-btn">&lt;</button>
+                                    <button class="nav-btn">&gt;</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="submit-container">
+                            <button class="btn-primary">Enviar</button>
+                        </div>
+
     </main>
     <script src="../js/sidebar.js"></script>
+    <script src="../js/reportA.js"></script>
 </body>
 
 </html>
