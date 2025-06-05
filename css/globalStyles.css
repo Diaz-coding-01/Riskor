@@ -291,14 +291,14 @@ h2, ul, li {
   Botón filtro - Filtrar datos mostrados dentro de una interfaz
 */
 
-#btnFilter{
+.btnFilter{
     background-color: transparent;
     border: none;
     transition: var(--transition-base);
 }
 
 
-#btnFilter:hover {
+.btnFilter:hover {
   transform: translateY(-2px);
   cursor: pointer;
 }
