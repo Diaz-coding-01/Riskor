@@ -28,6 +28,7 @@ body{
 :root{
     --color-bg-int: #f2f7ff;                    /*Color del fondo de cada interfaz*/
     --color-bg-tb: rgba(254, 254, 255, 0.9);    /*Color del fondo de las tablas.                                  Ej. Empleados, Mantenimientos, etc.*/
+    --color-search: #FEFEFF77;
     --color-btn-primary: linear-gradient(134deg,rgba(120, 132, 237, 1) 0%, rgba(97, 111, 239, 1) 100%);         /*Color de la mayoria de botones*/
     --color-btn-text: #F2F9FE;                  /*Color del texto de los botones.                                 Ej. Todos los botones principales*/
     --color-breadcrumb: #7884ED;                /*Color del breadcrumb y color de botones fantasma.               Ej. "Detalles", "Editar", etc.*/
@@ -37,6 +38,9 @@ body{
     --color-txt: #81859E;                       /*Color de texto simple.                                          Ej. Texto ingresado en formulario*/
     --color-txt-title: #5E6489;                 /*Color de titulos.                                               Ej. Títulos de tablas, título de pregunta de formulario, etc.*/
     
+    --content-gap: 20px;                          /*Permite controlar un margen incluido en todas las interfaces*/
+    --border-radius: 12px;                        /*Permite cambiar el borde a los elementos más fácil*/
+
     --font-size-base: 1.1em;                      /*Tamaño de letra estándar.                                       Ej. Mostrar información, forms, etc.*/
     --font-size-title: 2.2em;                     /*Tamaño de los títulos.                                          Ej. Breadcrumb*/
     --font-weight-Semibold: 600;
@@ -46,6 +50,7 @@ body{
     --shadow-btn-primary: 0px 0px 15px 1px rgba(120, 132, 237, 0.65);   /*Sombra de los botones principales.      Ej. "Agregar", "Enviar", etc.*/
     --shadow-btn-secondary: 0px 0px 5px 1px rgba(120, 132, 237, 0.45);  /*Sombra de los botones secundarios.      Ej. "Evidencias", "Buscar", etc.*/
     --shadow-hover: 0 5px 10px rgba(133, 155, 208, 0.3);
+    --shadow-modal: 2px 2px 4px 0px rgba(133, 155, 208, 0.25);
     --shadow-pnl: 2px 2px 4px 0px rgba(133, 155, 208, 0.25);            /*Sombra de los paneles dentro de un contenedor.    Ej. Registros médicos, Permisos área de la empresa, etc.*/
     --shadow-pnl-container: 5px 5px 4px 0px rgba(140, 158, 200, 0.35);  /*Sombra del contenedor que muestra los paneles.    Ej. Capacitaciones, Permisos, Regulaciones, etc.*/
     --shadow-search-container: 4px 4px 3px 0px rgba(140, 158, 200, 0.25); /*Sombra de contenedor de búsqueda                Ej. Regulaciones, Áreas, etc.*/
@@ -78,7 +83,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: var(--content-gap);
     padding: 20px;
 }
 
@@ -89,14 +94,32 @@ body{
 }
 
 .breadcrumb{
-    padding: 1rem 0;                                            
+    padding: 1em 0em;
     font-size: var(--font-size-title);                                           
-    font-weight: 600;                                           
+    font-weight: var(--font-weight-Semibold);                                           
 }
 
 .breadcrumb a{
+    font-size: var(--font-size-title);
     text-decoration: none;                                      
     color: var(--color-breadcrumb);                             
+}
+
+h2, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb > h2, ul {
+  display: inline-flex;
+  font-size: initial;
+  list-style: none;
+}
+
+.breadcrumb ul > li a[href] {
+    text-decoration: none;
+    position: relative;
+    color: gray;
 }
 
 .headerContentButtons{
@@ -106,7 +129,34 @@ body{
     padding: 5rem 0 1rem 0;
 }
 
+.topHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profilePicture{
+  border-radius: 50%;          
+  --color-img-border: 3px solid #8F90DE;                               
+  border: var(--color-img-border);                            /*Borde característico de la carga de imágenes*/
+  object-fit: cover;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  box-shadow: 2px 2px 8px 2px rgba(151, 167, 231, 0.35);
+}
+
+.icons {
+  display: flex;                  /* Muestra los íconos en línea horizontal */
+  align-items: center;
+}
+
+.icons img {
+  margin-left: 2em; /* Espacio a la izquierda del ícono*/
+}
+
 .cardContainer{
+    position: relative;
     display: flex;                                              
     align-items: center;                                        /*Centrar el div*/
     width: var(--width-container);                              /*El contenedor de paneles usará el 90% del espacio que se le asigne*/
@@ -119,7 +169,7 @@ body{
     --color-bg-tb: rgba(254, 254, 255, 0.35);                 /*Se modifica la variable global solamente cambiando la transparencia*/  
     background-color: var(--color-bg-tb);                       /*Color del contenedor (Neutro y semi-transparente)*/
     box-shadow: var(--shadow-pnl-container);                    
-    height: 60vh;                                               /*Altura del contenedor*/
+    height: 55vh;                                               /*Altura del contenedor*/
     overflow: auto;                                             /*Crear scroll dentro de panel*/
     scrollbar-width: none;                                      /*Ocultar scrollbar interna del contenedor: Firefox */
     -ms-overflow-style: none;                                   /*Ocultar scrollbar interna del contenedor: Explorer */
@@ -128,6 +178,27 @@ body{
 .pnlContainer::-webkit-scrollbar {
     display: none;                                              /*Ocultar scrollbar interna del contenedor:  Chrome, Safari y Edge */
 }
+
+/*Sombra que se muestra para que el usuario sepa que hay varios por ejemplo (Solo aplicable en interfaces con paneles, tablas NO)*/
+
+.bottomShadow{
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  bottom: 0;
+  pointer-events: none;
+  right: 0;
+  left: 0;
+  z-index: 25;     
+  border-radius: 12px;     
+  background: linear-gradient(to top, #F6F7FF, transparent);                       
+}
+
+/*
+  -------------------------------------------------------------------------------------------------------------------------------
+  Componentes reutilizables
+  -------------------------------------------------------------------------------------------------------------------------------
+*/
 
 /*
   Sidebar - Menú de navegación
@@ -149,6 +220,7 @@ body{
   width: 100%; 
 }
 
+
 /*
   Botón primario - Agregar elementos, guardar información, etc
 */
@@ -156,14 +228,15 @@ body{
 .btn-primary{
   background: var(--color-btn-primary);                       /*Gradiente del fondo del btn*/
   border: 0px;                                                /*Quitamos el borde del botón (El primario no lo necesita)*/
-  border-radius: 12px;                                        /*Redondeo de esquinas de 12px*/
+  border-radius: var(--border-radius);                                        /*Redondeo de esquinas de 12px*/
   box-shadow: var(--shadow-btn-primary);                      /*Sombra del btn reutilizada con las var globales*/
   color: var(--color-btn-text);                               /*Color del texto del btn*/
-  font-weight: 500;                                           /*Peso de la letra*/
+  font-weight: var(--font-weight-Medium);                                           /*Peso de la letra*/
   font-size: var(--font-size-base);                                           /*Tamaño de la letra*/
   cursor: pointer;                                            /*El cursor cambiará al estar en el btn*/
   transition: var(--transition-base);
 }
+
 
 .btn-primary:hover{
   --color-btn-primary: #6876f2;
@@ -171,6 +244,7 @@ body{
   transform: translateY(-1px);          
   box-shadow: var(--shadow-btn-primary);
 }
+ 
 
 /*
   Búsqueda - Contenedor 
@@ -183,7 +257,7 @@ body{
     width: 50%;
     padding: 20px;                                              /*Al modificar el padding se hace como si no existiera, útil para tablas como Empleados*/
     box-sizing: border-box;
-    background-color: var(--bg-containers);
+    background-color: var(--color-search);
     border-radius: 12px;
     box-shadow: var(--shadow-search-container);
 }
@@ -223,10 +297,12 @@ body{
     transition: var(--transition-base);
 }
 
+
 #btnFilter:hover {
   transform: translateY(-2px);
   cursor: pointer;
 }
+ 
 
 /*
   Paneles comunes - Mostrar información en lugar de una tabla
@@ -248,7 +324,7 @@ body{
 
 .informationPnl:hover {
     transform: translateY(-4px);                                /*Levanta un poco */
-    box-shadow: var(--shadow-hover);          /*Sombra más fuerte */
+    box-shadow: var(--shadow-hover);                            /*Sombra más fuerte */
 }
 
 /*
@@ -269,33 +345,71 @@ body{
     background-color: var(--color-modal-container);
 }
 
+/*
+  Form - Modal
+*/
+
 .modalAdd{
-    display: flex;
     position: relative;
+    display: flex;
     border-radius: 12px;
     padding: 45px 70px;
-    box-sizing: border-box;
-    gap: 15px;
-    flex-direction: column;
+    /*flex-direction lo debe agregar c/u, Sino da problemas*/ 
     background-color: var(--color-btn-text);
+    box-shadow: var(--shadow-modal);
+}
+
+#btnCloseAdd{
+    position: absolute;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin: 20px;
+    right: 0;
+    top: 3px;
 }
 
 .containerModalOpen{
     display: flex;
 }
 
+.containerModalClose {
+    display: none;
+}
 
+/*
+  Contenedor
+*/
 
 .formField{
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
+  margin-bottom: 15px;
 }
+
+/*
+  Títulos de cada input
+*/
 
 .formField label{
   font-weight: var(--font-weight-Medium);
   font-size: var(--font-size-base);
   color: var(--color-txt);
+}
+
+/*
+  Botón X - Cerrar modal
+*/
+
+#btnClose{
+    position: absolute;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin: 20px;
+    right: 0;
+    top: 0;
 }
 
 /*
@@ -305,7 +419,16 @@ body{
 .employeePicture{
     height: 320px;
     width: 320px;
-    border-radius: 25%; /*En caso de empleados debe cambiarse el border radius*/
+    border-radius: 20%; /*En caso de empleados debe cambiarse el border radius*/
     object-fit: cover;
     border: var(--color-img-border);
+}
+
+#btnNotifications{
+    border: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 15px;
+    background-color: transparent;
+    cursor: pointer;
 }

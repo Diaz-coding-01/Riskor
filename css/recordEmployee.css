@@ -11,3 +11,19 @@
     border-radius: 25%;
     object-fit: cover;
 }
+
+
+/*Meter esta clase a globales*/
+.txtTextbox{
+  border-radius: 5px;
+  border: 1px solid #7B96C7;
+  width: 100%;
+  padding: 7px;
+  font-size: var(--font-size-base);
+  color: var(--color-txt);
+  font-weight: var(--font-weight-Regular);
+}
+
+.firstRow, .secRow, .thirdRow{
+    display: flex;
+}
