@@ -13,8 +13,8 @@
     <div class="containerModalAdd containerModalClose">
         <form class="modalAdd closeAdd" id="addRecord">
             <button id="btnCloseAdd" type="button">
-                    <img src="../media/closeIcon.svg" alt="cerrarModal">
-                </button>
+                <img src="../media/closeIcon.svg" alt="cerrarModal">
+            </button>
             <div>
                 <img src="../media/133866211092483860.jpg" alt="EmployeePicture" class="employeePicture" style="margin-bottom: 15px;">
             </div>
@@ -151,9 +151,26 @@
         <div class="content">
             <!--Contenedor que divide la interfaz en 2, (Titulo, crear, busqueda) y (Paneles) -->
             <div class="headerContent">
-                <div class="breadcrumb"> <!--Div que contendrá el breadcrumb-->
-                    <a href="medicalRecords.html">Expedientes médicos</a>
+                <div class="topHeader">
+                    
+                    <nav class="breadcrumb">
+                        <ul>
+                            <li><a>Expedientes médicos</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="icons">
+                        <div class="notifications">
+                            <button id="btnNotifications">
+                                <img src="../media/Vector (1).svg" alt="Notificaciones" />
+                            </button>
+                        </div>
+                        <div class="profile">
+                            <img src="../media/133866211092483860.jpg" alt="Perfil" class="profilePicture" />
+                        </div>
+                    </div>
                 </div>
+
                 <div class="headerContentButtons">
                     <div class="searchContainer">
                         <input type="text" id="txtSearch">

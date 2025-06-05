@@ -71,15 +71,7 @@
     margin-left: 15px;
 }
 
-.firstRow{
-    display: flex;
-}
-
-.secRow{
-    display: flex;
-}
-
-.thirdRow{
+.firstRow, .secRow, .thirdRow{
     display: flex;
 }
 
@@ -127,4 +119,3 @@ select{
     color: var(--color-txt);
     font-weight: var(--font-weight-Regular);
 }
-
