@@ -168,7 +168,7 @@ body{
 .btn-primary:hover{
   --color-btn-primary: #6876f2;
   background: var(--color-btn-primary); 
-  transform: translateY(-3px);          
+  transform: translateY(-1px);          
   box-shadow: var(--shadow-btn-primary);
 }
 
