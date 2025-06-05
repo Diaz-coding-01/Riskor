@@ -1,0 +1,117 @@
+@import url('globalStyles.css');
+
+/* Estilo del contenedor principal */
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Contenido principal */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow: auto;
+}
+
+.cuentas-content{
+    padding-top: 30px;
+}
+
+hr{
+   border-radius: 50px;
+   height: 5px;
+   background-color: #94ACDA;
+   border: none;
+}
+
+/* Contenedor de pestañas */
+.tabs {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4px;
+}
+
+/* Botones de pestañas */
+.tab {
+    padding: 10px 20px;
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--color-txt);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    flex: 1;
+    margin-bottom: 0.5rem;
+    margin-right: 5px;
+}
+
+.tab::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    /* Para que esté justo en el borde inferior */
+    left: 10%;
+    /* Un poco de margen para que no sea tan ancho */
+    right: 10%;
+    height: 5px;
+    /* Más grueso para destacar */
+    background-color: transparent;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.tab.active {
+    color: var(--color-breadcrumb);
+}
+
+.tab.active::after {
+    background-color: var(--color-breadcrumb);
+}
+
+/* Contenido de cada pestaña */
+.tab-content {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Ocultar todos los tab panes */
+.tab-pane {
+    display: none;
+}
+
+/* Mostrar solo el tab pane activo */
+.tab-pane.active {
+    display: block;
+}
+
+.card-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: start;
+}
+
+.card {
+    background-color: var(--color-bg-tb);
+    padding: 4rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 380px;
+    /* Para ocupar todo el espacio asignado por el grid */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
