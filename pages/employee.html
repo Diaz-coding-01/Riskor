@@ -106,18 +106,22 @@
             </div>
             <!--Clase contenedor para el cuerpo-->
             <div class="contenedor-cuerpo">
-                <!--Contenido-->
                 <div class="content">
 
                     <div class="headerContent">
                         <!--Creación de la clase breadcrumb el cual servira para indicar la ruta que ha seguido el usuario para llegar a esa página-->
                         <div class="topHeader">
-                            <div class="breadcrumb">
-                                <a href="employee.html">Empleados</a>
-                            </div>
+                            <nav class="breadcrumb">
+                                <ul>
+                                    <li><a>Empleados</a></li>
+                                </ul>
+                            </nav>
+
                             <div class="icons">
                                 <div class="notifications">
-                                    <img src="../media/Vector (1).svg" alt="Notificaciones" />
+                                    <button id="btnNotifications">
+                                        <img src="../media/Vector (1).svg" alt="Notificaciones" />
+                                    </button>
                                 </div>
                                 <div class="profile">
                                     <img src="../media/133866211092483860.jpg" alt="Perfil" class="profilePicture" />
@@ -131,19 +135,18 @@
                             <!--Creación del boton para busqueda del empleado-->
                             <div class="searchContainer">
                                 <input type="text" id="txtSearch" placeholder="Buscar empleado..." />
-                                <button id="btnFilter">
+                                <button id="btnFilterEmployees" class="btnFilter">
                                     <img src="../media/filtrar.svg" title="Filtrar">
                                 </button>
                                 <!--Al dar click al boton se ejecuta la funcion searchEmployee creada en el archivo js, quitar el evento onclick y ponerlo como id-->
                                 <button id="searchEmployee" class="btn-primary" style="flex: 2;">Buscar</button>
                             </div>
                             <!--Al momento de dar click se ejecuta la función addEmployee creada en el archivo js-->
-                            <button class="btn-primary" id="addEmployee" style="height: 3.5em; width: 12em">Registrar
-                                Empleado</button>
+                            <button class="btn-primary" id="addEmployee">Registrar Empleado</button>
                         </div>
 
                     </div>
-                    <!--Clase contenedor para la tabla-->
+                    
                     <div class="table-container">
                         <!--Creación de la tabla-->
                         <table>

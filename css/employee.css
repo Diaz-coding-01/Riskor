@@ -1,102 +1,15 @@
 @import url('globalStyles.css'); /*Se importa el estilo principal del sitio web*/
 
-body {
-  color: #81859E;
-}
-
-h2{
-  text-decoration: none;                                      
-  color: var(--color-breadcrumb);       
-}
-
-.topHeader{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1%;
-}
-
-.profilePicture{
-  border-radius: 50%;          
-  --color-img-border: 3px solid #8F90DE;                               
-  border: var(--color-img-border);                            /*Borde característico de la carga de imágenes*/
-  object-fit: cover;
-  cursor: pointer;
-  height: 60px;
-  width: 60px;
-  box-shadow: 2px 2px 8px 2px rgba(151, 167, 231, 0.35);
-}
-
 .searchContainer{
-    padding: 20px;
-    background-color: transparent;
-    box-shadow: none;
+    --space-elements: 0;
+    --color-search: transparent;
+    --shadow-search-container: none;
 }
 
 .btn-primary{
-  height: 2.7em; 
-  width: 13em;
-}
-
-.icons {
-  display: flex;                  /* Muestra los íconos en línea horizontal */
-  align-items: center;
-}
-
-.icons img {
-  margin-left: 2em; /* Espacio a la izquierda del ícono*/
-}
-
-.table-container {
-  background-color: white;
-  box-shadow: 0px 4px 8px 0px rgba(49, 58, 141, 0.25);
-  overflow-x: auto;
-  width: 90%;
-  max-width: 100%;
-  margin: 0 auto; /* Centrado */
-}
-
-table {
-  width: 100%;
-  min-width: 150px; 
-  border-collapse: collapse;
-  font-size: var(--font-size-base);
-  border: 1px solid var(--color-txt);
-  border-radius: 5px;
-}
-
-thead {
-  font-weight: bold;
-  border-bottom: 2px solid #94ACDA;
-}
-
-td {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 180px; 
-}
-
-th, td {
-  text-align: left;           /* Alineación a la izquierda para celdas*/
-  padding: 1em;               /* Espaciado interno uniforme */
-}
-
-td:last-child {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 0.8em;
-}
-
-td img {
-  cursor: pointer;            /* Muestra el puntero de clic */
-  width: 1em;                /* Tamaño reducido para íconos de acción */
-  margin-left: 0.3em;
-}
-
-tr:hover {
-  background-color: #f9f9f9;  /* Cambio de fondo al pasar el ratón por encima */
+  --border-radius: 8px;
+  height: 3em; 
+  width: 15em;
 }
 
 /*Formulario de registro*/

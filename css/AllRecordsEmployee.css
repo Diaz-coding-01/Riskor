@@ -4,85 +4,12 @@
   --content-gap: 10px;
 }
 
-h2, ul, li {
-  margin: 0;
-  padding: 0;
-}
-
-.breadcrumb > h2, ul {
-  display: inline-flex;
-  font-size: initial;
-  list-style: none;
-}
-
-.breadcrumb ul > li a[href] {
-    text-decoration: none;
-    position: relative;
-    color: gray;
-}
-
-/*
-----------------------------------------------------------------------------
-*/
-
 .table-container {
-  background-color: var(--color-neutral);
-  box-shadow: 0px 4px 8px 0px rgba(49, 58, 141, 0.25);
-  overflow-x: auto;
-  width: 90%;
-  max-width: 100%;
-  border: 1px solid var(--color-txt);
-  margin: 0 auto; /* Centrado */
-  overflow: hidden;
-  min-height: 60vh;
-}
-
-table {
-  width: 100%;
-  min-width: 150px; 
-  border-collapse: collapse;
-  font-size: var(--font-size-base);
-  color: var(--color-txt-title);
-  border-radius: 5px;
-  margin-top: 0.2em;
-}
-
-thead {
-  font-weight: var(--font-weight-Semibold);
-  color: var(--color-txt-title);
-  border-bottom: 2px solid #94ACDA;
-}
-
-td {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 180px; 
-}
-
-th, td {
-  text-align: left;           /* Alineación a la izquierda para celdas*/
-  padding: 1.2em;               /* Espaciado interno uniforme */
-}
-
-td:last-child {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 0.8em;
-}
-
-td img {
-  cursor: pointer;            /* Muestra el puntero de clic */
-  width: 1em;                /* Tamaño reducido para íconos de acción */
-  margin-left: 0.3em;
-}
-
-tr:hover {
-  background-color: #f9f9f9;  /* Cambio de fondo al pasar el ratón por encima */
+  --height-container: 60vh;
 }
 
 /* Distribución personalizada por columnas */
+
 thead th:nth-child(1),
 tbody td:nth-child(1) {
   width: 10%;
@@ -107,11 +34,6 @@ thead th:nth-child(5),
 tbody td:nth-child(5) {
   width: 60%;
 }
-
-
-/*
--------------------------------------------------------------------------------------------
-*/
 
 .bottomButtons{
     display: flex;
