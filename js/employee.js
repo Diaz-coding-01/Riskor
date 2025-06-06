@@ -27,24 +27,7 @@ const employees = [ /*Variable que registra los empleados*/
     correo: 'v.maria@correo.com',
     cargo: 'Contador',
   },
-  {
-    dui: '12345678-9',
-    nombre: 'José Maximiliano Fernández',
-    correo: 'jose@correo.com',
-    cargo: 'Gerente',
-  },
-  {
-    dui: '12345678-8',
-    nombre: 'Fernando Ignacio Mendoza',
-    correo: 'fer.m@correo.com',
-    cargo: 'Contador',
-  },
-  {
-    dui: '12345678-7',
-    nombre: 'Isidora Valentina María Morales',
-    correo: 'v.maria@correo.com',
-    cargo: 'Contador',
-  },
+  
 ];
 /*Datos cargados de la tabla*/
 function refreshTable() {
@@ -58,9 +41,9 @@ function refreshTable() {
         <td>${e.correo}</td>
         <td>${e.cargo}</td>
         <td>
-           <img src="../media/famicons_eye-sharp.svg" title="Ver">
-            <img src="../media/ri_edit-fill.svg" title="Editar">
-            <img src="../media/Vector.svg" title="Eliminar">
+           <img src="../media/globalMedia/actions/read-Icon.svg" title="Ver">
+            <img src="../media/globalMedia/actions/update-Icon.svg" title="Editar">
+            <img src="../media/globalMedia/actions/delete-Icon.svg" title="Eliminar">
         </td>
       </tr>
     `;
@@ -81,9 +64,9 @@ function searchEmployee() {
           <td>${e.correo}</td>
           <td>${e.cargo}</td>
           <td>
-            <img src="../media/famicons_eye-sharp.svg" title="Ver">
-            <img src="../media/ri_edit-fill.svg" title="Editar">
-            <img src="../media/Vector.svg" title="Eliminar">
+            <img src="../media/globalMedia/actions/read-Icon.svg" title="Ver">
+            <img src="../media/globalMedia/actions/update-Icon.svg" title="Editar">
+            <img src="../media/globalMedia/actions/delete-Icon.svg" title="Eliminar">
           </td>
         </tr>
       `;

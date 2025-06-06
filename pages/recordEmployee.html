@@ -15,45 +15,45 @@
             </div>
             <div class="rowsFormTop">
                 <div class="firstRow">
-                    <div class="contactNameInput">
-                        <h4>Nombre de contacto</h4>
-                        <input type="text" id="contactName" class="txtTextbox">
+                    <div class="contactNameInput" style="flex: 2;">
+                        <label for="txtContactName">Nombre de contacto</label>
+                        <input type="text" id="txtContactName" class="txtTextbox">
                     </div>
-                    <div class="contactNumInput">
-                        <h4>Número de contacto</h4>
-                        <input type="text" id="contactPhone" class="txtTextbox">
+                    <div class="contactNumInput" style="flex: 1;">
+                        <label for="txtContactPhone">Número de contacto</label>
+                        <input type="text" id="txtContactPhone" class="txtTextbox">
                     </div>
                 </div>
 
                 <div class="secRow">
-                    <div class="genderInput">
-                        <h4>Género</h4>
-                        <input type="text" id="gender" class="txtTextbox">
+                    <div class="genderInput" style="flex: 1;">
+                        <label for="txtGender">Género</label>
+                        <input type="text" id="txtGender" class="txtTextbox">
                     </div>
-                    <div class="documentInput">
-                        <h4>Documento</h4>
-                        <input type="text" id="dui" class="txtTextbox">
+                    <div class="documentInput" style="flex: 1;">
+                        <label for="txtDui">Documento</label>
+                        <input type="text" id="txtDui" class="txtTextbox">
                     </div>
-                    <div class="isssInput">
-                        <h4>N° de affiliation ISSS</h4>
-                        <input type="text" id="affiliationIsss" class="txtTextbox">
+                    <div class="isssInput" style="flex: 1;">
+                        <label for="txtAffiliationIsss">N° de affiliation ISSS</label>
+                        <input type="text" id="txtAffiliationIsss" class="txtTextbox">
                     </div>
                 </div>
                 <div class="thirdRow">
                     <div class="thirdRowLeft">
-                        <div class="mailInput">
-                            <h4>Correo electrónico</h4>
-                            <input type="email" id="employeeMail" class="txtTextbox">
+                        <div class="mailInput" style="flex: 1;">
+                            <label for="txtEmployeeMail">Correo electrónico</label>
+                            <input type="email" id="txtEmployeeMail" class="txtTextbox">
                         </div>
-                        <div class="bloodInput">
-                            <h4>Sangre</h4>
-                            <input type="text" id="bloodType" class="txtTextbox">
+                        <div class="bloodInput" style="flex: 1;">
+                            <label for="txtBloodType">Sangre</label>
+                            <input type="text" id="txtBloodType" class="txtTextbox">
                         </div>
                     </div>
                     <div class="thirdRowRight">
-                        <div class="allergies">
-                            <h4>Alergias</h4>
-                            <input type="text" id="allergies" class="txtTextbox">
+                        <div class="allergies" style="flex: 2;">
+                            <label for="txtAllergies">Alergias</label>
+                            <textarea name="" id="txtAllergies" class="txtTextbox" style="resize: none;"></textarea>
                         </div>
                     </div>
                 </div>
@@ -62,5 +62,7 @@
         <div class="formBottom"></div>
         
     </main>
+    <script src="../js/recordEmployee.js"></script>
+    <script src="../js/sidebar.js"></script>
 </body>
 </html>

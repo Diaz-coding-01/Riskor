@@ -17,6 +17,7 @@
 .txtTextbox{
   border-radius: 5px;
   border: 1px solid #7B96C7;
+  box-sizing: border-box;
   width: 100%;
   padding: 7px;
   font-size: var(--font-size-base);
@@ -26,4 +27,5 @@
 
 .firstRow, .secRow, .thirdRow{
     display: flex;
+    gap: 25px;
 }

@@ -30,6 +30,7 @@ body{
     --color-bg-tb: rgba(254, 254, 255, 0.9);    /*Color del fondo de las tablas.                                  Ej. Empleados, Mantenimientos, etc.*/
     --color-search: #FEFEFF77;
     --color-btn-primary: linear-gradient(134deg,rgba(120, 132, 237, 1) 0%, rgba(97, 111, 239, 1) 100%);         /*Color de la mayoria de botones*/
+    --color-btn-ghost-border: 2px solid var(--color-breadcrumb);
     --color-btn-text: #F2F9FE;                  /*Color del texto de los botones.                                 Ej. Todos los botones principales*/
     --color-breadcrumb: #7884ED;                /*Color del breadcrumb y color de botones fantasma.               Ej. "Detalles", "Editar", etc.*/
     --color-img-border: 3px solid #8F90DE;      /*Borde de las imagenes de los empleados.                         Ej. Registro de empleado, Selección de empleado, etc.*/
@@ -47,6 +48,8 @@ body{
     --font-weight-Medium: 500;
     --font-weight-Regular: 400;
 
+    --height-container: 55vh;                     /*Para manejar el tamaño de los contenedores de información.      Ej. Tablas, contenedores de paneles/cartas*/
+
     --shadow-btn-primary: 0px 0px 15px 1px rgba(120, 132, 237, 0.65);   /*Sombra de los botones principales.      Ej. "Agregar", "Enviar", etc.*/
     --shadow-btn-secondary: 0px 0px 5px 1px rgba(120, 132, 237, 0.45);  /*Sombra de los botones secundarios.      Ej. "Evidencias", "Buscar", etc.*/
     --shadow-hover: 0 5px 10px rgba(133, 155, 208, 0.3);
@@ -55,6 +58,7 @@ body{
     --shadow-pnl-container: 5px 5px 4px 0px rgba(140, 158, 200, 0.35);  /*Sombra del contenedor que muestra los paneles.    Ej. Capacitaciones, Permisos, Regulaciones, etc.*/
     --shadow-search-container: 4px 4px 3px 0px rgba(140, 158, 200, 0.25); /*Sombra de contenedor de búsqueda                Ej. Regulaciones, Áreas, etc.*/
 
+    --space-elements: 20px;                       /*Controlar padding de los elementos (Útil al heredar)*/
     --transition-base: transform 0.3s ease, box-shadow 0.3s ease;
     --width-container: 90%;                       /*Tamaño del contenedor de todo el contenido    Ej. Clases: ["card-container", "headerContent"]*/    
 }
@@ -169,7 +173,7 @@ h2, ul, li {
     --color-bg-tb: rgba(254, 254, 255, 0.35);                 /*Se modifica la variable global solamente cambiando la transparencia*/  
     background-color: var(--color-bg-tb);                       /*Color del contenedor (Neutro y semi-transparente)*/
     box-shadow: var(--shadow-pnl-container);                    
-    height: 55vh;                                               /*Altura del contenedor*/
+    height: var(--height-container);                            /*Altura del contenedor*/
     overflow: auto;                                             /*Crear scroll dentro de panel*/
     scrollbar-width: none;                                      /*Ocultar scrollbar interna del contenedor: Firefox */
     -ms-overflow-style: none;                                   /*Ocultar scrollbar interna del contenedor: Explorer */
@@ -227,24 +231,22 @@ h2, ul, li {
 
 .btn-primary{
   background: var(--color-btn-primary);                       /*Gradiente del fondo del btn*/
-  border: 0px;                                                /*Quitamos el borde del botón (El primario no lo necesita)*/
-  border-radius: var(--border-radius);                                        /*Redondeo de esquinas de 12px*/
-  box-shadow: var(--shadow-btn-primary);                      /*Sombra del btn reutilizada con las var globales*/
-  color: var(--color-btn-text);                               /*Color del texto del btn*/
-  font-weight: var(--font-weight-Medium);                                           /*Peso de la letra*/
+  border: 0;                                      /*Se le asigna 0 al borde en una variable para hacer el ghost-button más fácil*/    
+  border-radius: var(--border-radius);                                        
+  box-shadow: var(--shadow-btn-primary);                      
+  color: var(--color-btn-text);                                               /*Color del texto del btn*/
+  font-weight: var(--font-weight-Medium);                                     /*Peso de la letra*/
   font-size: var(--font-size-base);                                           /*Tamaño de la letra*/
-  cursor: pointer;                                            /*El cursor cambiará al estar en el btn*/
+  cursor: pointer;                                            
   transition: var(--transition-base);
 }
-
 
 .btn-primary:hover{
   --color-btn-primary: #6876f2;
   background: var(--color-btn-primary); 
-  transform: translateY(-3px);          
+  transform: translateY(-2px);          
   box-shadow: var(--shadow-btn-primary);
 }
- 
 
 /*
   Búsqueda - Contenedor 
@@ -255,10 +257,10 @@ h2, ul, li {
     align-items: stretch;
     gap: 10px;
     width: 50%;
-    padding: 20px;                                              /*Al modificar el padding se hace como si no existiera, útil para tablas como Empleados*/
+    padding: var(--space-elements);                                        /*Al modificar el padding se hace como si no existiera, útil para tablas como Empleados*/
     box-sizing: border-box;
     background-color: var(--color-search);
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     box-shadow: var(--shadow-search-container);
 }
 
@@ -291,14 +293,14 @@ h2, ul, li {
   Botón filtro - Filtrar datos mostrados dentro de una interfaz
 */
 
-#btnFilter{
+.btnFilter{
     background-color: transparent;
     border: none;
     transition: var(--transition-base);
 }
 
 
-#btnFilter:hover {
+.btnFilter:hover {
   transform: translateY(-2px);
   cursor: pointer;
 }
@@ -318,8 +320,8 @@ h2, ul, li {
     border-radius: 12px;                                        
     box-shadow: var(--shadow-pnl);                              
     margin-bottom: 0.7em;                                       /*Distancia entre un panel a otro*/
-    background-color: var(--color-neutral);                     /*Color del panel neutro (Blanco por defecto)*/
-    transition: var(--transition-base);      /*Animación de regreso una vez termine hover*/
+    background-color: var(--color-neutral);                     
+    transition: var(--transition-base);                         /*Animación de regreso una vez termine hover*/
 }
 
 .informationPnl:hover {
@@ -432,3 +434,70 @@ h2, ul, li {
     background-color: transparent;
     cursor: pointer;
 }
+
+/*
+  Tabla -------------------------------------------------------------------------------------------------------------------------------
+
+  Clases para reutilizar la tabla con facilidad
+*/
+
+.table-container {
+  background-color: var(--color-neutral);
+  box-shadow: 0px 4px 8px 0px rgba(49, 58, 141, 0.25);
+  overflow-x: auto;
+  width: 90%;
+  max-width: 100%;
+  border: 1px solid var(--color-txt);
+  margin: 0 auto; /* Centrado */
+  overflow: hidden;
+  min-height: var(--height-container);
+}
+
+table {
+  width: 100%;
+  min-width: 150px; 
+  border-collapse: collapse;
+  font-size: var(--font-size-base);
+  color: var(--color-txt-title);
+  border-radius: 5px;
+  margin-top: 0.2em;
+}
+
+thead {
+  font-weight: var(--font-weight-Semibold);
+  color: var(--color-txt-title);
+  border-bottom: 2px solid #94ACDA;
+}
+
+td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px; 
+}
+
+th, td {
+  text-align: left;           /* Alineación a la izquierda para celdas*/
+  padding: 1.2em;               /* Espaciado interno uniforme */
+}
+
+td:last-child {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.8em;
+}
+
+td img {
+  cursor: pointer;            
+  width: 1em;                /* Tamaño reducido para íconos de acción */
+  margin-left: 0.3em;
+}
+
+tr:hover {
+  background-color: #f9f9f9;  /* Cambio de fondo al pasar el ratón por encima */
+}
+
+/*
+  -------------------------------------------------------------------------------------------------------------------------------
+*/
