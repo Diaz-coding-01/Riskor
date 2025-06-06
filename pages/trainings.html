@@ -49,12 +49,123 @@
                     <input type="text" name="" id="txtAddTrainingPlace">
                 </div>
             </div>
-            <input type="submit" class="btn-primary" style="align-self: end; padding: 15px 40px;">
+            <input type="submit" id="btnAddTraining" class="btn-primary" style="align-self: end; padding: 15px 40px;">
         </form>
     </div>
 
+    <div class="containerModal containerModalTraining hideModal">
+        <form class="modalTraining">
+            <button class="btnCloseModal" type="button" data-modal="containerModalTraining">
+                <img src="../media/closeIcon.svg" alt="">
+            </button>
+            <div class="headerModalTraining">
+                <div>
+                    <h2 id="trainingName">nombreCapacitacion</h2>
+                </div>
+                <div style="padding-right: 30px;">
+                    <h4 class="trainer">Capacitador: <span class="trainerName">Luis Gonzales</span></h4>
                 </div>
             </div>
+            <div class="bodyModalTraining">
+                <div>
+                    <div class="containerInputAddTraining">
+                        <label for="txtTrainingDescription">Descripcion</label>
+                        <input type="text" name="" id="txtTrainingDescription">
+                    </div>
+                </div>
+                <div>
+                    <div class="containerInputAddTraining">
+                        <label for="cmbTrainingModality">Modalidad</label>
+                        <select name="" id="cmbTrainingModality"></select>
+                    </div>
+                    <div class="containerInputAddTraining">
+                        <label for="dtTrainingDate">Fecha</label>
+                        <input type="date" id="dtTrainingDate">
+                    </div>
+                    <div class="containerInputAddTraining">
+                        <label for="tmTrainingDuration">Duración</label>
+                        <input type="time" id="tmTrainingDuration">
+                    </div>
+                </div>
+                <div>
+                    <div class="containerInputAddTraining">
+                        <label for="txtTrainingPlace">Lugar</label>
+                        <input type="text" name="" id="txtTrainingPlace">
+                    </div>
+                </div>
+                <div class="containerButtonsModalTraining">
+                    <button class="btn-primary">Asistencia</button>
+                    <button class="btn-primary">Listo</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="containerModal containerModalEmployees hideModal">
+        <form action="" class="modalEmployees">
+            <button class="btnCloseModal" type="button" data-modal="containerModalEmployees">
+                <img src="../media/closeIcon.svg" alt="">
+            </button>
+            <div class="headerModalEmployees">
+                <h4>Empleados</h4>
+                <div>
+                    <label for="chSelectAll">Marcar todos:</label>
+                    <input type="checkbox" id="chSelectAll" class="checks">
+                </div>
+            </div>
+            <div class="containerFilterEmployees">
+                <input type="text" id="txtSearchEmployees" placeholder="Buscar empleado...">
+                <button class="btnFilter" style="height: 100%;">
+                    <img src="../media/filtrar.svg" alt="" style="width: 90%;">
+                </button>
+            </div>
+            <div class="bodyModalEmployees">
+                <div class="employee">
+                    <div class="containerEmployeeImage">
+                        <img src="../media/Frame 59.png" alt="" class="employeeImage">
+                    </div>
+                    <div style="flex: 1;">
+                        <span class="employeeName">Luis Gonzalesrfgsrfwerfgtsefsefsefsefsefesfs</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="chEmployee checks" style="border-radius: 50%; transform: scale(1.4);">
+                    </div>
+                </div>
+                <div class="employee">
+                    <div class="containerEmployeeImage">
+                        <img src="../media/Frame 59.png" alt="" class="employeeImage">
+                    </div>
+                    <div style="flex: 1;">
+                        <span class="employeeName">Luis Gonzalesrfgsrfwerfgtsefsefsefsefsefesfs</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="chEmployee checks" style="border-radius: 50%; transform: scale(1.4);">
+                    </div>
+                </div>
+                <div class="employee">
+                    <div class="containerEmployeeImage">
+                        <img src="../media/Frame 59.png" alt="" class="employeeImage">
+                    </div>
+                    <div style="flex: 1;">
+                        <span class="employeeName">Luis Gonzalesrfgsrfwerfgtsefsefsefsefsefesfs</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="chEmployee checks" style="border-radius: 50%; transform: scale(1.4);">
+                    </div>
+                </div>
+                <div class="employee">
+                    <div class="containerEmployeeImage">
+                        <img src="../media/Frame 59.png" alt="" class="employeeImage">
+                    </div>
+                    <div style="flex: 1;">
+                        <span class="employeeName">Luis Gonzalesrfgsrfwerfgtsefsefsefsefsefesfs</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="chEmployee checks" style="border-radius: 50%; transform: scale(1.4);">
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Listo" class="btn-primary" id="btnAddEmployees" style="align-self: end; border-radius: 5px; box-shadow: none; padding: 10px 60px; margin: 10px;">
         </form>
     </div>
 
@@ -66,13 +177,15 @@
             <div class="contenedor-cuerpo">
                 <div class="content">
                     <div class="headerContent">
-                        <div class="breadcrumb">
-                            <a href="">Capacitaciones</a>
-                        </div>
+                        <nav class="breadcrumb">
+                            <ul>
+                                <li><a>Capacitaciones</a></li>
+                            </ul>
+                        </nav>
                         <div class="headerContentButtons">
                             <div class="searchContainer">
                                 <input type="text" id="txtSearch">
-                                <button id="btnFilter">
+                                <button class="btnFilter">
                                     <img src="../media/filtrar.svg" alt="">
                                 </button>
                                 <button class="btn-primary" style="flex: 2;">Buscar</button>
@@ -83,8 +196,9 @@
                         </div>
                     </div>
                     <div class="cardContainer">
-                        <div class="containerTraining">
-                            <div class="training">
+                        <div class="bottomShadow"></div>
+                        <div class="pnlContainer">
+                            <button class="informationPnl">
                                 <span class="trainingName">Ética laboral</span>
                                 <div class="containerMoreInfoTraining">
                                     <div class="containerTrainingUsers">
@@ -94,8 +208,8 @@
                                     </div>
                                     <img src="../media/grey_arrow_right.svg" alt="">
                                 </div>
-                            </div>
-                            <div class="training">
+                            </button>
+                            <button class="informationPnl">
                                 <span class="trainingName">Ética laboral</span>
                                 <div class="containerMoreInfoTraining">
                                     <div class="containerTrainingUsers">
@@ -105,8 +219,8 @@
                                     </div>
                                     <img src="../media/grey_arrow_right.svg" alt="">
                                 </div>
-                            </div>
-                            <div class="training">
+                            </button>
+                            <button class="informationPnl">
                                 <span class="trainingName">Ética laboral</span>
                                 <div class="containerMoreInfoTraining">
                                     <div class="containerTrainingUsers">
@@ -116,7 +230,29 @@
                                     </div>
                                     <img src="../media/grey_arrow_right.svg" alt="">
                                 </div>
-                            </div>
+                            </button>
+                            <button class="informationPnl">
+                                <span class="trainingName">Ética laboral</span>
+                                <div class="containerMoreInfoTraining">
+                                    <div class="containerTrainingUsers">
+                                        <img src="../media/Frame 59.png" alt="" class="userTraining user1">
+                                        <img src="../media/Frame 59.png" alt="" class="userTraining user2">
+                                        <img src="../media/Frame 59.png" alt="" class="userTraining user3">
+                                    </div>
+                                    <img src="../media/grey_arrow_right.svg" alt="">
+                                </div>
+                            </button>
+                            <button class="informationPnl">
+                                <span class="trainingName">Ética laboral</span>
+                                <div class="containerMoreInfoTraining">
+                                    <div class="containerTrainingUsers">
+                                        <img src="../media/Frame 59.png" alt="" class="userTraining user1">
+                                        <img src="../media/Frame 59.png" alt="" class="userTraining user2">
+                                        <img src="../media/Frame 59.png" alt="" class="userTraining user3">
+                                    </div>
+                                    <img src="../media/grey_arrow_right.svg" alt="">
+                                </div>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -124,7 +260,7 @@
         </div>
     </main>
 
-    <script src="../js/trainings.js"></script>
     <script src="../js/sidebar.js"></script>
+    <script src="../js/trainings.js"></script>
 </body>
 </html>

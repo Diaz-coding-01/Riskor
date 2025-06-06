@@ -6,6 +6,17 @@ let formAddTraining = document.getElementById('formAddTraining');
 let modalAddTraining = document.querySelector('.containerModalAddTraining');
 let modalTraining = document.querySelector('.containerModalTraining');
 let trainings = document.querySelectorAll('.informationPnl');
+let btnAddTraining = document.getElementById('btnAddTraining');
+let modalEmployees = document.querySelector('.containerModalEmployees');
+
+
+btnAddTraining.addEventListener('click', () => {
+    modalEmployees.classList.replace('hideModal', 'showModal');
+});
+
+modalEmployees.addEventListener('submit', (e) => {
+    e.preventDefault();
+});
 
 btnCloseModal.forEach(btn => {
     btn.addEventListener('click', () => {

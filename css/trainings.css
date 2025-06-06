@@ -2,6 +2,7 @@
 
 body{
     --bg-containers: #FEFEFF77;
+    --width-modal: clamp(400px, 90%, 850px);
 }
 
 .bodyContent{
@@ -68,7 +69,7 @@ body{
     gap: 15px;
     flex-direction: column;
     background-color: #F2F9FE;
-    width: clamp(400px, 90%, 850px);
+    width: var(--width-modal);
 }
 
 .btnCloseModal{
@@ -125,8 +126,8 @@ body{
     padding: 10px 20px;
     box-sizing: border-box;
     flex-direction: column;
-    background-color: #F2F9FE;
-    width: clamp(400px, 90%, 850px);
+    background-color: var(--color-btn-text);
+    width: var(--width-modal);
 }
 
 .headerModalTraining{
@@ -177,4 +178,131 @@ body{
     width: 10em;
     box-shadow: none; 
     border-radius: 5px;
+}
+
+/*Modal empleados*/
+
+.modalEmployees{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 12px;
+    padding: 35px;
+    box-sizing: border-box;
+    gap: 15px;
+    background-color: #F2F9FEDF;
+    width: var(--width-modal);
+}
+
+.headerModalEmployees{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 20px 0 0;
+    box-sizing: border-box;
+    color: var(--color-txt);
+}
+
+.containerFilterEmployees{
+    display: flex;
+    padding: 30px;
+    max-height: 40px;
+    width: 80%;
+}
+
+.containerEmployeeImage{
+    padding: 5px;
+}
+
+#txtSearchEmployees{
+    flex: 1;
+    font-size: 1em;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.btnFilter{
+    background-color: transparent;
+    border: none;
+    transition: var(--transition-base);
+}
+
+.btnFilter:hover {
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.headerModalEmployees h4{
+    font-size: 1.6em;
+    font-weight: 600;
+    margin: 0;
+}
+
+#txtSearchEmployees{
+    border-radius: 5px;
+    border: solid 1px #6873BA;
+    box-shadow: 0 0 2px #6873BA;
+}
+
+.headerModalEmployees > div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1em;
+    font-weight: var(--font-weight-Medium);
+}
+
+.bodyModalEmployees{
+    width: 100%;
+    height: clamp(200px, 60vh, 300px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.employee{
+    display: flex;
+    align-items: stretch;
+    font-weight: var(--font-weight-Medium);
+    font-size: var(--font-size-base);
+    color: var(--color-txt);
+    gap: 15px;
+    padding: 0 20px;
+    height: 25%;
+}
+
+.employee > div{
+    display: flex;
+    align-items: center;
+}
+
+.employeeImage{
+    height: 100%;
+}
+
+.checks{
+    appearance: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 3px;
+    box-shadow: 0 0 3px #5666FF;
+    border: solid 1px #5666FF;
+    position: relative;
+    display: grid;
+    place-items: center;
+    transition: 1s;
+}
+
+.checks:checked{
+    background-color: #5666FF;
+    transition: 1s;
+}
+
+.checks:checked::before{
+    content: '✔';
+    color: #fff;
 }

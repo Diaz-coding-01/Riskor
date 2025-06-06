@@ -42,21 +42,6 @@
     width: 80%;
 }
 
-#btnNavbar {
-    background-color: #7884ED;
-    box-shadow: 0 0 5px #647AD3;
-    top: 100px;
-    right: -20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    display: grid;
-    place-content: center;
-    position: absolute;
-    z-index: 100;
-    border: none;
-}
-
 .btnNavbarIcon {
     width: 100%;
 }
@@ -143,6 +128,7 @@
     align-items: center;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 #btnSubmenu img {
