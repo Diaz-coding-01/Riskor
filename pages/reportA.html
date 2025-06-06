@@ -16,13 +16,15 @@
             <span class="closeAddAccidente">&times;</span>
             <h3>Evidencias</h3>
             <div class="drop-zone" id="dropZone">
-                <input type="file" id="fileInput" hidden />
-                <div class="upload-icon"></div>
+                <input type="file" id="fileInput" hidden multiple />
+                <div class="preview-container" id="previewContainer"></div>
                 <button id="examinarBtn" class="btn-primary">Examinar</button>
                 <p>o arrastra archivos aquí</p>
             </div>
+
         </div>
     </div>
+
     <main>
         <!--Clase contenedor para la seccion-->
         <div class="contenedor-seccion">
@@ -57,20 +59,20 @@
                             <div class="left-panel">
 
                                 <div class="form-section">
-                                <label>Víctima</label>
-                                <input type="text" id="txtVictimName">
+                                    <label>Víctima</label>
+                                    <input type="text" id="txtVictimName">
 
-                                <label>Descripción</label>
-                                <textarea rows="4"></textarea>
+                                    <label>Descripción</label>
+                                    <textarea rows="4"></textarea>
 
-                                <label>Fecha del acontecimiento</label>
-                                <input type="date" id="dtAddAccidentDate">
+                                    <label>Fecha del acontecimiento</label>
+                                    <input type="date" id="dtAddAccidentDate">
 
-                                <label for="cmbAddlocation">Ubicación</label>
-                                <select id="cmbAddlocation">
-                                    <option value="zona1">Zona 1</option>
-                                    <option value="zona2">Zona 2</option>
-                                </select>
+                                    <label for="cmbAddlocation">Ubicación</label>
+                                    <select id="cmbAddlocation">
+                                        <option value="zona1">Zona 1</option>
+                                        <option value="zona2">Zona 2</option>
+                                    </select>
                                 </div>
 
                                 <div class="evidence-section">
