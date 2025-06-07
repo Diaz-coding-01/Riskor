@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/securityPin.css">
+    <script src="../js/securityPin.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="FondoRiskor"></div>
+
+    <section>
+  <div class="box">
+    <button class="close-btn" type="button" onclick="window.history.back()">&times;</button>
+    <form action="">
+      <img src="../media/logoRiskor.png" alt="Riskor" class="logo-riskor-img" style="width: 180px; display: block; margin: 0 auto 18px auto;">
+      <p class="recovery-msg">
+        Código de seguridad enviado a la dirección<br>
+        <span class="recovery-email">a*********@mail.com</span>
+      </p>
+      <p class="recovery-instruccion">Coloca el código de seguridad para continuar</p>
+      <div class="code-inputs">
+        <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" required>
+        <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" required>
+        <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" required>
+        <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" required>
+        <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" required>
+        <input type="text" maxlength="1" pattern="[0-9]*" inputmode="numeric" required>
+      </div>
+      <div class="button-row">
+        <button type="button" class="button-atras">Atrás</button>
+        <button type="submit" class="button-listo">Listo</button>
+      </div>
+    </form>
+  </div>
+</section>
+</div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+@import url('globalStyles.css');
+
+#capa2 { 
+    animation: moverCapa2 400s linear infinite, saltoCapa 8s ease-in-out infinite alternate;
+    transform-origin: center bottom;
+    transform: scaleY(1.12);
+}
+#capa3 { 
+    animation: moverCapa3 600s linear infinite, saltoCapa 10s ease-in-out infinite alternate;
+    transform-origin: center bottom;
+    transform: scaleY(1.18);
+}
+#capa4 { 
+    animation: moverCapa4 800s linear infinite, saltoCapa 12s ease-in-out infinite alternate;
+    transform-origin: center bottom;
+    transform: scaleY(1.24);
+}
+#capa5 { 
+    animation: moverCapa5 1000s linear infinite, saltoCapa 14s ease-in-out infinite alternate;
+    transform-origin: center bottom;
+    transform: scaleY(1);
+}
+
+@keyframes moverCapa2 { 0% { transform: translateX(0) scaleY(1.12); } 100% { transform: translateX(-1920px) scaleY(1.12); } }
+@keyframes moverCapa3 { 0% { transform: translateX(0) scaleY(1.18); } 100% { transform: translateX(-1920px) scaleY(1.18); } }
+@keyframes moverCapa4 { 0% { transform: translateX(0) scaleY(1.24); } 100% { transform: translateX(-1920px) scaleY(1.24); } }
+@keyframes moverCapa5 { 0% { transform: translateX(0) scaleY(0); } 100% { transform: translateX(-1920px) scaleY(0); } }
+
+@keyframes saltoCapa {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    min-height: 420px;
+    background-color: #F2F9FE;
+    border: 2px solid rgb(242, 249, 254, .5);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-sizing: border-box;
+    margin: 24px;
+}
+
+.box form {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-riskor {
+    color: #7a8aed;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.recovery-msg {
+    color: #69698B;
+    font-size: 1.08em;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.recovery-email {
+    font-weight: 600;
+    color: #7a8aed;
+}
+
+.recovery-instruccion {
+    color: #69698B;
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.code-inputs {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+
+.code-inputs input {
+    width: 44px;
+    height: 48px;
+    border: 1.5px solid #bfc9db;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    text-align: center;
+    background: #fff;
+    color: #374151;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.code-inputs input:focus {
+    border-color: #7a8aed;
+}
+
+.button-row {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.button-listo,
+.button-atras {
+    width: 155px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: var(--transition-base);
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.button-listo {
+    background: linear-gradient(122deg,rgba(120, 132, 237, 1) 0%, rgba(120, 132, 237, 1) 100%);
+    box-shadow: 2px 2px 2px 0 rgba(131, 149, 223, 0.15);
+    border: none;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.button-listo:hover {
+    transform: translateY(-1px);
+    box-shadow: 2px 2px 5px 0 rgba(131, 149, 223 , 0.5);
+}
+
+.button-atras {
+    background: transparent;
+    border: 2px solid #616FEF;
+    outline: none;
+    color: #616FEF;
+    cursor: pointer;
+    gap: 12px;
+}
+
+.button-atras:hover {
+    transform: translateY(-1px);
+    box-shadow: 2px 2px 5px 0 rgba(131, 149, 223 , 0.5);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 26px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: #81859E;
+    cursor: pointer;
+    transition: color 0.2s;
+    z-index: 2;
+}
+
+.close-btn:hover {
+    color: #474A53;
+}

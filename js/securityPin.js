@@ -57,3 +57,16 @@ fondoRiskor.innerHTML = `
     </clipPath>
   </defs>
 </svg>`;
+
+document.querySelectorAll('.code-inputs input').forEach((input, idx, arr) => {
+    input.addEventListener('input', () => {
+        if (input.value.length === 1 && idx < arr.length - 1) {
+            arr[idx + 1].focus();
+        }
+    });
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Backspace' && !input.value && idx > 0) {
+            arr[idx - 1].focus();
+        }
+    });
+});
