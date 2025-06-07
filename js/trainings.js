@@ -44,11 +44,9 @@ formAddTraining.addEventListener('submit', (e) => {
 document.addEventListener('click', (e) => {
     if (e.target === modalAddTraining) {
         modalAddTraining.classList.replace('showModal', 'hideModal');
-    }
-})
-
-document.addEventListener('click', (e) => {
-    if (e.target === modalTraining) {
+    } else if (e.target === modalEmployees) {
+        modalEmployees.classList.replace('showModal', 'hideModal');
+    } else if (e.target === modalTraining) {
         modalTraining.classList.replace('showModal', 'hideModal');
     }
 })

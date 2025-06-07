@@ -1,7 +1,6 @@
 @import url('globalStyles.css');
 
 .navbarContainer {
-    --width-navbar: clamp(350px, 20vw, 400px);
     --height-logo-container: clamp(100px, 20vh, 125px);
     --height-user-container: clamp(60px, 15vh, 115px);
     background: linear-gradient(to right top, #F2F9FE, #F3F6FF);
@@ -11,14 +10,13 @@
     flex-direction: column;
     height: 100dvh;
     position: relative;
-    transition: all .5s ease;
     box-sizing: border-box;
-    transition: all .3s ease;
-    width: var(--width-navbar);
+    transition: max-width .3s ease;
 }
 
 .navbar {
-    padding-top: 10px;
+    padding: 20px 0;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,14 +26,21 @@
 
 }
 
-.logoContainer {
-    width: calc(var(--width-navbar) - 110px);
+.navHeader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: var(--height-logo-container);
+}	
+
+.logoContainer {
+    width: calc(100% - 100px);
     border-bottom: solid #94ACDA 3px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
+    padding-bottom: 30px;
 }
 
 .logo{
@@ -46,18 +51,25 @@
     width: 100%;
 }
 
-.navbarItemsContainer {
-    width: 100%;
+.navBody{
     height: calc(94dvh - var(--height-logo-container) - var(--height-user-container));
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     overflow-y: auto;
     scrollbar-width: none;  
 }
 
+.navbarItemsContainer {
+    width: calc(100% - 100px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .groupItems {
-    width: calc(var(--width-navbar) - 110px);
+    width: 100%;
     background-color: #F3F6FF;
     position: relative;
     display: flex;
@@ -84,7 +96,7 @@
     font-weight: 500;
     font-size: clamp(0.8em, 2vw, 1.5em);
     font-family: var(--font-text);
-    width: calc(clamp(350px, 20vw, 400px) - 110px);
+    width: 100%;
     margin-top: 35px;
     max-height: 30px;
     box-sizing: border-box;
@@ -94,7 +106,7 @@
     content: '';
     width: 4px;
     height: clamp(20px, 100%, 35px);
-    left: -40px;
+    left: clamp(-18px, -2vw, -30px);
     box-shadow: 0 0 6px #647AD3;
     display: block;
     background-color: #94ACDA;
@@ -135,14 +147,14 @@
     rotate: 90deg;
 }
 
-#submenu {
+#submenu{
     display: flex;
-    width: calc(var(--width-navbar) - 100px);
+    width: 100%;
     gap: 20px;
     align-items: end;
     box-sizing: border-box;
-    transition: 1s;
-    margin-left: 30px;
+    transition: height 1s ease;
+    margin-left: 20px;
 }
 
 .submenuItemsContainer {
@@ -179,7 +191,7 @@
     height: clamp(60px, 15vh, 80px);
     background: linear-gradient(to right bottom, #D7E3FF, #EEF3FF);
     transition: all .3s ease;
-    padding: 20px 50px;
+    padding: 20px;
     box-sizing: border-box;
     height: var(--height-user-container);
 }
@@ -196,8 +208,24 @@
     gap: 20px;
 }
 
+#btnNavbar {
+    background-color: #7884ED;
+    box-shadow: 0 0 5px #647AD3;
+    top: 100px;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: grid;
+    place-content: center;
+    position: absolute;
+    z-index: 20;
+    border: none;
+    padding: 15px;
+}
 
-/*Estilos para abrir y cerrar el nav*/
+
+/*Estilos para abrir y cerrar el nav y dropdown*/
 
 
 .rotate180 {
@@ -212,4 +240,20 @@
 .submenuOpen {
     height: 70px;
     translate: 0 0;
+}
+
+.hideText {
+    opacity: 0;
+}
+
+.hide {
+    display: none !important;
+}
+
+.navbarOpen {
+    max-width: 500px;
+}
+
+.navbarClose {
+    max-width: clamp(75px, 20dvw, 130px);
 }
