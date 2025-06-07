@@ -2,7 +2,6 @@
 
 let fondoRiskor = document.getElementById('FondoRiskor');
 
-/*Se añade dinamicamente el navbar*/
 fondoRiskor.innerHTML = `
     <svg id="fondo-riskor"
      width="100vw" height="100vh"
