@@ -60,7 +60,7 @@
 
 .pnlContainer::-webkit-scrollbar-thumb {
   background-color: #6a64f1;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
 .pnlContainer::-webkit-scrollbar-track {
@@ -71,7 +71,7 @@
 
 .accident-card {
   background-color: white;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 14px 20px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   display: flex;
@@ -90,10 +90,4 @@
   display: flex;
   align-items: center;
   gap: 14px;
-}
-
-.icon {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
 }

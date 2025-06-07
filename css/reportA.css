@@ -154,13 +154,13 @@ h2 {
 }
 
 .modal-content {
-  background-color: white;
+  background-color: #F2F9FE;
   padding: 30px;
   border-radius: 12px;
   width: 400px;
   text-align: center;
   position: relative;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 859BDO;
 }
 
 .closeAddAccidente {
@@ -187,13 +187,13 @@ h2 {
 }
 
 .preview-item {
-  width: 120px;
-  background: #f4f6fa;
+  width: 223px;
+  background: #f2f9fe;
   border-radius: 8px;
   overflow: hidden;
   text-align: center;
   font-size: 12px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 859BDO;
 }
 
 .preview-item img {

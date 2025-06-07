@@ -26,9 +26,12 @@
                     <div class="headerContent">
                         <!--Creación de la clase breadcrumb el cual servira para indicar la ruta que ha seguido el usuario para llegar a esa página-->
                         <div class="topHeader">
-                            <div class="breadcrumb">
-                                <a href="accidents.html">Accidentes reportados</a>
-                            </div>
+                            <nav class="breadcrumb">
+                                <ul>
+                                    <li><a href="accidents.html">Accidentes></a></li>
+                                    <li><a>Accidentes reportados</a></li>
+                                </ul>
+                            </nav>
                             <div class="icons">
                                 <div class="notifications">
                                     <img src="../media/Vector (1).svg" alt="Notificaciones" />
@@ -39,144 +42,145 @@
                             </div>
                         </div>
 
-                         <!--botones de header-->
+                        <!--botones de header-->
                         <div class="headerContentButtons">
                             <!--Creación del boton para busqueda del empleado-->
                             <div class="searchContainer">
                                 <input type="text" id="txtSearch" placeholder="Buscar reporte..." />
-                                <button id="btnFilter">
+                                <button id="btnFilterAccidentReports" class="btnFilter">
                                     <img src="../media/filtrar.svg" title="Filtrar">
                                 </button>
                                 <!--Al dar click al boton se ejecuta la funcion searchEmployee creada en el archivo js, quitar el evento onclick y ponerlo como id-->
                                 <button id="searchEmployee" class="btn-primary" style="flex: 2;">Buscar</button>
                             </div>
                             <!--Al momento de dar click se ejecuta la función addEmployee creada en el archivo js-->
-                            <button class="btn-primary" id="addEmployee" style="height: 3.5em; width: 12em">Reportar</button>
+                            <button class="btn-primary" id="addEmployee"
+                                style="height: 3.5em; width: 12em">Reportar</button>
                         </div>
 
                     </div>
 
-                        <div class="cardContainer">
-                            <div class="pnlContainer">
-                                <!-- Cada tarjeta -->
-                                <div class="accident-card">
-                                    <div class="accident-text">
-                                        <span><strong>Fecha:</strong> 26-04-2025</span>
-                                        <span><strong>Víctima:</strong> Miguel de Cervantes</span>
-                                    </div>
-                                    <div class="actions">
-                                        <img src="../media/famicons_eye-sharp.svg" alt="Ver" class="icon" />
-                                        <img src="../media/Vector.svg" alt="Eliminar" class="icon" />
-                                    </div>
+                    <div class="cardContainer">
+                        <div class="pnlContainer">
+                            <!-- Cada tarjeta -->
+                            <div class="accident-card">
+                                <div class="accident-text">
+                                    <span><strong>Fecha:</strong> 26-04-2025</span>
+                                    <span><strong>Víctima:</strong> Miguel de Cervantes</span>
                                 </div>
+                                <div class="actions">
+                                    <img src="../media/globalMedia/actions/read-Icon.svg" alt="Ver" class="icon" />
+                                    <img src="../media/globalMedia/actions/delete-Icon.svg" alt="Eliminar" class="icon" />
+                                </div>
+                            </div>
 
-                                <!-- Más tarjetas -->
-                                <div class="accident-card">
-                                    <div class="accident-text">
-                                        <span><strong>Fecha:</strong> 25-04-2025</span>
-                                        <span><strong>Víctima:</strong> Alonso Quijano</span>
-                                    </div>
-                                    <div class="actions">
-                                        <img src="../media/famicons_eye-sharp.svg" alt="Ver" class="icon" />
-                                        <img src="../media/Vector.svg" alt="Eliminar" class="icon" />
-                                    </div>
+                            <!-- Más tarjetas -->
+                            <div class="accident-card">
+                                <div class="accident-text">
+                                    <span><strong>Fecha:</strong> 25-04-2025</span>
+                                    <span><strong>Víctima:</strong> Alonso Quijano</span>
                                 </div>
+                                <div class="actions">
+                                    <img src="../media/globalMedia/actions/read-Icon.svgs="icon" />
+                                    <img src="../media/globalMedia/actions/delete-Icon.svg" alt="Eliminar" class="icon" />
+                                </div>
+                            </div>
 
-                                 <!-- Más tarjetas -->
-                                <div class="accident-card">
-                                    <div class="accident-text">
-                                        <span><strong>Fecha:</strong> 25-04-2025</span>
-                                        <span><strong>Víctima:</strong> Alonso Quijano</span>
-                                    </div>
-                                    <div class="actions">
-                                        <img src="../media/famicons_eye-sharp.svg" alt="Ver" class="icon" />
-                                        <img src="../media/Vector.svg" alt="Eliminar" class="icon" />
-                                    </div>
+                            <!-- Más tarjetas -->
+                            <div class="accident-card">
+                                <div class="accident-text">
+                                    <span><strong>Fecha:</strong> 25-04-2025</span>
+                                    <span><strong>Víctima:</strong> Alonso Quijano</span>
                                 </div>
-                                 <!-- Más tarjetas -->
-                                <div class="accident-card">
-                                    <div class="accident-text">
-                                        <span><strong>Fecha:</strong> 25-04-2025</span>
-                                        <span><strong>Víctima:</strong> Alonso Quijano</span>
-                                    </div>
-                                    <div class="actions">
-                                        <img src="../media/famicons_eye-sharp.svg" alt="Ver" class="icon" />
-                                        <img src="../media/Vector.svg" alt="Eliminar" class="icon" />
-                                    </div>
+                                <div class="actions">
+                                    <img src="../media/globalMedia/actions/read-Icon.svg" alt="Ver" class="icon" />
+                                    <img src="../media/globalMedia/actions/delete-Icon.svg" alt="Eliminar" class="icon" />
                                 </div>
-                                 <!-- Más tarjetas -->
-                                <div class="accident-card">
-                                    <div class="accident-text">
-                                        <span><strong>Fecha:</strong> 25-04-2025</span>
-                                        <span><strong>Víctima:</strong> Alonso Quijano</span>
-                                    </div>
-                                    <div class="actions">
-                                        <img src="../media/famicons_eye-sharp.svg" alt="Ver" class="icon" />
-                                        <img src="../media/Vector.svg" alt="Eliminar" class="icon" />
-                                    </div>
+                            </div>
+                            <!-- Más tarjetas -->
+                            <div class="accident-card">
+                                <div class="accident-text">
+                                    <span><strong>Fecha:</strong> 25-04-2025</span>
+                                    <span><strong>Víctima:</strong> Alonso Quijano</span>
                                 </div>
-                                 <!-- Más tarjetas -->
-                                <div class="accident-card">
-                                    <div class="accident-text">
-                                        <span><strong>Fecha:</strong> 25-04-2025</span>
-                                        <span><strong>Víctima:</strong> Alonso Quijano</span>
-                                    </div>
-                                    <div class="actions">
-                                        <img src="../media/famicons_eye-sharp.svg" alt="Ver" class="icon" />
-                                        <img src="../media/Vector.svg" alt="Eliminar" class="icon" />
-                                    </div>
+                                <div class="actions">
+                                    <img src="../media/globalMedia/actions/read-Icon.svg" alt="Ver" class="icon" />
+                                    <img src="../media/globalMedia/actions/delete-Icon.svg" alt="Eliminar" class="icon" />
                                 </div>
+                            </div>
+                            <!-- Más tarjetas -->
+                            <div class="accident-card">
+                                <div class="accident-text">
+                                    <span><strong>Fecha:</strong> 25-04-2025</span>
+                                    <span><strong>Víctima:</strong> Alonso Quijano</span>
+                                </div>
+                                <div class="actions">
+                                    <img src="../media/globalMedia/actions/read-Icon.svg" alt="Ver" class="icon" />
+                                    <img src="../media/globalMedia/actions/delete-Icon.svg" alt="Eliminar" class="icon" />
+                                </div>
+                            </div>
+                            <!-- Más tarjetas -->
+                            <div class="accident-card">
+                                <div class="accident-text">
+                                    <span><strong>Fecha:</strong> 25-04-2025</span>
+                                    <span><strong>Víctima:</strong> Alonso Quijano</span>
+                                </div>
+                                <div class="actions">
+                                    <img src="../media/globalMedia/actions/read-Icon.svg" alt="Ver" class="icon" />
+                                    <img src="../media/globalMedia/actions/delete-Icon.svg" alt="Eliminar" class="icon" />
+                                </div>
+                            </div>
 
-                                 <!-- Más tarjetas -->
-                                <div class="accident-card">
-                                    <div class="accident-text">
-                                        <span><strong>Fecha:</strong> 25-04-2025</span>
-                                        <span><strong>Víctima:</strong> Alonso Quijano</span>
-                                    </div>
-                                    <div class="actions">
-                                        <img src="../media/famicons_eye-sharp.svg" alt="Ver" class="icon" />
-                                        <img src="../media/Vector.svg" alt="Eliminar" class="icon" />
-                                    </div>
+                            <!-- Más tarjetas -->
+                            <div class="accident-card">
+                                <div class="accident-text">
+                                    <span><strong>Fecha:</strong> 25-04-2025</span>
+                                    <span><strong>Víctima:</strong> Alonso Quijano</span>
                                 </div>
-
-                                 <!-- Más tarjetas -->
-                                <div class="accident-card">
-                                    <div class="accident-text">
-                                        <span><strong>Fecha:</strong> 25-04-2025</span>
-                                        <span><strong>Víctima:</strong> Alonso Quijano</span>
-                                    </div>
-                                    <div class="actions">
-                                        <img src="../media/famicons_eye-sharp.svg" alt="Ver" class="icon" />
-                                        <img src="../media/Vector.svg" alt="Eliminar" class="icon" />
-                                    </div>
+                                <div class="actions">
+                                    <img src="../media/globalMedia/actions/read-Icon.svg" alt="Ver" class="icon" />
+                                    <img src="../media/globalMedia/actions/delete-Icon.svg"alt="Eliminar" class="icon" />
                                 </div>
+                            </div>
 
-                                 <!-- Más tarjetas -->
-                                <div class="accident-card">
-                                    <div class="accident-text">
-                                        <span><strong>Fecha:</strong> 25-04-2025</span>
-                                        <span><strong>Víctima:</strong> Alonso Quijano</span>
-                                    </div>
-                                    <div class="actions">
-                                        <img src="../media/famicons_eye-sharp.svg" alt="Ver" class="icon" />
-                                        <img src="../media/Vector.svg" alt="Eliminar" class="icon" />
-                                    </div>
+                            <!-- Más tarjetas -->
+                            <div class="accident-card">
+                                <div class="accident-text">
+                                    <span><strong>Fecha:</strong> 25-04-2025</span>
+                                    <span><strong>Víctima:</strong> Alonso Quijano</span>
                                 </div>
+                                <div class="actions">
+                                    <img src="../media/globalMedia/actions/read-Icon.svg" alt="Ver" class="icon" />
+                                    <img src="../media/globalMedia/actions/delete-Icon.svg" alt="Eliminar" class="icon" />
+                                </div>
+                            </div>
 
-                                 <!-- Más tarjetas -->
-                                <div class="accident-card">
-                                    <div class="accident-text">
-                                        <span><strong>Fecha:</strong> 25-04-2025</span>
-                                        <span><strong>Víctima:</strong> Alonso Quijano</span>
-                                    </div>
-                                    <div class="actions">
-                                        <img src="../media/famicons_eye-sharp.svg" alt="Ver" class="icon" />
-                                        <img src="../media/Vector.svg" alt="Eliminar" class="icon" />
-                                    </div>
+                            <!-- Más tarjetas -->
+                            <div class="accident-card">
+                                <div class="accident-text">
+                                    <span><strong>Fecha:</strong> 25-04-2025</span>
+                                    <span><strong>Víctima:</strong> Alonso Quijano</span>
+                                </div>
+                                <div class="actions">
+                                    <img src="../media/globalMedia/actions/read-Icon.svg" alt="Ver" class="icon" />
+                                    <img src="../media/globalMedia/actions/delete-Icon.svg" alt="Eliminar" class="icon" />
+                                </div>
+                            </div>
+
+                            <!-- Más tarjetas -->
+                            <div class="accident-card">
+                                <div class="accident-text">
+                                    <span><strong>Fecha:</strong> 25-04-2025</span>
+                                    <span><strong>Víctima:</strong> Alonso Quijano</span>
+                                </div>
+                                <div class="actions">
+                                    <img src="../media/globalMedia/actions/read-Icon.svg" alt="Ver" class="icon" />
+                                    <img src="../media/globalMedia/actions/delete-Icon.svg" alt="Eliminar" class="icon" />
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
     </main>
     <script src="../js/sidebar.js"></script>
     <script src="../js/reportingAccidents.js"></script>
