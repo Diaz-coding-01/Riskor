@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomar asistencia</title>
+    <link rel="stylesheet" href="../css/trainingAsistenceData.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+</head>
+<body>
+
+    <main>
+        <div class="contenedor-seccion">
+            <div class="contenedor-sidebar">
+                <aside id="sidebar"></aside>
+            </div>
+            <div class="contenedor-cuerpo">
+                <div class="content">
+                    <div class="headerContent">
+                        <div class="topHeader">
+                            <nav class="breadcrumb">
+                                <ul>
+                                    <li><a href="trainings.html">Capacitaciones ></a></li>
+                                    <!--Aca que link iria si es el nombre de las capacitaciones?-->
+                                    <li><a href="trainings.html">Nombre de la capacitacion ></a></li>
+                                    <li><a>Integrantes</a></li>
+                                </ul>
+                            </nav>
+
+                            <div class="icons">
+                                <div class="notifications">
+                                    <button id="btnNotifications">
+                                        <img src="../media/Vector (1).svg" alt="Notificaciones" />
+                                    </button>
+                                </div>
+                                <div class="profile">
+                                    <img src="../media/133866211092483860.jpg" alt="Perfil" class="profilePicture" />
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="headerContentButtons">
+                            <div class="searchContainer">
+                                <input type="text" id="txtSearch" placeholder="Buscar empleado..." />
+                                <button id="searchEmployee" class="btn-primary" style="flex: 2;">Buscar</button>
+                            </div>
+                            <a class="btn-primary" id="btnTakeAsistence">Tomar asistencia</a>
+                        </div>
+
+                    </div>
+                    
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>DUI</th>
+                                    <th>Nombre completo</th>
+                                    <th>Asistio</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody id="trainingAsistenceData">
+                                <!-- Aquí se generarán las filas de la tabla dinámicamente -->
+                                <tr>
+                                    <td>12345678-9</td>
+                                    <td>Juan Pérez</td>
+                                    <td>si</td>
+                                    <td>
+                                        <img src="../media/globalMedia/actions/read-Icon.svg" title="Ver">
+                                        <img src="../media/globalMedia/actions/update-Icon.svg" title="Editar">
+                                        <img src="../media/globalMedia/actions/delete-Icon.svg" title="Eliminar">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>98765432-1</td>
+                                    <td>María López</td>
+                                    <td>no</td>
+                                    <td>
+                                        <img src="../media/globalMedia/actions/read-Icon.svg" title="Ver">
+                                        <img src="../media/globalMedia/actions/update-Icon.svg" title="Editar">
+                                        <img src="../media/globalMedia/actions/delete-Icon.svg" title="Eliminar">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+    <script src="../js/sidebar.js"></script>
+</body>
+</html>

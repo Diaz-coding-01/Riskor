@@ -1,0 +1,12 @@
+.btn-primary {
+    height: 3em;
+    width: 15em;
+    display: grid;
+    place-content: center;
+}
+
+.searchContainer{
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
