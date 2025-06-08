@@ -8,6 +8,10 @@
     margin-bottom: 3em;
 }
 
+.informationPnl{
+    --height-pnl: 6em;
+}
+
 /*Clase para eliminar la decoración del enlace*/
 .recordEmployee{
     text-decoration: none;
@@ -17,7 +21,7 @@
 .info{
     display: flex;                                              
     flex-direction: column;                                     /*Coloca la info debajo del título, sin eso iría a la derecha*/
-    padding: 0.8em;                                             /*Espacio para que respire el contenido*/
+    padding-left: 0.8em;                                             /*Espacio para que respire el contenido*/
 }
 
 .dataEmployee{

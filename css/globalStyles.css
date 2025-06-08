@@ -49,6 +49,7 @@ body{
     --font-weight-Regular: 400;
 
     --height-container: 55vh;                     /*Para manejar el tamaño de los contenedores de información.      Ej. Tablas, contenedores de paneles/cartas*/
+    --height-pnl: 8em;
 
     --shadow-btn-primary: 0px 0px 15px 1px rgba(120, 132, 237, 0.65);   /*Sombra de los botones principales.      Ej. "Agregar", "Enviar", etc.*/
     --shadow-btn-secondary: 0px 0px 5px 1px rgba(120, 132, 237, 0.45);  /*Sombra de los botones secundarios.      Ej. "Evidencias", "Buscar", etc.*/
@@ -195,7 +196,7 @@ h2, ul, li {
   left: 0;
   z-index: 25;     
   border-radius: 12px;     
-  background: linear-gradient(to top, #F6F7FF, transparent);                       
+  background: linear-gradient(to top, #dcddee, transparent);                       
 }
 
 /*
@@ -322,6 +323,7 @@ h2, ul, li {
     margin-bottom: 0.7em;                                       /*Distancia entre un panel a otro*/
     background-color: var(--color-neutral);                     
     transition: var(--transition-base);                         /*Animación de regreso una vez termine hover*/
+    height: var(--height-pnl);
 }
 
 .informationPnl:hover {

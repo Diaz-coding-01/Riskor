@@ -5,11 +5,15 @@ body{
     --width-modal: clamp(400px, 90%, 850px);
 }
 
+.btn-primary{
+    --border-radius: 5px;
+}
+
 .bodyContent{
     flex: 1;
     background-color: var(--bg-containers);
     width: 100%;
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     padding: 20px;
     box-sizing: border-box;
 }
@@ -19,13 +23,13 @@ body{
     border: none;
     cursor: pointer;
     justify-content: space-between;
-    height: clamp(100px, 33%, 150px); /*Este estilo no esta del todo confirmado*/
+    --height-pnl: 10em;
 }
 
 .trainingName{
     color: var(--color-txt);
-    font-weight: 600;
-    font-size: 1.6em;
+    font-weight: var(--font-weight-Semibold);
+    font-size: var(--font-size-base);
 }
 
 .containerTrainingUsers{
@@ -63,7 +67,7 @@ body{
 .modalAddTraining{
     display: flex;
     position: relative;
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     padding: 45px 70px;
     box-sizing: border-box;
     gap: 15px;
@@ -97,11 +101,11 @@ body{
 .containerInputAddTraining label{
     font-size: 1.1em;
     color: var(--color-txt);
-    font-weight: 500;
+    font-weight: var(--font-weight-Medium);
 }
 
 .containerInputAddTraining label + *{
-    font-weight: 500;
+    font-weight: var(--font-weight-Medium);
     font-size: var(--font-size-base);
     color: var(--color-txt-title);
     padding: 7px;
@@ -122,7 +126,7 @@ body{
 .modalTraining{
     display: flex;
     position: relative;
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     padding: 10px 20px;
     box-sizing: border-box;
     flex-direction: column;
@@ -142,7 +146,7 @@ body{
 #trainingName{
     font-size: 1.6em;
     color: var(--color-txt);
-    font-weight: 600;
+    font-weight: var(--font-weight-Semibold);
     width: 100%;
     text-align: start;
 }	
@@ -299,10 +303,29 @@ body{
 
 .checks:checked{
     background-color: #5666FF;
-    transition: 1s;
+    transition: 0.6s;
 }
 
 .checks:checked::before{
     content: '✔';
     color: #fff;
+}
+
+/*Scroll personalizado*/
+
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: var(--border-radius);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: var(--border-radius);
+  background: linear-gradient(rgb(156, 165, 243), rgb(224, 226, 251));
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-breadcrumb);
+  border-radius: var(--border-radius);
 }

@@ -26,9 +26,12 @@
                     <div class="headerContent">
                         <!--Creación de la clase breadcrumb el cual servira para indicar la ruta que ha seguido el usuario para llegar a esa página-->
                         <div class="topHeader">
-                            <div class="breadcrumb">
-                                <a href="accidents.html">Accidentes Verificados</a>
-                            </div>
+                            <nav class="breadcrumb">
+                                <ul>
+                                    <li><a href="accidents.html">Accidentes ></a></li>
+                                    <li style="margin-left: 0.4em;"><a>Accidentes verificados</a></li>
+                                </ul>
+                            </nav>
                             <div class="icons">
                                 <div class="notifications">
                                     <img src="../media/Vector (1).svg" alt="Notificaciones" />
@@ -44,7 +47,7 @@
                             <!--Creación del boton para busqueda del empleado-->
                             <div class="searchContainer">
                                 <input type="text" id="txtSearch" placeholder="Buscar reporte..." />
-                                <button id="btnFilter">
+                                <button id="btnFilter" class="btnFilter">
                                     <img src="../media/filtrar.svg" title="Filtrar">
                                 </button>
                                 <!--Al dar click al boton se ejecuta la funcion searchEmployee creada en el archivo js, quitar el evento onclick y ponerlo como id-->
