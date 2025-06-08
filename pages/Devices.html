@@ -10,93 +10,280 @@
 </head>
 
 <body>
-    <div class="container">
-        <aside id="sidebar  "></aside>
-        <main class="main-content">
-            <div class="topHeader">                    
-                <nav class="breadcrumb">
-                    <ul>
-                        <li><a>Control de dispositivos</a></li>
-                    </ul>
+    
+    <main>
+        <div class="contenedor-seccion">
+            <div class="contenedor-sidebar">
+                <nav class="sidebar">
+                    <header>
+                        <div class="superiorNav">
+                            <img src="../media/sidebar/LogoRiskor.png" alt="Logo de Riskor">
+                        </div>
+                    </header>
+                    <hr class="hr-sidebar">
+                    <div class="menu-sidebar" style="margin-top: 10%;">
+                        <div class="menu">
+                            <div class="menu-link">
+                                <li class="nav-link">
+                                    <a href="#" class="links activeNavbarItem">
+                                        <img src="../media/sidebar/Inicio.svg" alt="" class="navbar-icon">
+                                        <span class="text nav-text">Inicio</span>
+                                    </a>
+                                </li>
+                                <li class="nav-link dropdown">
+                                    <a href="employee.html" class="links dropdown-toggle">
+                                        <img src="../media/sidebar/Empleado.svg" alt="" class="navbar-icon" />
+                                        <span class="text nav-text">Empleados</span>
+                                    </a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="#" class="links activeNavbarItem">
+                                        <img src="../media/sidebar/Accidentes.svg" alt="" class="navbar-icon">
+                                        <span class="text nav-text">Accidentes</span>
+                                    </a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="trainings.html" class="links activeNavbarItem">
+                                        <img src="../media/sidebar/capacitaciones.svg" alt="" class="navbar-icon">
+                                        <span class="text nav-text">Capacitaciones</span>
+                                    </a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="#" class="links activeNavbarItem">
+                                        <img src="../media/sidebar/permisos.svg" alt="" class="navbar-icon">
+                                        <span class="text nav-text">Permisos</span>
+                                    </a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="#" class="links activeNavbarItem">
+                                        <img src="../media/sidebar/Incapacidad.svg" alt="" class="navbar-icon">
+                                        <span class="text nav-text">Incapacidad</span>
+                                    </a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="#" class="links activeNavbarItem">
+                                        <img src="../media/sidebar/RegulacionesEmpresariales.svg" alt=""
+                                            class="nav-icon">
+                                        <span class="text nav-text">Regulaciones...</span>
+                                    </a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="#" class="links activeNavbarItem">
+                                        <img src="../media/sidebar/AreasEmpresa.svg" alt="" class="nav-icon">
+                                        <span class="text nav-text">Áreas </span>
+                                    </a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="#" class="links activeNavbarItem">
+                                        <img src="../media/sidebar/Infraestructura.svg" alt="" class="nav-icon">
+                                        <span class="text nav-text">Dispositivos</span>
+                                    </a>
+                                </li>
+                                <li class="nav-link">
+                                    <a href="#" class="links activeNavbarItem">
+                                        <img src="../media/sidebar/Configuracion.svg" alt="" class="nav-icon">
+                                        <span class="text nav-text">Configuración</span>
+                                    </a>
+                                </li>
+                            </div>
+                        </div>
+                        <div class="userContainer">
+                            <a href="" class="navbarUserItem">
+                                <img src="../media/sidebar/Usuario.svg" alt="" class="userIcon">
+                                <span class="navbarText navTextVisible">User</span>
+                            </a>
+                        </div>
                 </nav>
-
-                <div class="icons">
-                    <div class="notifications">
-                        <button id="btnNotifications">
-                            <img src="../media/Vector (1).svg" alt="Notificaciones" />
-                        </button>
-                    </div>
-                    <div class="profile">
-                        <img src="../media/133866211092483860.jpg" alt="Perfil" class="profilePicture" />
-                    </div>
-                </div>
             </div>
 
-            <div class="cuentas-content">
-                <div class="tabs">
-                    <button class="tab active" data-tab="todos">Todos</button>
-                    <button class="tab" data-tab="Salud">Salud</button>
-                    <button class="tab" data-tab="Sistemas">Sistemas</button>
-                </div>
-                <hr>
-                <div class="tab-content">
-                    <div id="todos" class="tab-pane active">
-                        <div class="card-section">
+            <div class="contenedor-cuerpo">
+                <div class="content">
+
+                    <div class="headerContent">
+                        <div class="topHeader">
+
+                            <nav class="breadcrumb">
+                                <ul>
+                                    <li><a>Control de Dispositivos</a></li>
+                                </ul>
+                            </nav>
+
+                            <div class="icons">
+                                <div class="notifications">
+                                    <button id="btnNotifications">
+                                        <img src="../media/Vector (1).svg" alt="Notificaciones" />
+                                    </button>
+                                </div>
+                                <div class="profile">
+                                    <img src="../media/133866211092483860.jpg" alt="Perfil" class="profilePicture" />
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="contenedor-dispositivos">
+                        <div class="tabs">
+                            <button class="tab active" data-tab="todos">Todos</button>
+                            <button class="tab" data-tab="Salud">Salud <img src="../media/Health.svg" alt=""></button>
+                            <button class="tab" data-tab="Sistemas">Sistemas <img src="../media/systems.svg"
+                                    alt=""></button>
+                        </div>
+                        <hr class="liner">
+                    </div>
+                    <div class="cardContainer">
+                        <div class="pnlContainer" data-tab-content="todos">
                             <div class="card">
                                 <div class="card-header">
-                                   
+                                    <h3>Botiquín 12</h3>
+                                    <div class="icon">
+                                        <img src="../media/Health.svg" alt="Agregar">
+                                    </div>
                                 </div>
-                                
+                                <div class="card-body">
+                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn-detalles">Detalles</button>
+                                </div>
                             </div>
                             <div class="card">
                                 <div class="card-header">
                                     <h3>Botiquín 12</h3>
-                                    <span class="icon">➕</span>
+                                    <div class="icon">
+                                        <img src="../media/Health.svg" alt="Agregar">
+                                    </div>
                                 </div>
-                                <p><strong>Instalado:</strong> 21-05-2025</p>
-                                <button class="btn-primary">Detalles</button>
+                                <div class="card-body">
+                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn-detalles">Detalles</button>
+                                </div>
                             </div>
                             <div class="card">
                                 <div class="card-header">
                                     <h3>Botiquín 12</h3>
-                                    <span class="icon">➕</span>
+                                    <div class="icon">
+                                        <img src="../media/Health.svg" alt="Agregar">
+                                    </div>
                                 </div>
-                                <p><strong>Instalado:</strong> 21-05-2025</p>
-                                <button class="btn-primary">Detalles</button>
+                                <div class="card-body">
+                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn-detalles">Detalles</button>
+                                </div>
                             </div>
                             <div class="card">
                                 <div class="card-header">
                                     <h3>Botiquín 12</h3>
-                                    <span class="icon">➕</span>
+                                    <div class="icon">
+                                        <img src="../media/Health.svg" alt="Agregar">
+                                    </div>
                                 </div>
-                                <p><strong>Instalado:</strong> 21-05-2025</p>
-                                <button class="btn-primary">Detalles</button>
+                                <div class="card-body">
+                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn-detalles">Detalles</button>
+                                </div>
                             </div>
                             <div class="card">
                                 <div class="card-header">
                                     <h3>Botiquín 12</h3>
-                                    <span class="icon">➕</span>
+                                    <div class="icon">
+                                        <img src="../media/Health.svg" alt="Agregar">
+                                    </div>
                                 </div>
-                                <p><strong>Instalado:</strong> 21-05-2025</p>
-                                <button class="btn-primary">Detalles</button>
+                                <div class="card-body">
+                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn-detalles">Detalles</button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Botiquín 12</h3>
+                                    <div class="icon">
+                                        <img src="../media/Health.svg" alt="Agregar">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn-detalles">Detalles</button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Botiquín 12</h3>
+                                    <div class="icon">
+                                        <img src="../media/Health.svg" alt="Agregar">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn-detalles">Detalles</button>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Botiquín 12</h3>
+                                    <div class="icon">
+                                        <img src="../media/Health.svg" alt="Agregar">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn-detalles">Detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pnlContainer" data-tab-content="Salud" style="display: none;">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Botiquín 12</h3>
+                                    <div class="icon">
+                                        <img src="../media/Health.svg" alt="Agregar">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn-detalles">Detalles</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pnlContainer" data-tab-content="Sistemas" style="display: none;">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Botiquín 12</h3>
+                                    <div class="icon">
+                                        <img src="../media/Health.svg" alt="Agregar">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn-detalles">Detalles</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div id="Salud" class="tab-pane">
-                        <p class="text-center">Contenido de Dispositivos de salud</p>
-                        <div>
-                            <!-- Aquí puedes añadir contenido específico -->
-                        </div>
-                    </div>
-                    <div id="Sistemas" class="tab-pane">
-                        <p>Contenido de Dispositivos de Sistemas</p>
-                        <div>
-                            <!-- Aquí puedes añadir contenido específico -->
-                        </div>
-                    </div>
+                    <button class="btn-primary Agregar-dispositivo">Agregar dispositivo</button>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
     </div>
 
     <script src="../js/sidebar.js"></script>
@@ -104,3 +291,7 @@
 </body>
 
 </html>
+
+
+<!--
+-->
