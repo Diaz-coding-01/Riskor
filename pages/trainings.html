@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/trainings.css">
 </head>
 <body>
+    <!-- Modal Agregar Capacitación -->
     <div class="containerModal containerModalAddTraining hideModal">
         <form class="modalAddTraining" id="formAddTraining">
             <button class="btnCloseModal" type="button" data-modal="containerModalAddTraining">
@@ -15,24 +16,24 @@
             </button>
             <div>
                 <div class="containerInputAddTraining">
-                    <label for="txtAddTrainingName">Nombre capacitacion</label>
-                    <input type="text" name="" id="txtAddTrainingName">
+                    <label for="txtAddTrainingName">Nombre capacitación</label>
+                    <input type="text" id="txtAddTrainingName">
                 </div>
                 <div class="containerInputAddTraining">
                     <label for="txtAddTrainerName">Nombre capacitador</label>
-                    <input type="text" name="" id="txtAddTrainerName">
+                    <input type="text" id="txtAddTrainerName">
                 </div>
             </div>
             <div>
                 <div class="containerInputAddTraining">
-                    <label for="txtAddTrainingDescription">Descripcion</label>
-                    <input type="text" name="" id="txtAddTrainingDescription">
+                    <label for="txtAddTrainingDescription">Descripción</label>
+                    <input type="text" id="txtAddTrainingDescription">
                 </div>
             </div>
             <div>
                 <div class="containerInputAddTraining">
                     <label for="cmbAddTrainingModality">Modalidad</label>
-                    <select name="" id="cmbAddTrainingModality"></select>
+                    <select id="cmbAddTrainingModality"></select>
                 </div>
                 <div class="containerInputAddTraining">
                     <label for="dtAddTrainingDate">Fecha</label>
@@ -46,21 +47,22 @@
             <div>
                 <div class="containerInputAddTraining">
                     <label for="txtAddTrainingPlace">Lugar</label>
-                    <input type="text" name="" id="txtAddTrainingPlace">
+                    <input type="text" id="txtAddTrainingPlace">
                 </div>
             </div>
             <input type="submit" id="btnAddTraining" class="btn-primary" style="align-self: end; padding: 15px 40px;">
         </form>
     </div>
 
+    <!-- Modal Ver Capacitación -->
     <div class="containerModal containerModalTraining hideModal">
-        <form class="modalTraining">
+        <form class="modalTraining" id="formTraining">
             <button class="btnCloseModal" type="button" data-modal="containerModalTraining">
                 <img src="../media/closeIcon.svg" alt="">
             </button>
             <div class="headerModalTraining">
                 <div>
-                    <h2 id="trainingName">nombreCapacitacion</h2>
+                    <h2 id="trainingName"></h2>
                 </div>
                 <div style="padding-right: 30px;">
                     <h4 class="trainer">Capacitador: <span class="trainerName">Luis Gonzales</span></h4>
@@ -69,14 +71,14 @@
             <div class="bodyModalTraining">
                 <div>
                     <div class="containerInputAddTraining">
-                        <label for="txtTrainingDescription">Descripcion</label>
-                        <input type="text" name="" id="txtTrainingDescription">
+                        <label for="txtTrainingDescription">Descripción</label>
+                        <input type="text" id="txtTrainingDescription">
                     </div>
                 </div>
                 <div>
                     <div class="containerInputAddTraining">
                         <label for="cmbTrainingModality">Modalidad</label>
-                        <select name="" id="cmbTrainingModality"></select>
+                        <select id="cmbTrainingModality"></select>
                     </div>
                     <div class="containerInputAddTraining">
                         <label for="dtTrainingDate">Fecha</label>
@@ -90,19 +92,20 @@
                 <div>
                     <div class="containerInputAddTraining">
                         <label for="txtTrainingPlace">Lugar</label>
-                        <input type="text" name="" id="txtTrainingPlace">
+                        <input type="text" id="txtTrainingPlace">
                     </div>
                 </div>
                 <div class="containerButtonsModalTraining">
-                    <button class="btn-primary">Asistencia</button>
-                    <button class="btn-primary">Listo</button>
+                    <a class="btn-primary" href="trainingAsistenceData.html" style="text-decoration: none;">Asistencia</a>
+                    <button class="btn-primary" type="button">Listo</button>
                 </div>
             </div>
         </form>
     </div>
 
+    <!-- Modal Empleados -->
     <div class="containerModal containerModalEmployees hideModal">
-        <form action="" class="modalEmployees">
+        <form class="modalEmployees">
             <button class="btnCloseModal" type="button" data-modal="containerModalEmployees">
                 <img src="../media/closeIcon.svg" alt="">
             </button>
@@ -115,55 +118,24 @@
             </div>
             <div class="containerFilterEmployees">
                 <input type="text" id="txtSearchEmployees" placeholder="Buscar empleado...">
-                <button class="btnFilter" style="height: 100%;">
+                <button class="btnFilter" type="button" style="height: 100%;">
                     <img src="../media/filtrar.svg" alt="" style="width: 90%;">
                 </button>
             </div>
             <div class="bodyModalEmployees">
+                <!-- Ejemplo de empleados, puedes generar dinámicamente -->
                 <div class="employee">
                     <div class="containerEmployeeImage">
                         <img src="../media/Frame 59.png" alt="" class="employeeImage">
                     </div>
                     <div style="flex: 1;">
-                        <span class="employeeName">Luis Gonzalesrfgsrfwerfgtsefsefsefsefsefesfs</span>
+                        <span class="employeeName">Luis Gonzales</span>
                     </div>
                     <div>
                         <input type="checkbox" class="chEmployee checks" style="border-radius: 50%; transform: scale(1.4);">
                     </div>
                 </div>
-                <div class="employee">
-                    <div class="containerEmployeeImage">
-                        <img src="../media/Frame 59.png" alt="" class="employeeImage">
-                    </div>
-                    <div style="flex: 1;">
-                        <span class="employeeName">Luis Gonzalesrfgsrfwerfgtsefsefsefsefsefesfs</span>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="chEmployee checks" style="border-radius: 50%; transform: scale(1.4);">
-                    </div>
-                </div>
-                <div class="employee">
-                    <div class="containerEmployeeImage">
-                        <img src="../media/Frame 59.png" alt="" class="employeeImage">
-                    </div>
-                    <div style="flex: 1;">
-                        <span class="employeeName">Luis Gonzalesrfgsrfwerfgtsefsefsefsefsefesfs</span>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="chEmployee checks" style="border-radius: 50%; transform: scale(1.4);">
-                    </div>
-                </div>
-                <div class="employee">
-                    <div class="containerEmployeeImage">
-                        <img src="../media/Frame 59.png" alt="" class="employeeImage">
-                    </div>
-                    <div style="flex: 1;">
-                        <span class="employeeName">Luis Gonzalesrfgsrfwerfgtsefsefsefsefsefesfs</span>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="chEmployee checks" style="border-radius: 50%; transform: scale(1.4);">
-                    </div>
-                </div>
+                <!-- ...más empleados... -->
             </div>
             <input type="submit" value="Listo" class="btn-primary" id="btnAddEmployees" style="align-self: end; border-radius: 5px; box-shadow: none; padding: 10px 60px; margin: 10px;">
         </form>
@@ -172,7 +144,7 @@
     <main>
         <div class="contenedor-seccion">
             <div class="contenedor-sidebar">
-                <div id="sidebar"></div>
+                <aside id="sidebar"></aside>
             </div>
             <div class="contenedor-cuerpo">
                 <div class="content">
@@ -185,32 +157,19 @@
                         <div class="headerContentButtons">
                             <div class="searchContainer">
                                 <input type="text" id="txtSearch">
-                                <button class="btnFilter">
+                                <button class="btnFilter" type="button">
                                     <img src="../media/filtrar.svg" alt="">
                                 </button>
-                                <button class="btn-primary" style="flex: 2;">Buscar</button>
+                                <button class="btn-primary" style="flex: 2;" type="button">Buscar</button>
                             </div>
                             <div>
-                                <button class="btn-primary" id="btnOpenAddTraining" style="height: 3.5em; width: 12em">Crear</button>
+                                <button class="btn-primary" id="btnOpenAddTraining" style="height: 3.5em; width: 12em" type="button">Crear</button>
                             </div>
                         </div>
                     </div>
                     <div class="cardContainer">
                         <div class="bottomShadow"></div>
-                        <div class="pnlContainer">
-                            <button class="informationPnl">
-                                <span class="trainingName">Ética laboral</span>
-                                <div class="containerMoreInfoTraining">
-                                    <div class="containerTrainingUsers">
-                                        <img src="../media/Frame 59.png" alt="" class="userTraining user1">
-                                        <img src="../media/Frame 59.png" alt="" class="userTraining user2">
-                                        <img src="../media/Frame 59.png" alt="" class="userTraining user3">
-                                    </div>
-                                    <img src="../media/grey_arrow_right.svg" alt="">
-                                </div>
-                            </button>
-                            
-                        </div>
+                        <div class="pnlContainer"></div>
                     </div>
                 </div>
             </div>

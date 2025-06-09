@@ -7,6 +7,8 @@ body{
 
 .btn-primary{
     --border-radius: 5px;
+    display: grid;
+    place-content: center;
 }
 
 .bodyContent{
@@ -44,8 +46,23 @@ body{
 }
 
 .userTraining{
+    border-radius: 50%;
     width: 60px;
+    height: 60px;
     position: relative;
+}
+
+.btnAddMembers{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    left: 20%;
+    z-index: 25;
+    transition: scale 0.3s ease;
+}
+
+.btnAddMembers:hover{
+    scale: 1.1;
 }
 
 .user1{
@@ -113,14 +130,6 @@ body{
     border: solid 1px #7B96C7;
 }
 
-.showModal{
-    display: flex;
-}
-
-.hideModal{
-    display: none;
-}
-
 /*Modal capacitacion*/
 
 .modalTraining{
@@ -177,7 +186,7 @@ body{
     padding: 20px 0;
 }	
 
-.containerButtonsModalTraining button{
+.containerButtonsModalTraining *{
     height: 2.5em;
     width: 10em;
     box-shadow: none; 
@@ -225,17 +234,6 @@ body{
     font-size: 1em;
     padding: 5px;
     box-sizing: border-box;
-}
-
-.btnFilter{
-    background-color: transparent;
-    border: none;
-    transition: var(--transition-base);
-}
-
-.btnFilter:hover {
-    transform: translateY(-2px);
-    cursor: pointer;
 }
 
 .headerModalEmployees h4{
@@ -286,6 +284,8 @@ body{
 
 .employeeImage{
     height: 100%;
+    width: 100%;
+    border-radius: 50%;
 }
 
 .checks{
@@ -309,6 +309,16 @@ body{
 .checks:checked::before{
     content: '✔';
     color: #fff;
+}
+
+/*Cambios de los modales*/
+
+.showModal{
+    display: flex;
+}
+
+.hideModal{
+    display: none;
 }
 
 /*Scroll personalizado*/

@@ -9,121 +9,127 @@
 </head>
 <body>
     <main>
-        <div class="content">
-            <div class="headerContent">
-                <div class="topHeader"> 
-                    <nav class="breadcrumb">
-                        <ul>
-                            <li><a href="medicalRecords.html">Expedientes médicos ></a></li>
-                            <li><a href="AllRecordsEmployee.html">Ver Empleado ></a></li>
-                            <li><a>empleado</a></li>
-                        </ul>
-                    </nav>
-                </div>
+        <div class="contenedor-seccion">
+            <div class="contenedor-sidebar">
+                <aside id="sidebar"></aside>
             </div>
-
-            <!--Formulario-->
-            <form>
-                <div class="formTop">
-                    <div> 
-                        <img src="../media/133866211092483860.jpg" alt="Employee" class="employeePicture">
+            <div class="contenedor-cuerpo">
+                <div class="content">
+                    <div class="headerContent">
+                        <div class="topHeader"> 
+                            <nav class="breadcrumb">
+                                <ul>
+                                    <li><a href="medicalRecords.html">Expedientes médicos ></a></li>
+                                    <li><a href="AllRecordsEmployee.html">Ver Empleado ></a></li>
+                                    <li><a>empleado</a></li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
-                    <div class="rowsFormTop">
-                        <div class="firstRow">
-                            <div class="contactNameInput" style="flex: 2;">
-                                <label for="txtContactName">Nombre de contacto</label>
-                                <input type="text" id="txtContactName" class="txtTextbox">
-                            </div>
-                            <div class="contactNumInput" style="flex: 1;">
-                                <label for="txtContactPhone">Número de contacto</label>
-                                <input type="text" id="txtContactPhone" class="txtTextbox">
-                            </div>
-                        </div>
 
-                        <div class="secRow">
-                            <div class="genderInput" style="flex: 1;">
-                                <label for="txtGender">Género</label>
-                                <input type="text" id="txtGender" class="txtTextbox">
+                    <!--Formulario-->
+                    <form>
+                        <div class="formTop">
+                            <div> 
+                                <img src="../media/133866211092483860.jpg" alt="Employee" class="employeePicture">
                             </div>
-                            <div class="documentInput" style="flex: 1;">
-                                <label for="txtDui">Documento</label>
-                                <input type="text" id="txtDui" class="txtTextbox">
-                            </div>
-                            <div class="isssInput" style="flex: 1;">
-                                <label for="txtAffiliationIsss">N° de affiliation ISSS</label>
-                                <input type="text" id="txtAffiliationIsss" class="txtTextbox">
-                            </div>
-                        </div>
-                        <div class="thirdRow">
-                            <div class="thirdRowLeft">
-                                <div class="mailInput" style="flex: 1;">
-                                    <label for="txtEmployeeMail">Correo electrónico</label>
-                                    <input type="email" id="txtEmployeeMail" class="txtTextbox">
+                            <div class="rowsFormTop">
+                                <div class="firstRow">
+                                    <div class="contactNameInput" style="flex: 2;">
+                                        <label for="txtContactName">Nombre de contacto</label>
+                                        <input type="text" id="txtContactName" class="txtTextbox">
+                                    </div>
+                                    <div class="contactNumInput" style="flex: 1;">
+                                        <label for="txtContactPhone">Número de contacto</label>
+                                        <input type="text" id="txtContactPhone" class="txtTextbox">
+                                    </div>
                                 </div>
-                                <div class="bloodInput" style="flex: 1;">
-                                    <label for="txtBloodType">Sangre</label>
-                                    <input type="text" id="txtBloodType" class="txtTextbox">
+
+                                <div class="secRow">
+                                    <div class="genderInput" style="flex: 1;">
+                                        <label for="txtGender">Género</label>
+                                        <input type="text" id="txtGender" class="txtTextbox">
+                                    </div>
+                                    <div class="documentInput" style="flex: 1;">
+                                        <label for="txtDui">Documento</label>
+                                        <input type="text" id="txtDui" class="txtTextbox">
+                                    </div>
+                                    <div class="isssInput" style="flex: 1;">
+                                        <label for="txtAffiliationIsss">N° de affiliation ISSS</label>
+                                        <input type="text" id="txtAffiliationIsss" class="txtTextbox">
+                                    </div>
+                                </div>
+                                <div class="thirdRow">
+                                    <div class="thirdRowLeft">
+                                        <div class="mailInput" style="flex: 1;">
+                                            <label for="txtEmployeeMail">Correo electrónico</label>
+                                            <input type="email" id="txtEmployeeMail" class="txtTextbox">
+                                        </div>
+                                        <div class="bloodInput" style="flex: 1;">
+                                            <label for="txtBloodType">Sangre</label>
+                                            <input type="text" id="txtBloodType" class="txtTextbox">
+                                        </div>
+                                    </div>
+                                    <div class="thirdRowRight">
+                                        <div class="allergies" style="flex: 2;">
+                                            <label for="txtAllergies">Alergias</label>
+                                            <textarea name="" id="txtAllergies" class="txtTextarea" style="resize: none;"></textarea>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="thirdRowRight">
-                                <div class="allergies" style="flex: 2;">
-                                    <label for="txtAllergies">Alergias</label>
-                                    <textarea name="" id="txtAllergies" class="txtTextarea" style="resize: none;"></textarea>
+                        </div>
+
+                        <div class="formBottom">
+                            <!-- Contenedor superior (divide en dos columnas) -->
+                            <div class="medicalCondition">
+                                <label for="txtMedicalCondition">Condición médica</label>
+                                <input type="text" id="txtMedicalCondition" class="txtTextbox">
+                            </div>
+                            <div class="contenedor-campos">
+                                <!-- Columna izquierda -->
+                                <div class="colLeft">
+                                    <label for="txtTratamiento">Tratamiento</label>
+                                    <div class="caja-tratamiento">
+                                        <textarea name="" id="txtTratamiento" class="txtTextarea" style="resize: none;"></textarea>
+                                    </div>
+                                </div>
+
+                                <!-- Columna derecha -->
+                                <div class="colRight">
+                                    <div class="dateInput">
+                                        <label for="dtpInicioT">Inicio del tratamiento</label>
+                                        <input type="date" id="dtpInicioT" value="2025-08-19" />
+                                    </div>
+                                    <div class="dateInput">
+                                        <label for="dtpFinT">Fin del tratamiento</label>
+                                        <input type="date" id="dtpFinT" value="2025-08-26" />
+                                    </div>
+                                    <div class="statusSelect">
+                                        <label for="cmbEstado">Estado</label>
+                                        <select id="cmbEstado">
+                                            <option>Activo</option>
+                                            <option>Inactivo</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="formBottom">
-                    <!-- Contenedor superior (divide en dos columnas) -->
-                    <div class="medicalCondition">
-                        <label for="txtMedicalCondition">Condición médica</label>
-                        <input type="text" id="txtMedicalCondition" class="txtTextbox">
-                    </div>
-                    <div class="contenedor-campos">
-                        <!-- Columna izquierda -->
-                        <div class="colLeft">
-                            <label for="txtTratamiento">Tratamiento</label>
-                            <div class="caja-tratamiento">
-                                <textarea name="" id="txtTratamiento" class="txtTextarea" style="resize: none;"></textarea>
+                            <!-- Contenedor de botones -->
+                            <div class="btnContainer">
+                                <div class="leftButtons">
+                                    <button class="btn-primary">Volver</button>
+                                </div>
+                                    <div class="rightButtons">
+                                    <button class="btn-primary">Modificar</button>
+                                    <button class="btn-primary">Guardar</button>
+                                </div>
                             </div>
-                        </div>
-
-                        <!-- Columna derecha -->
-                        <div class="colRight">
-                            <div class="dateInput">
-                                <label for="dtpInicioT">Inicio del tratamiento</label>
-                                <input type="date" id="dtpInicioT" value="2025-08-19" />
-                            </div>
-                            <div class="dateInput">
-                                <label for="dtpFinT">Fin del tratamiento</label>
-                                <input type="date" id="dtpFinT" value="2025-08-26" />
-                            </div>
-                            <div class="statusSelect">
-                                <label for="cmbEstado">Estado</label>
-                                <select id="cmbEstado">
-                                    <option>Activo</option>
-                                    <option>Inactivo</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Contenedor de botones -->
-                    <div class="btnContainer">
-                        <div class="leftButtons">
-                            <button class="btn-primary">Volver</button>
-                        </div>
-                            <div class="rightButtons">
-                                <button class="btn-primary">Modificar</button>
-                                <button class="btn-primary">Guardar</button>
-                            </div>
-                        </div>
-                    </div>    
-                </div>
-            </form>        
-        </div>
+                        </div>    
+                    </form>     
+                </div>   
+            </div> <!-- Cierra .content -->
+        </div> <!-- Cierra .contenedor-cuerpo -->
     </main>
     <script src="../js/recordEmployee.js"></script>
     <script src="../js/sidebar.js"></script>
