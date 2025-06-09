@@ -1,65 +1,70 @@
 @import url('globalStyles.css');
 
-/* Estilo del contenedor principal */
-.container {
-    display: flex;
+/* ====== Estilos Generales ====== */
+.liner {
+    background-color: #94ACDA;
+    border: none;
+    border-radius: 50px;
+    height: 5px;
+    margin: 0;
+}
+
+/* ====== Contenedores Principales ====== */
+.contenedor-dispositivos {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0 1rem;
     width: 100%;
-    min-height: 100vh;
 }
 
-/* Contenido principal */
-.main-content {
-    flex: 1;
-    padding: 20px;
-    overflow: auto;
+.pnlContainer {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.cuentas-content{
-    padding-top: 30px;
+.Agregar-dispositivo {
+    align-self: flex-start;
+    margin-left: 6.5rem;
+    margin-top: auto;
 }
 
-hr{
-   border-radius: 50px;
-   height: 5px;
-   background-color: #94ACDA;
-   border: none;
-}
-
-/* Contenedor de pestañas */
+/* ====== Tabs (Pestañas) ====== */
 .tabs {
     display: flex;
     justify-content: center;
     padding-bottom: 4px;
 }
 
-/* Botones de pestañas */
 .tab {
-    padding: 10px 20px;
+    align-items: center;
     background: transparent;
     border: none;
-    font-size: 1.3rem;
-    font-weight: bold;
     color: var(--color-txt);
     cursor: pointer;
-    position: relative;
-    transition: all 0.3s ease;
+    display: flex;
     flex: 1;
+    font-size: 1.3rem;
+    font-weight: bold;
+    justify-content: space-between;
     margin-bottom: 0.5rem;
     margin-right: 5px;
+    padding: 10px 20px;
+    position: relative;
+    transition: all 0.6s ease;
 }
 
 .tab::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    /* Para que esté justo en el borde inferior */
-    left: 10%;
-    /* Un poco de margen para que no sea tan ancho */
-    right: 10%;
-    height: 5px;
-    /* Más grueso para destacar */
     background-color: transparent;
     border-radius: 6px;
+    bottom: 0;
+    content: "";
+    height: 5px;
+    left: 3%;
+    position: absolute;
+    right: 3%;
     transition: all 0.3s ease;
 }
 
@@ -71,47 +76,90 @@ hr{
     background-color: var(--color-breadcrumb);
 }
 
-/* Contenido de cada pestaña */
-.tab-content {
-    text-align: center;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-/* Ocultar todos los tab panes */
-.tab-pane {
-    display: none;
-}
-
-/* Mostrar solo el tab pane activo */
-.tab-pane.active {
-    display: block;
-}
-
-.card-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: start;
-}
-
+/* ====== Tarjetas ====== */
 .card {
-    background-color: var(--color-bg-tb);
-    padding: 4rem;
-    border-radius: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 380px;
-    /* Para ocupar todo el espacio asignado por el grid */
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-pnl);
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    height: 16rem;
+    padding: 1.5rem;
+    width: 27.5rem;
 }
 
 .card-header {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
+
+.card-header h3 {
+    color: #545475;
+    font-size: 1.8rem;
+    font-weight: var(--font-weight-Medium);
+    margin: 0;
+}
+
+.card-header .icon img {
+    height: 25px;
+    width: 25px;
+}
+
+.card-body .info {
+    color: var(--color-txt-title);
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.card-body .info .date,
+.card-body .info .label {
+    font-weight: var(--font-weight-Semibold);
+}
+
+.card-body .date {
+    font-weight: 700;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+}
+
+.card button {
+    margin-top: auto;
+}
+
+/* ====== Botones ====== */
+.btn-primary {
+    border-radius: 0.8rem;
+    padding: 1rem 4.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-detalles {
+    background-color: #ffffff;
+    border: 2px solid #6563ff;
+    border-radius: 0.8rem;
+    box-shadow: var(--shadow-btn-secondary);
+    color: #6563ff;
+    cursor: pointer;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-Semibold);
+    padding: 1rem 5.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-detalles:hover {
+    --color-btn-primary: #6876f2;
+    background: var(--color-btn-primary);
+    box-shadow: var(--shadow-btn-primary);
+    color: #f5f8ff;
+    transform: translateY(-5px);
+}
+
