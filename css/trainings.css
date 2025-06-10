@@ -320,22 +320,3 @@ body{
 .hideModal{
     display: none;
 }
-
-/*Scroll personalizado*/
-
-::-webkit-scrollbar {
-  width: 8px;
-  border-radius: var(--border-radius);
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  border-radius: var(--border-radius);
-  background: linear-gradient(rgb(156, 165, 243), rgb(224, 226, 251));
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--color-breadcrumb);
-  border-radius: var(--border-radius);
-}

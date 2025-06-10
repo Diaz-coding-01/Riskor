@@ -28,18 +28,12 @@
 
 /* Dentro de thirdRow: distribución izquierda y derecha */
 .thirdRowLeft,
-.thirdRowRight {
+.thirdRowRight,
+.textField {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.textField{
-  flex: 1;
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
 }
 
 .formBottom {
@@ -79,12 +73,12 @@
   Parte inferior del formulario - Estructura
   -----------------------------------------------------------------------------------------------------------------------
 */
-.caja-tratamiento{
+.treatmentContainer{
   height: 100%;
   width: 100%;
 }
 
-.caja-tratamiento textarea {
+.treatmentContainer textarea {
   padding: 1rem;
   border-radius: 5px;
 }
@@ -129,64 +123,33 @@
   -----------------------------------------------------------------------------------------------------------------------
 */
 label{
-    font-size: var(--font-size-base);
-    color: var(--color-txt-title);
-    font-weight: var(--font-weight-Semibold);
+  font-size: var(--font-size-base);
+  color: var(--color-txt-title);
+  font-weight: var(--font-weight-Semibold);
 }
 
 /*Combobox*/
 select{
-    --border-radius: 5px;
-    border-radius: var(--border-radius);
-    height: 3em;
-    font-family: poppins, sans-serif;
-    padding-left: 0.4em;
-    border: 1px solid #7B96C7; 
+  --border-radius: 5px;
+  border-radius: var(--border-radius);
+  height: 3em;
+  font-family: poppins, sans-serif;
+  padding-left: 0.4em;
+  border: 1px solid #7B96C7; 
 }
 
 /*DateTime Picker*/
 .dateInput input{
-    --border-radius: 5px;
-    border-radius: var(--border-radius);
-    height: 3em;
-    font-family: poppins, sans-serif;
-    padding-left: 0.4em;
-    border: 1px solid #7B96C7;
-}
-
-.txtTextbox{
-  border: 1px solid #7B96C7; 
-  box-sizing: border-box;
-  width: 100%;
-  padding: 7px;
-  font-size: var(--font-size-base);
-  color: var(--color-txt);
-  font-weight: var(--font-weight-Regular);
+  height: 3em;
+  font-family: "Poppins", sans-serif;
+  padding-left: 0.4em;
+  border-radius: 5px;
+  border: 1px solid #7B96C7;
 }
 
 /*Textareas*/
 .txtTextarea{
-    border-radius: 5px;
-    border: 1px solid #7B96C7; 
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    padding: 7px;
-    font-size: var(--font-size-base);
-    color: var(--color-txt);
-    font-weight: var(--font-weight-Regular);
-    font-family: "Poppins", sans-serif;
-}
-
-.textareaCondition {
-  height: 30px;
-  resize: none;
-  padding: 1em;
-  border: 1px solid #7B96C7; 
-  border-radius: 5px;
-  font-size: var(--font-size-base);
-  color: var(--color-txt);
-  font-weight: var(--font-weight-Regular);
+  height: 100%;
   font-family: "Poppins", sans-serif;
 }
 
@@ -195,27 +158,17 @@ select{
 .txtTextarea{
   border: 1px solid #7B96C7; 
   resize: none;
-  font-size: var(--font-size-base);
   border-radius: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  font-size: var(--font-size-base);
+  color: var(--color-txt-title);
+  font-weight: var(--font-weight-Regular);
 }
 
 /*
   -----------------------------------------------------------------------------------------------------------------------
-*/
-
-/*
-.formTop{
-    justify-content: space-between;
-}
-
-.textareaCondition{
-  width: 100%;
-  height: 3 0px;
-  resize: none;
-  padding: 0.5rem;
-  --border-radius: 5px;
-  border-radius: var(--border-radius);
-}
 */
 
 /*
