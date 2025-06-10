@@ -40,8 +40,8 @@ containerTrainings.addEventListener('click', async (e) => {
         await loadTrainingData(e.target.dataset.id);
         modalTraining.classList.replace('hideModal', 'showModal');
     } else if (e.target.classList.contains('btnAddMembers')) {
+        await loadEmployeesTraining(e.target.closest('.informationPnl').dataset.id);
         modalEmployees.classList.replace('hideModal', 'showModal');
-        loadEmployeesTraining(e.target.closest('.informationPnl').dataset.id);
     }
 })
 

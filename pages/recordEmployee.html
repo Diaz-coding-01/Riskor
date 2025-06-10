@@ -13,10 +13,11 @@
             <div class="contenedor-sidebar">
                 <aside id="sidebar"></aside>
             </div>
-            <div class="contenedor-cuerpo">
+            <!--Estos estilos pasarlos a globales y a content-->
+            <div class="contenedor-cuerpo" style="overflow: auto; height: 100dvh;">
                 <div class="content">
                     <div class="headerContent">
-                        <div class="topHeader"> 
+                        <div class="topHeader">
                             <nav class="breadcrumb">
                                 <ul>
                                     <li><a href="medicalRecords.html">Expedientes médicos ></a></li>
@@ -29,19 +30,21 @@
 
                     <div class="cardContainer">
                         <!--Formulario-->
-                        <form>
+                        <form id="formRecord">
                             <div class="formTop">
-                                <div class="imgContainer"> <img src="../media/133866211092483860.jpg" alt="Employee" class="employeePicture"></div>
+                                <div class="imgContainer">
+                                    <img src="../media/133866211092483860.jpg" alt="Employee" class="employeePicture">
+                                </div>
 
                                 <div class="rowsFormTop">
-                                    
+
                                     <div class="firstRow">
-                                        <div class="textField">
+                                        <div class="textField" style="flex: 2;">
                                             <label for="txtContactName">Nombre de contacto</label>
                                             <input type="text" id="txtContactName" class="txtTextbox">
                                         </div>
-                                    
-                                        <div class="textField">
+
+                                        <div class="textField" style="flex: 1;">
                                             <label for="txtContactPhone">Número de contacto</label>
                                             <input type="text" id="txtContactPhone" class="txtTextbox">
                                         </div>
@@ -52,54 +55,53 @@
                                             <label for="txtGender">Género</label>
                                             <input type="text" id="txtGender" class="txtTextbox">
                                         </div>
-                                    
+
                                         <div class="textField">
                                             <label for="txtDui">Documento</label>
                                             <input type="text" id="txtDui" class="txtTextbox">
                                         </div>
-                                    
+
                                         <div class="textField">
                                             <label for="txtAffiliationIsss">N° de affiliation ISSS</label>
                                             <input type="text" id="txtAffiliationIsss" class="txtTextbox">
                                         </div>
                                     </div>
-              
+
                                     <div class="thirdRow">
-              
+
                                         <div class="thirdRowLeft">
                                             <div class="textField">
                                                 <label for="txtEmployeeMail">Correo electrónico</label>
                                                 <input type="email" id="txtEmployeeMail" class="txtTextbox">
                                             </div>
-              
+
                                             <div class="textField">
                                                 <label for="txtBloodType">Sangre</label>
                                                 <select id="txtBloodType">
                                                 </select>
                                             </div>
                                         </div>
-              
-                                        <div class="thirdRowRight">
+
+                                        <div class="thirdRowRight" style="flex: 2;">
                                             <div class="textField">
                                                 <label for="txtAllergies">Alergias</label>
                                                 <textarea name="" id="txtAllergies" class="txtTextarea"></textarea>
                                             </div>
-              
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="formBottom">
-              
+
                                 <!-- Contenedor superior (divide en dos columnas) -->
                                 <div class="conditionContainer">
                                     <label for="txtCondition">Condición médica</label>
                                     <textarea name="" id="txtCondition" class="textareaCondition"></textarea>
                                 </div>
-              
+
                                 <div class="inputContainer">
-              
+
                                     <!-- Columna izquierda -->
                                     <div class="colLeft">
                                         <label for="txtTratamiento">Tratamiento</label>
@@ -110,17 +112,17 @@
 
                                     <!-- Columna derecha -->
                                     <div class="colRight">
-              
+
                                         <div class="dateInput">
                                             <label for="dtpInicioT">Inicio del tratamiento</label>
                                             <input type="date" id="dtpInicioT" value="2025-08-19" />
                                         </div>
-              
+
                                         <div class="dateInput">
                                             <label for="dtpFinT">Fin del tratamiento</label>
                                             <input type="date" id="dtpFinT" value="2025-08-26" />
                                         </div>
-              
+
                                         <div class="statusSelect">
                                             <label for="cmbEstado">Estado</label>
                                             <select id="cmbEstado">
@@ -128,11 +130,11 @@
                                                 <option>Finalizado</option>
                                             </select>
                                         </div>
-              
+
                                     </div>
                                 </div>
-                            </div>   
-              
+                            </div>
+
                             <div class="btnContainer">
                                 <div class="leftButtons">
                                     <button class="btn-primary">Volver</button>
@@ -141,11 +143,10 @@
                                     <button class="btn-primary">Modificar</button>
                                     <button class="btn-primary">Guardar</button>
                                 </div>
-                            </div> 
-              
-                        </form>                
+                            </div>
+                        </form>
                     </div>
-                </div>   
+                </div>
             </div>
         </div>
     </main>
