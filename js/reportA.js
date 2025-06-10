@@ -1,3 +1,85 @@
+/*Modelo 3D*/
+import * as THREE from 'https://unpkg.com/three@0.160.1/build/three.module.js';
+import { OBJLoader } from 'https://unpkg.com/three@0.160.1/examples/jsm/loaders/OBJLoader.js';
+
+window.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('modeloBody3D');
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  container.appendChild(renderer.domElement);
+
+  camera.position.z = 5;
+
+  const light = new THREE.DirectionalLight(0xffffff, 1);
+  light.position.set(1, 1, 1).normalize();
+  scene.add(light);
+
+  const textureLoader = new THREE.TextureLoader();
+
+  const createMaterial = (basePath, name) => new THREE.MeshStandardMaterial({
+    map: textureLoader.load(`${basePath}/${name}_BaseColor.png`),
+    normalMap: textureLoader.load(`${basePath}/${name}_Normal.png`),
+    roughnessMap: textureLoader.load(`${basePath}/${name}_Roughness.png`),
+    metalnessMap: textureLoader.load(`${basePath}/${name}_Metallic.png`),
+    displacementMap: textureLoader.load(`${basePath}/${name}_Height.png`),
+    displacementScale: 0.05,
+  });
+
+  const materials = {
+    body: createMaterial("../media/female_quad_obj/female_texture/body", "femal_low_M_body"),
+    eyebrow: createMaterial("../media/female_quad_obj/female_texture/eyebrow", "femal_low_M_eyebrow"),
+    eyes: createMaterial("../media/female_quad_obj/female_texture/eyes", "femal_low_M_eyes"),
+    hair: createMaterial("../media/female_quad_obj/female_texture/hair", "femal_low_M_hair"),
+    pantAndBra: createMaterial("../media/female_quad_obj/female_texture/pant and bra", "femal_low_M_pant_and_bra"),
+    teeth: createMaterial("../media/female_quad_obj/female_texture/teeth", "femal_low_M_teeth"),
+  };
+
+  const loader = new OBJLoader();
+  loader.load('../media/female_quad_obj/female_quad_obj.obj',
+    function (obj) {
+      obj.traverse((child) => {
+        if (child instanceof THREE.Mesh) {
+          const name = child.name.toLowerCase();
+          if (name.includes("eyebrow")) {
+            child.material = materials.eyebrow;
+          } else if (name.includes("eye")) {
+            child.material = materials.eyes;
+          } else if (name.includes("hair")) {
+            child.material = materials.hair;
+          } else if (name.includes("pant") || name.includes("bra")) {
+            child.material = materials.pantAndBra;
+          } else if (name.includes("teeth")) {
+            child.material = materials.teeth;
+          } else {
+            child.material = materials.body;
+          }
+        }
+      });
+
+      obj.scale.set(1, 1, 1);
+      scene.add(obj);
+    },
+    (xhr) => {
+      console.log(`Modelo cargado: ${xhr.loaded / xhr.total * 100}%`);
+    },
+    (error) => {
+      console.error('Error al cargar el modelo:', error);
+    }
+  );
+
+  function animate() {
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+  }
+
+  animate();
+});
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("modalEvidencias");
   const btnAbrir = document.getElementById("btnAgregar");
@@ -64,60 +146,5 @@ fileInput.addEventListener("change", (e) => {
     };
     reader.readAsDataURL(file);
   }
-});
-
-/*Modelo 3D*/
-window.addEventListener('DOMContentLoaded', () => {
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
-  const renderer = new THREE.WebGLRenderer({ antialias: true });
-
-  const container = document.getElementById('modeloBody3D');
-  if (!container) {
-    console.error('No se encontró el contenedor #modeloBody3D');
-    return;
-  }
-
-  const width = container.clientWidth;
-  const height = container.clientHeight;
-
-  renderer.setSize(width, height);
-  container.appendChild(renderer.domElement);
-
-  camera.aspect = width / height;
-  camera.updateProjectionMatrix();
-
-  const light = new THREE.DirectionalLight(0xffffff, 1);
-  light.position.set(1, 1, 1).normalize();
-  scene.add(light);
-
-  const loader = new THREE.OBJLoader();
- loader.load('../media/female_quad_obj/female_quad_obj.obj',
-  function (obj) {
-    obj.traverse((child) => {
-      if (child instanceof THREE.Mesh) {
-        child.material = new THREE.MeshNormalMaterial(); // material temporal
-      }
-    });
-    obj.scale.set(1, 1, 1);
-    scene.add(obj);
-  },
-
-    function (xhr) {
-      console.log(`Modelo ${xhr.loaded / xhr.total * 100}% cargado`);
-    },
-    function (error) {
-      console.error('Error al cargar el modelo:', error);
-    }
-  );
-
-  camera.position.z = 5;
-
-  function animate() {
-    requestAnimationFrame(animate);
-    renderer.render(scene, camera);
-  }
-
-  animate();
 });
 
