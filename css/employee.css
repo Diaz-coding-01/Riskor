@@ -34,6 +34,7 @@
     width: clamp(500px, 85%, 1200px);
     position: relative;
     box-shadow: 0 0 15px #aaa;
+    height: 70vh; /*Altura modificada, para ser similar a los diseños (Los campos necesitan espacio)*/
 }
 
 #closeAddEmployee{

@@ -35,6 +35,7 @@ body{
     --color-btn-ghost-border: 2px solid var(--color-breadcrumb);
     --color-btn-text: #F2F9FE;                  /*Color del texto de los botones.                                 Ej. Todos los botones principales*/
     --color-breadcrumb: #7884ED;                /*Color del breadcrumb y color de botones fantasma.               Ej. "Detalles", "Editar", etc.*/
+    --color-element-border: 1px solid #7B96C7;
     --color-img-border: 3px solid #8F90DE;      /*Borde de las imagenes de los empleados.                         Ej. Registro de empleado, Selección de empleado, etc.*/
     --color-modal-container: rgba(133, 133, 172, 0.5);
     --color-neutral: #FFFFFF;                   /*Implica muchos tipos de elementos, blanco.*/
@@ -355,7 +356,7 @@ h2, ul, li {
 
 /*
 
-  Modal -------------------------------------------------------------------------------------
+  Modal -------------------------------------------------------------------------------------------------------------------------
 
   Modal - Contenedor (Sombra del contenedor)
 
@@ -461,7 +462,7 @@ h2, ul, li {
 }
 
 /*
-  Tabla -------------------------------------------------------------------------------------------------------------------------------
+  Tabla -------------------------------------------------------------------------------------------------------------------------
 
   Clases para reutilizar la tabla con facilidad
 */
@@ -526,3 +527,44 @@ tr:hover {
 /*
   -------------------------------------------------------------------------------------------------------------------------------
 */
+
+/*
+  Elementos de formularios ------------------------------------------------------------------------------------------------------
+
+  Contiene estilos para: Labels, Dropdowns, textbox y textareas
+*/
+label{
+  font-size: var(--font-size-base);
+  color: var(--color-txt-title);
+  font-weight: var(--font-weight-Semibold);
+}
+
+/*Combobox*/
+select{
+  --border-radius: 5px;
+  border-radius: var(--border-radius);
+  height: 3em;
+  font-family: "Poppins", sans-serif;
+  padding-left: 0.4em;
+  border: var(--color-element-border); 
+}
+
+/*Textareas*/
+.txtTextarea{
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+/*Atributos en común con los textbox y los texarea*/
+.txtTextbox,
+.txtTextarea{
+  border: var(--color-element-border); /* Valor de la variable por defecto: 1px solid #7B96C7*/ 
+  resize: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  font-size: var(--font-size-base);
+  color: var(--color-txt-title);
+  font-weight: var(--font-weight-Regular);
+}

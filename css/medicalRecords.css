@@ -68,7 +68,7 @@
     justify-content: space-between;
     /*flex-direction: row; /*Al ser 3 elementos se pasan a fila para no estar en columna*/
     width: clamp(400px, 90%, 1080px);
-    
+    height: 55vh; /*Altura modificada, más similar a los diseños*/
 }
 
 .formField{
