@@ -26,6 +26,8 @@ body{
 
 /*No tocar*/
 :root{
+    --border-radius: 12px;                        /*Permite cambiar el borde a los elementos más fácil*/
+
     --color-bg-int: #f2f7ff;                    /*Color del fondo de cada interfaz*/
     --color-bg-tb: rgba(254, 254, 255, 0.9);    /*Color del fondo de las tablas.                                  Ej. Empleados, Mantenimientos, etc.*/
     --color-search: #FEFEFF77;
@@ -38,12 +40,12 @@ body{
     --color-neutral: #FFFFFF;                   /*Implica muchos tipos de elementos, blanco.*/
     --color-txt: #81859E;                       /*Color de texto simple.                                          Ej. Texto ingresado en formulario*/
     --color-txt-title: #5E6489;                 /*Color de titulos.                                               Ej. Títulos de tablas, título de pregunta de formulario, etc.*/
-    
     --content-gap: 20px;                          /*Permite controlar un margen incluido en todas las interfaces*/
-    --border-radius: 12px;                        /*Permite cambiar el borde a los elementos más fácil*/
+
+    --display: block;                             /*Variable que permite sobreescribir el display de algunos contenedores   Ej. Modals*/
 
     --font-size-base: 1.1em;                      /*Tamaño de letra estándar.                                       Ej. Mostrar información, forms, etc.*/
-    --font-size-title: 2.2em;                     /*Tamaño de los títulos.                                          Ej. Breadcrumb*/
+    --font-size-title: 2em;                       /*Tamaño de los títulos.                                          Ej. Breadcrumb*/
     --font-weight-Semibold: 600;
     --font-weight-Medium: 500;
     --font-weight-Regular: 400;
@@ -51,7 +53,7 @@ body{
     --height-container: 55vh;                     /*Para manejar el tamaño de los contenedores de información.      Ej. Tablas, contenedores de paneles/cartas*/
     --height-pnl: 8em;
 
-    --shadow-btn-primary: 0px 0px 15px 1px rgba(120, 132, 237, 0.65);   /*Sombra de los botones principales.      Ej. "Agregar", "Enviar", etc.*/
+    --shadow-btn-primary: 0px 0px 10px 1px rgba(120, 132, 237, 0.4);   /*Sombra de los botones principales.      Ej. "Agregar", "Enviar", etc.*/
     --shadow-btn-secondary: 0px 0px 5px 1px rgba(120, 132, 237, 0.45);  /*Sombra de los botones secundarios.      Ej. "Evidencias", "Buscar", etc.*/
     --shadow-hover: 0 5px 10px rgba(133, 155, 208, 0.3);
     --shadow-modal: 2px 2px 4px 0px rgba(133, 155, 208, 0.25);
@@ -210,7 +212,7 @@ h2, ul, li {
 /* Track */
 ::-webkit-scrollbar-track {
   border-radius: var(--border-radius);
-  background: linear-gradient(rgb(156, 165, 243), rgb(224, 226, 251));
+  background: linear-gradient(rgb(187, 193, 247), rgb(224, 226, 251));
 }
 
 /* Handle */
@@ -361,6 +363,7 @@ h2, ul, li {
 
 .containerModal{
     z-index: 30;
+    display: var(--display); /*Valor por defecto: block*/
     position: absolute;
     justify-content: center;
     align-items: center;
