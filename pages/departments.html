@@ -7,6 +7,62 @@
     <link rel="stylesheet" href="../css/departments.css">
 </head>
 <body>
-    
+    <main>
+        <div class="content">
+            <div class="headerContent">
+                <div class="topHeader">
+                    <nav class="breadcrumb">
+                        <ul>
+                            <li><a>Áreas de la Empresa</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="icons">
+                        <div class="notifications">
+                            <button id="btnNotifications">
+                                <img src="../media/Vector (1).svg" alt="Notificaciones" />
+                            </button>
+                        </div>
+                        <div class="profile">
+                            <img src="../media/133866211092483860.jpg" alt="Perfil" class="profilePicture" />
+                        </div>
+                    </div>
+                </div>    
+                
+                <div class="headerContentButtons">
+                    <div class="searchContainer">
+                        <input type="text" id="txtSearch">
+                        <button class="btn-primary" style="flex: 2;">Buscar</button>
+                    </div>
+                    <div>
+                        <button class="btn-primary" id="loadModal" style="height: 3.5em; width: 12em">Agregar área</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cardContainer">
+                <div class="pnlContainer">
+                    <a href="#" id="area" class="area"> 
+                        <div id="departmentInformation" class="informationPnl"> 
+
+                            <div class="image"> <!--Div dirigido a la imagen del empleado-->
+                                <img src="../media/Área img example.png" alt="imagenÁrea" class="areaImage">
+                            </div>
+
+                            <div class="info"> 
+                                <div class="name" style="font-size: 1.2em; margin-left: 0.3em;"> <!--Nombre del empleado (Título del panel)-->
+                                    Edificio 1-A
+                                </div>
+                                
+                            </div>
+                        
+                            <div class="arrow"> <!--Flecha apuntando a la derecha como svg para no perder calidad-->
+                                <img src="../media/grey_arrow_right.svg" alt="arrow.svg">
+                            </div>
+                        </div>
+                     </a>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
