@@ -1,0 +1,94 @@
+@import url('globalStyles.css');
+
+.bottomButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 100%;
+}
+
+.btn-primary {
+    height: 3em;
+    width: 15em;
+    margin-top: 1.2em;
+    --border-radius: 5px;
+}
+
+/*====== modals =======*/
+
+.modalAdd {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: clamp(400px, 80%, 600px);
+    padding: 40px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.containerModal{
+    --display: flex;
+}
+
+.formGrid {
+    display: flex;
+    gap: 30px;
+}
+
+.inputGrid {
+    flex: 3;
+    display: grid;
+    gap: 15px;
+}
+
+.formField {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formField label {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--color-txt);
+}
+
+input,
+select {
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    color: var(--color-txt-title);
+    padding: 7px;
+    min-height: 40px;
+    border: 1px solid #7B96C7;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.formField-Row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.formField-Row .formField {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+}
+
+.longInput {
+    grid-column: span 2;
+}
+
+.longInput input {
+    width: 65.5%;
+}
+
+.inputMaintenance{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}

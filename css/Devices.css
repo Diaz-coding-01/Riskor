@@ -1,7 +1,7 @@
 @import url('globalStyles.css');
 
 /* ====== Estilos Generales ====== */
-.liner {
+.Line {
     background-color: #94ACDA;
     border: none;
     border-radius: 50px;
@@ -10,7 +10,7 @@
 }
 
 /* ====== Contenedores Principales ====== */
-.contenedor-dispositivos {
+.containerDevices{
     margin: 0 auto;
     max-width: 1400px;
     padding: 0 1rem;
@@ -25,7 +25,7 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
-.Agregar-dispositivo {
+.AddDevice {
     align-self: flex-start;
     margin-left: 6.5rem;
     margin-top: auto;
@@ -86,29 +86,29 @@
     flex-direction: column;
     height: 16rem;
     padding: 1.5rem;
-    width: 27.5rem;
+    width: 28.5rem;
 }
 
-.card-header {
+.cardHeader {
     align-items: center;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
 }
 
-.card-header h3 {
+.cardHeader h3 {
     color: #545475;
     font-size: 1.8rem;
     font-weight: var(--font-weight-Medium);
     margin: 0;
 }
 
-.card-header .icon img {
+.cardHeader .icon img {
     height: 25px;
     width: 25px;
 }
 
-.card-body .info {
+.cardBody .info {
     color: var(--color-txt-title);
     display: flex;
     font-size: 1.5rem;
@@ -116,16 +116,16 @@
     margin-top: 1.5rem;
 }
 
-.card-body .info .date,
-.card-body .info .label {
+.cardBody .info .date,
+.cardBody .info .label {
     font-weight: var(--font-weight-Semibold);
 }
 
-.card-body .date {
+.cardBody .date {
     font-weight: 700;
 }
 
-.card-footer {
+.cardFooter {
     display: flex;
     justify-content: flex-end;
     margin-top: auto;
@@ -142,7 +142,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-.btn-detalles {
+.btnDetalles {
     background-color: #ffffff;
     border: 2px solid #6563ff;
     border-radius: 0.8rem;
@@ -155,11 +155,89 @@
     transition: all 0.2s ease-in-out;
 }
 
-.btn-detalles:hover {
+.btnDetalles:hover {
     --color-btn-primary: #6876f2;
     background: var(--color-btn-primary);
     box-shadow: var(--shadow-btn-primary);
     color: #f5f8ff;
     transform: translateY(-5px);
+}
+
+
+/*====== modals =======*/
+.modalAdd {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: clamp(500px, 85%, 900px);
+    padding: 40px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.containerModal{
+    --display: flex;
+}
+
+.formGrid {
+    display: flex;
+    gap: 30px;
+}
+
+.inputGrid {
+    flex: 3;
+    display: grid;
+    gap: 15px;
+}
+
+.formField {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formField label {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--color-txt);
+}
+
+input,
+select {
+    font-size: var(--font-size-base);
+    font-weight: 500;
+    color: var(--color-txt-title);
+    padding: 7px;
+    min-height: 40px;
+    border: 1px solid #7B96C7;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.formFieldRow {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.formFieldRow .formField {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+}
+
+.longInput {
+    grid-column: span 2;
+}
+
+.longInput input {
+    width: 65.5%;
+}
+
+.inputMaintenance{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 

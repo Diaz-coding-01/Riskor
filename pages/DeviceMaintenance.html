@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Mantenimientos</title>
+    <link rel="stylesheet" href="../css/DeviceMaintenance.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+</head>
+
+<body>
+
+    <div class="containerModal containerModalClose" id="AddDeviceMaintenance">
+        <form class="modalAdd closeAdd" id="formAddEmployee">
+            <button id="btnClose" type="button" aria-label="Cerrar formulario">
+                <img src="../media/closeIcon.svg" alt="Cerrar">
+            </button>
+            <div class="formGrid">
+                <div class="inputGrid">
+                    <div class="formField-Row">
+                        <div class="formField longInput">
+                            <label for="fechaInstalacion">Fecha del mantenimiento</label>
+                            <input type="date" id="fechaInstalacion" name="fechaInstalacion" required>
+                        </div>
+                    </div>
+                    <div class="formField">
+                        <label for="txtDeviceName1">Descripcion</label>
+                        <input type="text" id="txtDeviceName1" name="deviceName1" required>
+                    </div>
+                    <div class="formField">
+                        <label for="txtDeviceName2">Mantenimiento realizado por</label>
+                        <input type="text" id="txtDeviceName2" name="deviceName2" required>
+                    </div>
+                    <div class="formField">
+                        <label for="txtDeviceName3">Observaciones</label>
+                        <input type="text" id="txtDeviceName3" name="deviceName3" required>
+                    </div>
+
+                </div>
+            </div>
+            <div class="inputMaintenance">
+                <input type="submit" class="btn-primary" style="align-self: flex-end; padding: 15px 40px;"
+                    value="Guardar">
+            </div>
+        </form>
+    </div>
+
+    <main>
+        <div class="contenedor-seccion">
+            <div class="contenedor-sidebar">
+                <nav id="sidebar"></nav>
+            </div>
+            <div class="contenedor-cuerpo">
+                <div class="content">
+
+                    <div class="headerContent">
+                        <!--Clase breadcrumb-->
+                        <div class="topHeader">
+
+                            <nav class="breadcrumb">
+                                <ul>
+                                    <li><a href="Devices.html">Control de dispositivos ></a></li>
+                                    <li style="margin-left: 0.4em;"><a>Mantenimiento</a></li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                    </div>
+                    <!--Clase contenedor para la tabla-->
+                    <div class="table-container" style="margin-top: 2em;">
+                        <!--Creación de la tabla-->
+                        <table>
+                            <thead>
+                                <tr>
+                                    <!--Componentes que contiene la tabla-->
+                                    <th>Fecha de mantenimiento</th>
+                                    <th>Descripción</th>
+                                    <th>Hecha por</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="DeviceMaintenanceTableBody">
+                                <!-- Datos mostrados en el archivo js -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bottomButtons">
+                        <a href="Devices.html"><button type="button" class="btn-primary">Volver </button></a>
+
+
+                        <div id="paginacion" class="paginacion-container"></div>
+
+                        <button type="button" class="btn-primary" id="NewDeviceMaintenance">Crear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../js/DeviceMaintenance.js"></script>
+    <script src="../js/sidebar.js"></script>
+</body>
+
+</html>
