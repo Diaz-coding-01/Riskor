@@ -10,15 +10,126 @@
 </head>
 
 <body>
-    <div class="container">
-        <aside id="sidebar"></aside>
-        <main class="main-content">
-            <div class="topHeader">                    
-                <nav class="breadcrumb">
-                    <ul>
-                        <li><a>Control de dispositivos</a></li>
-                    </ul>
-                </nav>
+
+    <!-- ===== Modal par ver datos =====-->
+    <div class="containerModal containerModalClose" id="ViewDevices">
+        <form class="modalAdd closeAdd" id="formAddEmployee">
+            <button id="btnClose" type="button" aria-label="Cerrar formulario">
+                <img src="../media/closeIcon.svg" alt="Cerrar">
+            </button>
+            <div class="formGrid">
+                <div class="inputGrid">
+                    <div class="formField">
+                        <label for="ViewDeviceName">Nombre del Dispositivo</label>
+                        <input type="text" id="ViewDeviceName" name="ViewDeviceName" required>
+                    </div>
+                    <div class="formField">
+                        <label for="cmbDeviceType1">Tipo</label>
+                        <select id="cmbDeviceType1" name="deviceType1" required>
+                            <option value="">Seleccione...</option>
+                            <option value="administrador">Botiquines</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="formField">
+                        <label for="txtDeviceName2">Descripcion</label>
+                        <input type="text" id="txtDeviceName2" name="deviceName2" required>
+                    </div>
+                    <div class="formField">
+                        <label for="cmbDeviceType2">Ubicacion</label>
+                        <select id="cmbDeviceType2" name="deviceType2" required>
+                            <option value="">Seleccione...</option>
+                            <option value="administrador">Salón 3</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="formFieldRow">
+                        <div class="formField">
+                            <label for="fechaInstalacion">Instalado</label>
+                            <input type="date" id="fechaInstalacion" name="fechaInstalacion" required>
+                        </div>
+
+                        <div class="formField">
+                            <label for="ultimoMantenimiento">Último Mantenimiento</label>
+                            <input type="date" id="ultimoMantenimiento" name="ultimoMantenimiento" required>
+                        </div>
+                    </div>
+                    <div class="formField">
+                        <label for="txtStatus">Status</label>
+                        <input type="text" id="txtStatus" name="txtStatus" required>
+                    </div>
+                    <div class="formField longInput">
+                        <label for="txtResponsibleName">Nombre del responsable</label>
+                        <input type="text" id="txtResponsibleName" name="responsibleName" required>
+                    </div>
+                </div>
+            </div>
+            <div class="inputMaintenance">
+                <a href="DeviceMaintenance.html"><input type="button" class="btn-primary"
+                        style="align-self: flex-end; padding: 15px 40px;" value="Ver mantenimientos"></a>
+                <input type="submit" class="btn-primary" style="align-self: flex-end; padding: 15px 40px;"
+                    value="Guardar">
+            </div>
+        </form>
+    </div>
+
+    <!-- ===== Modal par ver Agregar Dispositivos =====-->
+    <div class="containerModal containerModalClose" id="AddDevices">
+        <form class="modalAdd closeAdd" id="formAddEmployee">
+            <button id="btnCloseAdd" type="button" aria-label="Cerrar formulario">
+                <img src="../media/closeIcon.svg" alt="Cerrar">
+            </button>
+            <div class="formGrid">
+                <div class="inputGrid">
+                    <div class="formField">
+                        <label for="txtDeviceName1">Nombre del Dispositivo</label>
+                        <input type="text" id="txtDeviceName1" name="deviceName1" required>
+                    </div>
+                    <div class="formField">
+                        <label for="cmbDeviceType1">Tipo</label>
+                        <select id="cmbDeviceType1" name="deviceType1" required>
+                            <option value="">Seleccione...</option>
+                            <option value="administrador">Botiquines</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="formField">
+                        <label for="txtDeviceName2">Descripcion</label>
+                        <input type="text" id="txtDeviceName2" name="deviceName2" required>
+                    </div>
+                    <div class="formField">
+                        <label for="cmbDeviceType2">Ubicacion</label>
+                        <select id="cmbDeviceType2" name="deviceType2" required>
+                            <option value="">Seleccione...</option>
+                            <option value="administrador">Salón 3</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="formFieldRow">
+                        <div class="formField">
+                            <label for="fechaInstalacion">Instalado</label>
+                            <input type="date" id="fechaInstalacion" name="fechaInstalacion" required>
+                        </div>
+
+                        <div class="formField">
+                            <label for="ultimoMantenimiento">Último Mantenimiento</label>
+                            <input type="date" id="ultimoMantenimiento" name="ultimoMantenimiento" required>
+                        </div>
+                    </div>
+                    <div class="formField longInput">
+                        <label for="txtResponsibleName">Nombre del responsable</label>
+                        <input type="text" id="txtResponsibleName" name="responsibleName" required>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" class="btn-primary" style="align-self: flex-end; padding: 15px 40px;" value="Guardar">
+        </form>
+    </div>
+
+    <main>
+        <div class="contenedor-seccion">
+            <div class="contenedor-sidebar">
+                <nav id="sidebar"></nav>
             </div>
 
             <div class="contenedor-cuerpo">
@@ -47,176 +158,33 @@
 
 
                     </div>
-                    <div class="contenedor-dispositivos">
+                    <div class="containerDevices">
                         <div class="tabs">
                             <button class="tab active" data-tab="todos">Todos</button>
                             <button class="tab" data-tab="Salud">Salud <img src="../media/Health.svg" alt=""></button>
-                            <button class="tab" data-tab="Sistemas">Sistemas <img src="../media/systems.svg"
-                                    alt=""></button>
+                            <button class="tab" data-tab="Sistemas">Sistemas <img src="../media/systems.svg" alt=""></button>
                         </div>
-                        <hr class="liner">
+                        <hr class="Line">
                     </div>
                     <div class="cardContainer">
                         <div class="pnlContainer" data-tab-content="todos">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3>Botiquín 12</h3>
-                                    <div class="icon">
-                                        <img src="../media/Health.svg" alt="Agregar">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
-                                </div>
-                                <div class="card-footer">
-                                    <button class="btn-detalles">Detalles</button>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3>Botiquín 12</h3>
-                                    <div class="icon">
-                                        <img src="../media/Health.svg" alt="Agregar">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
-                                </div>
-                                <div class="card-footer">
-                                    <button class="btn-detalles">Detalles</button>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3>Botiquín 12</h3>
-                                    <div class="icon">
-                                        <img src="../media/Health.svg" alt="Agregar">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
-                                </div>
-                                <div class="card-footer">
-                                    <button class="btn-detalles">Detalles</button>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3>Botiquín 12</h3>
-                                    <div class="icon">
-                                        <img src="../media/Health.svg" alt="Agregar">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
-                                </div>
-                                <div class="card-footer">
-                                    <button class="btn-detalles">Detalles</button>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3>Botiquín 12</h3>
-                                    <div class="icon">
-                                        <img src="../media/Health.svg" alt="Agregar">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
-                                </div>
-                                <div class="card-footer">
-                                    <button class="btn-detalles">Detalles</button>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3>Botiquín 12</h3>
-                                    <div class="icon">
-                                        <img src="../media/Health.svg" alt="Agregar">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
-                                </div>
-                                <div class="card-footer">
-                                    <button class="btn-detalles">Detalles</button>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3>Botiquín 12</h3>
-                                    <div class="icon">
-                                        <img src="../media/Health.svg" alt="Agregar">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
-                                </div>
-                                <div class="card-footer">
-                                    <button class="btn-detalles">Detalles</button>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3>Botiquín 12</h3>
-                                    <div class="icon">
-                                        <img src="../media/Health.svg" alt="Agregar">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
-                                </div>
-                                <div class="card-footer">
-                                    <button class="btn-detalles">Detalles</button>
-                                </div>
-                            </div>
+
                         </div>
                         <div class="pnlContainer" data-tab-content="Salud" style="display: none;">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3>Botiquín 12</h3>
-                                    <div class="icon">
-                                        <img src="../media/Health.svg" alt="Agregar">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
-                                </div>
-                                <div class="card-footer">
-                                    <button class="btn-detalles">Detalles</button>
-                                </div>
-                            </div>
+
                         </div>
                         <div class="pnlContainer" data-tab-content="Sistemas" style="display: none;">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3>Botiquín 12</h3>
-                                    <div class="icon">
-                                        <img src="../media/Health.svg" alt="Agregar">
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <p class="info"><span class="label">Instalado:</span> <span class="date">21-05-2025</span></p>
-                                </div>
-                                <div class="card-footer">
-                                    <button class="btn-detalles">Detalles</button>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
-                    <button class="btn-primary Agregar-dispositivo">Agregar dispositivo</button>
+                    <button class="btn-primary AddDevice" id="NewDecives">Agregar dispositivo</button>
                 </div>
             </div>
         </div>
     </main>
-    </div>
 
     <script src="../js/sidebar.js"></script>
     <script src="../js/Devices.js"></script>
 </body>
 
 </html>
-
-
-<!--
--->
