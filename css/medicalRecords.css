@@ -84,11 +84,6 @@
     flex-direction: row-reverse;
 }
 
-.txtTextbox:focus{
-  border: 2px solid #7B96C7;
-  padding: 7px;
-}
-
 .txtTextboxBig{
   border-radius: 5px;
   border: 1px solid #7B96C7;
@@ -99,11 +94,7 @@
   font-weight: var(--font-weight-Regular);
 }
 
-.txtTextboxBig:focus{
-  border: 2px solid #7B96C7;
-  padding: 7px;
-}
 
-select{
+.dropdown{
     width: 250px;
 }

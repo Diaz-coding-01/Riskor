@@ -4,7 +4,7 @@
   --content-gap: 10px;
 }
 
-.table-container {
+.tableContainer {
   --height-container: 60vh;
 }
 
@@ -43,7 +43,7 @@ tbody td:nth-child(5) {
     max-width: 100%;
 }
 
-.btn-primary{
+.btnPrimary{
     height: 3em;
     width: 15em;
     margin-top: 1.2em;

@@ -294,7 +294,7 @@ h2, ul, li {
 
 .txtSearch{
     background-image: url('../media/globalMedia/searchbar-icon.svg');
-    background-position: 12px 12px; 
+    background-position: 12px center; 
     background-repeat: no-repeat;
     padding: 12px;
     border-radius: 5px;
