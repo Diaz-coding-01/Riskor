@@ -5,7 +5,7 @@ body{
     --width-modal: clamp(400px, 90%, 850px);
 }
 
-.btn-primary{
+.btnPrimary {
     --border-radius: 5px;
     display: grid;
     place-content: center;
@@ -21,11 +21,10 @@ body{
 }
 
 .informationPnl{
-    width: 100%;
+    text-decoration: none;
     border: none;
     cursor: pointer;
     justify-content: space-between;
-    --height-pnl: 10em;
 }
 
 .trainingName{
@@ -91,16 +90,6 @@ body{
     flex-direction: column;
     background-color: #F2F9FE;
     width: var(--width-modal);
-}
-
-.btnCloseModal{
-    position: absolute;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    margin: 20px;
-    right: 0;
-    top: 0;
 }
 
 .modalAddTraining > div{
@@ -193,100 +182,7 @@ body{
     border-radius: 5px;
 }
 
-/*Modal empleados*/
 
-.modalEmployees{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    border-radius: 12px;
-    padding: 35px;
-    box-sizing: border-box;
-    gap: 15px;
-    background-color: #F2F9FEDF;
-    width: var(--width-modal);
-}
-
-.headerModalEmployees{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 15px 20px 0 0;
-    box-sizing: border-box;
-    color: var(--color-txt);
-}
-
-.containerFilterEmployees{
-    display: flex;
-    padding: 30px;
-    max-height: 40px;
-    width: 80%;
-}
-
-.containerEmployeeImage{
-    padding: 5px;
-}
-
-#txtSearchEmployees{
-    flex: 1;
-    font-size: 1em;
-    padding: 5px;
-    box-sizing: border-box;
-}
-
-.headerModalEmployees h4{
-    font-size: 1.6em;
-    font-weight: 600;
-    margin: 0;
-}
-
-#txtSearchEmployees{
-    border-radius: 5px;
-    border: solid 1px #6873BA;
-    box-shadow: 0 0 2px #6873BA;
-}
-
-.headerModalEmployees > div{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 1em;
-    font-weight: var(--font-weight-Medium);
-}
-
-.bodyModalEmployees{
-    width: 100%;
-    height: clamp(200px, 60vh, 300px);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-.employee{
-    display: flex;
-    align-items: stretch;
-    font-weight: var(--font-weight-Medium);
-    font-size: var(--font-size-base);
-    color: var(--color-txt);
-    gap: 15px;
-    padding: 0 20px;
-    height: 25%;
-}
-
-.employee > div{
-    display: flex;
-    align-items: center;
-}
-
-.employeeImage{
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-}
 
 .checks{
     appearance: none;

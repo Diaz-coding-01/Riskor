@@ -11,7 +11,7 @@
     <!-- Modal Agregar Capacitación -->
     <div class="containerModal containerModalAddTraining hideModal">
         <form class="modalAddTraining" id="formAddTraining">
-            <button class="btnCloseModal" type="button" data-modal="containerModalAddTraining">
+            <button class="btnClose" type="button" data-modal="containerModalAddTraining">
                 <img src="../media/closeIcon.svg" alt="">
             </button>
             <div>
@@ -50,7 +50,7 @@
                     <input type="text" id="txtAddTrainingPlace">
                 </div>
             </div>
-            <input type="submit" id="btnAddTraining" class="btn-primary" style="align-self: end; padding: 15px 40px;">
+            <input type="submit" id="btnAddTraining" class="btnPrimary" style="align-self: end; padding: 15px 40px;">
         </form>
     </div>
 
@@ -96,50 +96,14 @@
                     </div>
                 </div>
                 <div class="containerButtonsModalTraining">
-                    <a class="btn-primary" href="trainingAsistenceData.html" style="text-decoration: none;">Asistencia</a>
-                    <button class="btn-primary" type="button">Listo</button>
+                    <a class="btnPrimary" href="trainingAsistenceData.html" style="text-decoration: none;">Asistencia</a>
+                    <button class="btnPrimary" type="button">Listo</button>
                 </div>
             </div>
         </form>
     </div>
 
-    <!-- Modal Empleados -->
-    <div class="containerModal containerModalEmployees hideModal">
-        <form class="modalEmployees">
-            <button class="btnCloseModal" type="button" data-modal="containerModalEmployees">
-                <img src="../media/closeIcon.svg" alt="">
-            </button>
-            <div class="headerModalEmployees">
-                <h4>Empleados</h4>
-                <div>
-                    <label for="chSelectAll">Marcar todos:</label>
-                    <input type="checkbox" id="chSelectAll" class="checks">
-                </div>
-            </div>
-            <div class="containerFilterEmployees">
-                <input type="text" id="txtSearchEmployees" placeholder="Buscar empleado...">
-                <button class="btnFilter" type="button" style="height: 100%;">
-                    <img src="../media/filtrar.svg" alt="" style="width: 90%;">
-                </button>
-            </div>
-            <div class="bodyModalEmployees">
-                <!-- Ejemplo de empleados, puedes generar dinámicamente -->
-                <div class="employee">
-                    <div class="containerEmployeeImage">
-                        <img src="../media/Frame 59.png" alt="" class="employeeImage">
-                    </div>
-                    <div style="flex: 1;">
-                        <span class="employeeName">Luis Gonzales</span>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="chEmployee checks" style="border-radius: 50%; transform: scale(1.4);">
-                    </div>
-                </div>
-                <!-- ...más empleados... -->
-            </div>
-            <input type="submit" value="Listo" class="btn-primary" id="btnAddEmployees" style="align-self: end; border-radius: 5px; box-shadow: none; padding: 10px 60px; margin: 10px;">
-        </form>
-    </div>
+    
 
     <main>
         <div class="contenedor-seccion">
@@ -156,14 +120,14 @@
                         </nav>
                         <div class="headerContentButtons">
                             <div class="searchContainer">
-                                <input type="text" id="txtSearch">
+                                <input type="text" class="txtSearch">
                                 <button class="btnFilter" type="button">
                                     <img src="../media/filtrar.svg" alt="">
                                 </button>
-                                <button class="btn-primary" style="flex: 2;" type="button">Buscar</button>
+                                <button class="btnPrimary" style="flex: 2;" type="button">Buscar</button>
                             </div>
                             <div>
-                                <button class="btn-primary" id="btnOpenAddTraining" style="height: 3.5em; width: 12em" type="button">Crear</button>
+                                <button class="btnPrimary" id="btnOpenAddTraining" style="height: 3.5em; width: 12em" type="button">Crear</button>
                             </div>
                         </div>
                     </div>

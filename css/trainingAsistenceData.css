@@ -1,12 +1,262 @@
-.btn-primary {
+@import url('globalStyles.css');
+
+body{
+    --width-modal: clamp(400px, 90%, 850px);
+}
+
+.bodyContent{
+    width: var(--width-container);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.containerDataTraining{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#frmTrainingInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.containerInputUpdateTraining{
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.containerInputUpdateTraining label{
+    font-size: 1.1em;
+    color: var(--color-txt);
+    font-weight: var(--font-weight-Medium);
+}
+
+.containerInputUpdateTraining label + *{
+    font-weight: var(--font-weight-Medium);
+    font-size: var(--font-size-base);
+    color: var(--color-txt-title);
+    padding: 7px;
+    border-radius: 3px;
+    border: solid 1px #7B96C7;
+    height: clamp(25px, 100%, 40px);
+}
+
+.rowForm{
+    display: flex;
+    gap: 10px;
+}
+
+.btnPrimary {
     height: 3em;
     width: 15em;
     display: grid;
     place-content: center;
+    border-radius: 5px !important;
 }
 
-.searchContainer{
-    padding: 0 !important;
-    background: transparent !important;
-    box-shadow: none !important;
+.containerDataEmployees{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.headerDataEmployees{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.titleEmployees{
+    font-size: var(--font-size-title);
+    color: var(--color-txt);
+    font-weight: var(--font-weight-Semibold);
+}
+
+.lineDivision{
+    height: 3px;
+    border-radius: 2px;
+    flex: 1;
+    background-color: var(--color-breadcrumb);
+}
+
+.containerSearchEmployees{
+    box-sizing: border-box;
+    padding: 20px 0;
+    max-height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.txtSearch{
+    max-width: 600px;
+}
+
+.imgEmployeeTable{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.table-container{
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.tdChecks{
+    text-align: center;
+    vertical-align: middle;
+}	
+
+.containerCheck{
+    display: grid;
+    align-items: center; 
+    justify-content: center; 
+    height: 100%; 
+    width: 100%;
+}
+
+.chkPresent{
+    border: solid 1px #5666FF;
+}
+
+.chkAbsent{
+    border: solid 1px #D85E5E;
+}
+
+.checks{
+    appearance: none;
+    height: 25px;
+    width: 25px;
+    border-radius: 3px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    transition: 1s;
+}
+
+.chkPresent:checked{
+    background-color: #5666FF;
+    transition: 0.6s;
+}
+
+.chkAbsent:checked{
+    background-color: #D85E5E;
+    transition: 0.6s;
+}
+
+.checks:checked::before{
+    content: '✔';
+    color: #fff;
+}
+
+/*Modal empleados*/
+
+.modalEmployees{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 12px;
+    padding: 35px;
+    box-sizing: border-box;
+    gap: 15px;
+    background-color: #F2F9FEDF;
+    width: var(--width-modal);
+}
+
+.headerModalEmployees{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 20px 0 0;
+    box-sizing: border-box;
+    color: var(--color-txt);
+}
+
+.containerFilterEmployees{
+    display: flex;
+    padding: 30px;
+    max-height: 40px;
+    width: 80%;
+}
+
+.containerEmployeeImage{
+    padding: 5px;
+}
+
+#txtSearchEmployees{
+    flex: 1;
+    font-size: 1em;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.headerModalEmployees h4{
+    font-size: 1.6em;
+    font-weight: 600;
+    margin: 0;
+}
+
+#txtSearchEmployees{
+    border-radius: 5px;
+    border: solid 1px #6873BA;
+    box-shadow: 0 0 2px #6873BA;
+}
+
+.headerModalEmployees > div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1em;
+    font-weight: var(--font-weight-Medium);
+}
+
+.bodyModalEmployees{
+    width: 100%;
+    height: clamp(150px, 30vh, 300px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.employee{
+    display: flex;
+    align-items: stretch;
+    font-weight: var(--font-weight-Medium);
+    font-size: var(--font-size-base);
+    color: var(--color-txt);
+    gap: 15px;
+    padding: 0 20px;
+    height: 25%;
+}
+
+.employee > div{
+    display: flex;
+    align-items: center;
+}
+
+.employeeImage{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+/*acciones de modales*/
+
+.showModal{
+    display: flex !important;
+}
+
+.hideModal{
+    display: none !important;
 }

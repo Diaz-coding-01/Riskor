@@ -9,78 +9,128 @@
 </head>
 <body>
 
+    <!-- Modal Empleados -->
+    <div class="containerModal containerModalEmployees hideModal">
+        <form class="modalEmployees">
+            <button class="btnClose" type="button" data-modal="containerModalEmployees">
+                <img src="../media/closeIcon.svg" alt="">
+            </button>
+            <div class="headerModalEmployees">
+                <h4>Empleados</h4>
+                <div>
+                    <label for="chSelectAll">Marcar todos:</label>
+                    <input type="checkbox" id="chSelectAll" class="checks">
+                </div>
+            </div>
+            <div class="containerFilterEmployees">
+                <input type="text" id="txtSearchEmployees" placeholder="Buscar empleado...">
+                <button class="btnFilter" type="button" style="height: 100%;">
+                    <img src="../media/filtrar.svg" alt="" style="width: 90%;">
+                </button>
+            </div>
+            <div class="bodyModalEmployees">
+                <!-- Ejemplo de empleados, puedes generar dinámicamente -->
+                <div class="employee">
+                    <div class="containerEmployeeImage">
+                        <img src="../media/Frame 59.png" alt="" class="employeeImage">
+                    </div>
+                    <div style="flex: 1;">
+                        <span class="employeeName">Luis Gonzales</span>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="chEmployee checks" style="border-radius: 50%; transform: scale(1.4);">
+                    </div>
+                </div>
+                <!-- ...más empleados... -->
+            </div>
+            <input type="submit" value="Listo" class="btnPrimary" id="btnAddEmployees" style="align-self: end; border-radius: 5px; box-shadow: none; padding: 10px 60px; margin: 10px;">
+        </form>
+    </div>
+
     <main>
         <div class="contenedor-seccion">
             <div class="contenedor-sidebar">
                 <aside id="sidebar"></aside>
             </div>
             <div class="contenedor-cuerpo">
-                <div class="content">
+                <div class="content" style="overflow: auto; height: 100dvh; box-sizing: border-box;">
                     <div class="headerContent">
                         <div class="topHeader">
                             <nav class="breadcrumb">
                                 <ul>
                                     <li><a href="trainings.html">Capacitaciones ></a></li>
-                                    <!--Aca que link iria si es el nombre de las capacitaciones?-->
-                                    <li><a href="trainings.html">Nombre de la capacitacion ></a></li>
-                                    <li><a>Integrantes</a></li>
+                                    <li><a>Nombre de la capacitacion</a></li>
                                 </ul>
                             </nav>
-
-                            <div class="icons">
-                                <div class="notifications">
-                                    <button id="btnNotifications">
-                                        <img src="../media/Vector (1).svg" alt="Notificaciones" />
-                                    </button>
-                                </div>
-                                <div class="profile">
-                                    <img src="../media/133866211092483860.jpg" alt="Perfil" class="profilePicture" />
-                                </div>
-                            </div>
                         </div>
-
-
-                        <div class="headerContentButtons">
-                            <div class="searchContainer">
-                                <input type="text" id="txtSearch" placeholder="Buscar empleado..." />
-                                <button id="searchEmployee" class="btn-primary" style="flex: 2;">Buscar</button>
-                            </div>
-                            <a class="btn-primary" id="btnTakeAsistence">Tomar asistencia</a>
-                        </div>
-
                     </div>
-                    
-                    <div class="table-container">
-                        <table>
+                    <div class="bodyContent">
+                        <div class="containerDataTraining">
+                            <form id="frmTrainingInfo">
+                                <div class="rowForm">
+                                    <div class="containerInputUpdateTraining" style="flex: 2;">
+                                        <label for="txtTrainingDescription">Descripción</label>
+                                        <input type="text" id="txtTrainingDescription">
+                                    </div>
+                                    <div class="containerInputUpdateTraining">
+                                        <label for="cmbTrainingModality">Modalidad</label>
+                                        <select id="cmbTrainingModality"></select>
+                                    </div>
+                                </div>
+                                <div class="rowForm">
+                                    <div class="containerInputUpdateTraining">
+                                        <label for="txtTrainingPlace">Lugar</label>
+                                        <input type="text" id="txtAddTrainingPlace">
+                                    </div>
+                                    <div class="containerInputUpdateTraining">
+                                        <label for="dtTrainingDate">Fecha</label>
+                                        <input type="date" id="dtAddTrainingDate">
+                                    </div>
+                                    <div class="containerInputUpdateTraining">
+                                        <label for="tmTrainingDuration">Duración</label>
+                                        <input type="time" id="tmAddTrainingDuration">
+                                    </div>
+                                </div>
+                                <input type="submit" value="Guardar" id="btnUpdateTraining" class="btnPrimary" style="align-self: end;">
+                            </form>
+                        </div>
+                        <div class="containerDataEmployees">
+                            <div class="headerDataEmployees">
+                                <span class="titleEmployees">Participantes</span>
+                                <div class="lineDivision"></div>
+                            </div>
+                            <div class="containerSearchEmployees">
+                                <input type="text" class="txtSearch" placeholder="">
+                                <button id="btnOpenModalEmployee" class="btnPrimary">Ver participantes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tableContainer">
+                        <table id="tblEmployees">
                             <thead>
                                 <tr>
-                                    <th>DUI</th>
+                                    <th><img src="../media/Frame 59.png" class="imgEmployeeTable"></th>
                                     <th>Nombre completo</th>
-                                    <th>Asistio</th>
-                                    <th>Acción</th>
+                                    <th>Dui</th>
+                                    <th class="tdChecks">Presente</th>
+                                    <th class="tdChecks">Ausente</th>
                                 </tr>
                             </thead>
-                            <tbody id="trainingAsistenceData">
-                                <!-- Aquí se generarán las filas de la tabla dinámicamente -->
+                            <tbody id="tbodyEmployees">
+                                <!-- Aquí se llenarán los datos de los empleados -->
                                 <tr>
-                                    <td>12345678-9</td>
+                                    <td><img src="../media/Frame 59.png" class="imgEmployeeTable"></td>
                                     <td>Juan Pérez</td>
-                                    <td>si</td>
-                                    <td>
-                                        <img src="../media/globalMedia/actions/read-Icon.svg" title="Ver">
-                                        <img src="../media/globalMedia/actions/update-Icon.svg" title="Editar">
-                                        <img src="../media/globalMedia/actions/delete-Icon.svg" title="Eliminar">
-                                    </td>
+                                    <td>12345678-9</td>
+                                    <td><div class="containerCheck"><input type="checkbox" class="chkPresent checks tdChecks"></div></td>
+                                    <td><div class="containerCheck"><input type="checkbox" class="chkAbsent checks tdChecks"></div></td>
                                 </tr>
                                 <tr>
-                                    <td>98765432-1</td>
+                                    <td><img src="../media/Frame 59.png" class="imgEmployeeTable"></td>
                                     <td>María López</td>
-                                    <td>no</td>
-                                    <td>
-                                        <img src="../media/globalMedia/actions/read-Icon.svg" title="Ver">
-                                        <img src="../media/globalMedia/actions/update-Icon.svg" title="Editar">
-                                        <img src="../media/globalMedia/actions/delete-Icon.svg" title="Eliminar">
-                                    </td>
+                                    <td>98765432-1</td>
+                                    <td><div class="containerCheck"><input type="checkbox" class="chkPresent checks"></div></td>
+                                    <td><div class="containerCheck"><input type="checkbox" class="chkAbsent checks"></div></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -90,7 +140,7 @@
         </div>
     </main>
 
-    
+    <script src="../js/trainingAsistenceData.js"></script>
     <script src="../js/sidebar.js"></script>
 </body>
 </html>

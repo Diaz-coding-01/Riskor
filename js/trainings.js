@@ -1,68 +1,45 @@
 'use strict';
 
 let btnOpenAddTraining = document.getElementById('btnOpenAddTraining');
-let btnCloseModal = document.querySelectorAll('.btnCloseModal');
 let formAddTraining = document.getElementById('formAddTraining');
-let formTrainings = document.getElementById('formTraining');
 let modalAddTraining = document.querySelector('.containerModalAddTraining');
-let modalTraining = document.querySelector('.containerModalTraining');
 let containerTrainings = document.querySelector('.pnlContainer');
 let btnAddTraining = document.getElementById('btnAddTraining');
 let modalEmployees = document.querySelector('.containerModalEmployees');
 
-
+// Mostrar modal de empleados al hacer click en "Añadir empleados"
 btnAddTraining.addEventListener('click', () => {
     modalEmployees.classList.replace('hideModal', 'showModal');
 });
 
-modalEmployees.addEventListener('submit', (e) => {
-    e.preventDefault();
-});
-
-btnCloseModal.forEach(btn => {
-    btn.addEventListener('click', () => {
-        let modalClass = btn.dataset.modal;
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('containerModal')) {
+        e.target.classList.replace('showModal', 'hideModal');
+    } else if (e.target.classList.contains('btnClose') || e.target.closest('.btnClose')) {
+        let modalClass = e.target.dataset.modal || e.target.closest('.btnClose').dataset.modal;
         let modal = document.querySelector(`.${modalClass}`);
-        if (!modal) return;
         modal.classList.replace('showModal', 'hideModal');
-        if (modalClass === 'containerModalAddTraining') {
-            formAddTraining.reset();
-        } else if (modalClass === 'containerModalEmployees') {
-            modalEmployees.querySelector('.bodyModalEmployees').innerHTML = '';
-        } else if (modalClass === 'containerModalTraining') {
-            formTrainings.reset();
-        }
-    });
+    }
 });
 
-containerTrainings.addEventListener('click', async (e) => {
-    if (e.target.classList.contains('informationPnl')) {
-        await loadTrainingData(e.target.dataset.id);
-        modalTraining.classList.replace('hideModal', 'showModal');
-    } else if (e.target.classList.contains('btnAddMembers')) {
-        await loadEmployeesTraining(e.target.closest('.informationPnl').dataset.id);
-        modalEmployees.classList.replace('hideModal', 'showModal');
-    }
-})
-
+// Abrir modal para agregar capacitación
 btnOpenAddTraining.addEventListener('click', () => {
     modalAddTraining.classList.replace('hideModal', 'showModal');
-})
+});
 
+// Prevenir submit por defecto en el formulario de agregar capacitación
 formAddTraining.addEventListener('submit', (e) => {
     e.preventDefault();
-})
+});
 
+// Cerrar modales al hacer click fuera del contenido
 document.addEventListener('click', (e) => {
     if (e.target === modalAddTraining) {
         modalAddTraining.classList.replace('showModal', 'hideModal');
     } else if (e.target === modalEmployees) {
         modalEmployees.classList.replace('showModal', 'hideModal');
-    } else if (e.target === modalTraining) {
-        modalTraining.classList.replace('showModal', 'hideModal');
     }
-})
-
+});
 
 /*Mandar a llamar a una api*/
 document.addEventListener('DOMContentLoaded', () => {
@@ -77,36 +54,7 @@ let getTrainings = async () => {
     } catch (error) {
         console.error('Error fetching trainings:', error);
     }
-}
-
-let loadTrainingData = async (id) => {
-    try {
-        let response = await fetch(`https://retoolapi.dev/NpDyIE/data/${id}`);
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        let trainingData = await response.json();
-
-        loadDataTrainingsModal(trainingData);
-    } catch (error) {
-        console.error('Error loading training data:', error);
-    }
-}
-
-let loadDataTrainingsModal = (trainingData) => {
-    let trainingName = document.getElementById('trainingName');
-    let trainingDescription = document.getElementById('txtTrainingDescription');
-    let trainingModality = document.getElementById('cmbTrainingModality');
-    let trainingDate = document.getElementById('dtTrainingDate');
-    let trainingTime = document.getElementById('tmTrainingDuration');
-    let TrainingPlace = document.getElementById('txtTrainingPlace');
-
-    trainingName.textContent = trainingData.trainingName;
-    trainingDescription.value = trainingData.description;
-    TrainingPlace.value = trainingData.place;
-    trainingDate.value = new Date(trainingData.date).toLocaleDateString();
-    trainingTime.value = trainingData.duration;
-}
+};
 
 let loadDataEmployeesModal = (employees) => {
     let bodyModalEmployees = document.querySelector('.bodyModalEmployees');
@@ -126,15 +74,11 @@ let loadDataEmployeesModal = (employees) => {
         employeeName.textContent = employee.name || 'Unknown Employee';
 
         employeeElement.classList.add('employee');
-
         containerEmployeeImage.classList.add('containerEmployeeImage');
-
         employeeImage.classList.add('employeeImage');
-
         chEmployee.setAttribute('type', 'checkbox');
         chEmployee.classList.add('chEmployee', 'checks');
         chEmployee.style.cssText = 'border-radius: 50%; transform: scale(1.4);';
-
         containerEmployeeName.style.flex = '1';
 
         containerEmployeeName.appendChild(employeeName);
@@ -145,9 +89,9 @@ let loadDataEmployeesModal = (employees) => {
         employeeElement.appendChild(containerCh);
 
         fragment.appendChild(employeeElement);
-    })
+    });
     bodyModalEmployees.appendChild(fragment);
-}
+};
 
 let loadEmployeesTraining = async (id) => {
     try {
@@ -161,61 +105,47 @@ let loadEmployeesTraining = async (id) => {
     } catch (error) {
         console.error('Error loading employees for training:', error);
     }
-}
+};
 
+/*Insertar capacitaciones en el DOM*/
 let insertTrainings = (data) => {
     let trainingContainer = document.querySelector('.pnlContainer');
-
-
+    trainingContainer.innerHTML = '';
     let fragment = document.createDocumentFragment();
 
     data.forEach(training => {
-        let trainingElement = document.createElement('button');
+        let trainingElement = document.createElement('a');
         let trainingName = document.createElement('span');
         let containerMoreInfoTraining = document.createElement('div');
         let containerTrainingUsers = document.createElement('div');
-        let userTraining1 = document.createElement('img');
-        let userTraining2 = document.createElement('img');
-        let userTraining3 = document.createElement('img');
         let arrowIcon = document.createElement('img');
-        
-        let addMembers = document.createElement('div');
-        let addMembersIcon = document.createElement('img');
 
+        trainingElement.setAttribute('href', '../pages/trainingAsistenceData.html');
         trainingElement.setAttribute('data-id', training.id);
 
         trainingName.textContent = training.trainingName;
 
-        let employeeData = JSON.parse(training.employees);
+        let employeeData = [];
+        try {
+            employeeData = JSON.parse(training.employees);
+        } catch (e) {
+            employeeData = [];
+        }
 
-        addMembersIcon.setAttribute('src', '../media/addMembers.svg');
-        userTraining1.setAttribute('src', employeeData[0].image || '../media/Frame 59.png');
-        userTraining2.setAttribute('src', employeeData[1].image || '../media/Frame 59.png');
-        userTraining3.setAttribute('src', employeeData[2].image || '../media/Frame 59.png');
+        // Solo muestra hasta 3 empleados
+        employeeData.slice(0, 3).forEach((employee, idx) => {
+            let userImg = document.createElement('img');
+            userImg.setAttribute('src', employee.image || '../media/Frame 59.png');
+            userImg.classList.add('userTraining', `user${idx+1}`);
+            containerTrainingUsers.appendChild(userImg);
+        });
+
         arrowIcon.src = "../media/grey_arrow_right.svg";
 
         trainingElement.classList.add('informationPnl');
-        trainingElement.type = 'button';
-
         trainingName.classList.add('trainingName');
-
         containerMoreInfoTraining.classList.add('containerMoreInfoTraining');
-
         containerTrainingUsers.classList.add('containerTrainingUsers');
-
-        userTraining1.classList.add('userTraining', 'user1');
-        userTraining2.classList.add('userTraining', 'user2');
-        userTraining3.classList.add('userTraining', 'user3');
-
-        addMembers.classList.add('userTraining', 'btnAddMembers');
-        addMembersIcon.classList.add('btnAddMembers');
-
-        addMembers.appendChild(addMembersIcon);
-
-        containerTrainingUsers.appendChild(addMembers);
-        containerTrainingUsers.appendChild(userTraining1);
-        containerTrainingUsers.appendChild(userTraining2);
-        containerTrainingUsers.appendChild(userTraining3);
 
         containerMoreInfoTraining.appendChild(containerTrainingUsers);
         containerMoreInfoTraining.appendChild(arrowIcon);
@@ -227,4 +157,4 @@ let insertTrainings = (data) => {
     });
 
     trainingContainer.appendChild(fragment);
-}
+};
