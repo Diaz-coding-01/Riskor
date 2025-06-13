@@ -253,7 +253,7 @@ h2, ul, li {
   Botón primario - Agregar elementos, guardar información, etc
 */
 
-.btn-primary{
+.btnPrimary{
   background: var(--color-btn-primary);                       /*Gradiente del fondo del btn*/
   border: 0;                                      /*Se le asigna 0 al borde en una variable para hacer el ghost-button más fácil*/    
   border-radius: var(--border-radius);                                        
@@ -265,7 +265,7 @@ h2, ul, li {
   transition: var(--transition-base);
 }
 
-.btn-primary:hover{
+.btnPrimary:hover{
   --color-btn-primary: #6876f2;
   background: var(--color-btn-primary); 
   transform: translateY(-2px);          
@@ -292,7 +292,7 @@ h2, ul, li {
   Input - Barra de búsqueda
 */
 
-#txtSearch{
+.txtSearch{
     background-image: url('../media/globalMedia/searchbar-icon.svg');
     background-position: 12px 12px; 
     background-repeat: no-repeat;
@@ -305,7 +305,7 @@ h2, ul, li {
     color: var(--color-txt);
 }
 
-#txtSearch:focus {
+.txtSearch:focus {
   border: 1px solid #343968;
   font-size: var(--font-size-base);
   color: var(--color-txt);
@@ -387,7 +387,7 @@ h2, ul, li {
     box-shadow: var(--shadow-modal);
 }
 
-#btnCloseAdd{
+.btnCloseAdd{
     position: absolute;
     cursor: pointer;
     background-color: transparent;
@@ -417,20 +417,10 @@ h2, ul, li {
 }
 
 /*
-  Títulos de cada input
-*/
-
-.formField label{
-  font-weight: var(--font-weight-Medium);
-  font-size: var(--font-size-base);
-  color: var(--color-txt);
-}
-
-/*
   Botón X - Cerrar modal
 */
 
-#btnClose{
+.btnClose{
     position: absolute;
     cursor: pointer;
     background-color: transparent;
@@ -452,7 +442,7 @@ h2, ul, li {
     border: var(--color-img-border);
 }
 
-#btnNotifications{
+.btnNotifications{
     border: none;
     margin: 0;
     padding: 0;
@@ -467,7 +457,7 @@ h2, ul, li {
   Clases para reutilizar la tabla con facilidad
 */
 
-.table-container {
+.tableContainer {
   background-color: var(--color-neutral);
   box-shadow: 0px 4px 8px 0px rgba(49, 58, 141, 0.25);
   overflow-x: auto;
@@ -533,14 +523,14 @@ tr:hover {
 
   Contiene estilos para: Labels, Dropdowns, textbox y textareas
 */
-label{
+.lbl{
   font-size: var(--font-size-base);
   color: var(--color-txt-title);
   font-weight: var(--font-weight-Semibold);
 }
 
-/*Combobox*/
-select{
+/*Combobox - Select*/
+.dropdown{
   --border-radius: 5px;
   border-radius: var(--border-radius);
   height: 3em;

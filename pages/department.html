@@ -4,12 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../css/department.css">
 </head>
 <body>
     <main>
         <div class="content">
+            <div class="headerContent">
+                <div class="topHeader">
+                    <nav class="breadcrumb">
+                        <ul>
+                            <li><a href="departments.html">Áreas de la Empresa ></a></li>
+                            <li><a>Nueva área</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="cardContainer">
+                <div class="topInterface">
+                    <div class="departmentMap">
+                        <img src="../media/Área img example.png" alt="department">
+                    </div>
+                    <div class="areaDetails">
 
+                        <div class="table-container" style="margin-top: 2em;">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <!--Componentes que contiene la tabla-->
+                                        <th>Empleado</th>
+                                        <th>Desempeño</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="recordEmployeeTableBody">
+                                    <!-- Datos mostrados en el archivo js -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="bottomInterface">
+                    <button type="button" class="btn-primary">Guardar</button>
+                </div>
+            </div>        
         </div>
     </main>
 </body>
