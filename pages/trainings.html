@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../css/sidebar.css">
     <link rel="stylesheet" href="../css/trainings.css">
 </head>
+
 <body>
     <!-- Modal Agregar Capacitación -->
     <div class="containerModal containerModalAddTraining hideModal">
@@ -96,51 +98,47 @@
                     </div>
                 </div>
                 <div class="containerButtonsModalTraining">
-                    <a class="btnPrimary" href="trainingAsistenceData.html" style="text-decoration: none;">Asistencia</a>
+                    <a class="btnPrimary" href="trainingAsistenceData.html"
+                        style="text-decoration: none;">Asistencia</a>
                     <button class="btnPrimary" type="button">Listo</button>
                 </div>
             </div>
         </form>
     </div>
 
-    
+    <div class="bodyContainer">
+        <aside id="sidebar"></aside>
 
-    <main>
-        <div class="contenedor-seccion">
-            <div class="contenedor-sidebar">
-                <aside id="sidebar"></aside>
-            </div>
-            <div class="contenedor-cuerpo">
-                <div class="content">
-                    <div class="headerContent">
-                        <nav class="breadcrumb">
-                            <ul>
-                                <li><a>Capacitaciones</a></li>
-                            </ul>
-                        </nav>
-                        <div class="headerContentButtons">
-                            <div class="searchContainer">
-                                <input type="text" class="txtSearch">
-                                <button class="btnFilter" type="button">
-                                    <img src="../media/filtrar.svg" alt="">
-                                </button>
-                                <button class="btnPrimary" style="flex: 2;" type="button">Buscar</button>
-                            </div>
-                            <div>
-                                <button class="btnPrimary" id="btnOpenAddTraining" style="height: 3.5em; width: 12em" type="button">Crear</button>
-                            </div>
-                        </div>
+        <main class="content">
+            <div class="headerContent">
+                <nav class="breadcrumb">
+                    <ul>
+                        <li><a>Capacitaciones</a></li>
+                    </ul>
+                </nav>
+                <div class="headerContentButtons">
+                    <div class="searchContainer">
+                        <input type="text" class="txtSearch">
+                        <button class="btnFilter" type="button">
+                            <img src="../media/filtrar.svg" alt="">
+                        </button>
+                        <button class="btnPrimary" style="flex: 2;" type="button">Buscar</button>
                     </div>
-                    <div class="cardContainer">
-                        <div class="bottomShadow"></div>
-                        <div class="pnlContainer"></div>
+                    <div>
+                        <button class="btnPrimary" id="btnOpenAddTraining" style="height: 3.5em; width: 12em"
+                            type="button">Crear</button>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+            <div class="cardContainer">
+                <div class="bottomShadow"></div>
+                <div class="pnlContainer"></div>
+            </div>
+        </main>
+    </div>
 
     <script src="../js/sidebar.js"></script>
     <script src="../js/trainings.js"></script>
 </body>
+
 </html>

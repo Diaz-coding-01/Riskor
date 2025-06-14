@@ -22,7 +22,7 @@
     box-shadow: none !important;
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .AddDevice {
@@ -86,7 +86,6 @@
     flex-direction: column;
     height: 16rem;
     padding: 1.5rem;
-    width: 28.5rem;
 }
 
 .cardHeader {

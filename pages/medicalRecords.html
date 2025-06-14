@@ -62,55 +62,44 @@
         </form>
     </div> 
 
-    <main>
-        <div class="contenedor-seccion">
-        <div class="contenedor-sidebar">
-            <aside id="sidebar"></aside>
-        </div>
-        
-        <div class="contenedor-cuerpo">
-        <div class="content">
-            <!--Contenedor que divide la interfaz en 2, (Titulo, crear, busqueda) y (Paneles) -->
-            <div class="headerContent">
-                <div class="topHeader">
-                    
-                    <nav class="breadcrumb">
-                        <ul>
-                            <li><a>Expedientes médicos</a></li>
-                        </ul>
-                    </nav>
-
-                    <div class="icons">
-                        <div class="notifications">
-                            <button id="btnNotifications">
-                                <img src="../media/Vector (1).svg" alt="Notificaciones" />
-                            </button>
-                        </div>
-                        <div class="profile">
-                            <img src="../media/133866211092483860.jpg" alt="Perfil" class="profilePicture" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="headerContentButtons">
-                    <div class="searchContainer">
-                        <input type="text" id="txtSearch">
-                        <button id="btnFilterMedicalRecords" class="btnFilter">
-                            <img src="../media/filtrar.svg" title="Filtrar">
+    <div class="bodyContainer">
+    <aside id="sidebar"></aside>
+    <main class="content">
+        <!--Contenedor que divide la interfaz en 2, (Titulo, crear, busqueda) y (Paneles) -->
+        <div class="headerContent">
+            <div class="topHeader">
+                <nav class="breadcrumb">
+                    <ul>
+                        <li><a>Expedientes médicos</a></li>
+                    </ul>
+                </nav>
+                <div class="icons">
+                    <div class="notifications">
+                        <button id="btnNotifications">
+                            <img src="../media/Vector (1).svg" alt="Notificaciones" />
                         </button>
-                        <button class="btn-primary" style="flex: 2;">Buscar</button>
                     </div>
-                    <div>
-                        <button class="btn-primary" id="loadModal" style="height: 3.5em; width: 12em">Crear</button>
+                    <div class="profile">
+                        <img src="../media/133866211092483860.jpg" alt="Perfil" class="profilePicture" />
                     </div>
                 </div>
             </div>
-            
-            <div class="cardContainer" id="recordEmployeContainer"></div> <!--Contenedor padre-->
+            <div class="headerContentButtons">
+                <div class="searchContainer">
+                    <input type="text" id="txtSearch">
+                    <button id="btnFilterMedicalRecords" class="btnFilter">
+                        <img src="../media/filtrar.svg" title="Filtrar">
+                    </button>
+                    <button class="btn-primary" style="flex: 2;">Buscar</button>
+                </div>
+                <div>
+                    <button class="btn-primary" id="loadModal" style="height: 3.5em; width: 12em">Crear</button>
+                </div>
+            </div>
         </div>
-        </div>
-        </div>
+        <div class="cardContainer" id="recordEmployeContainer"></div>
     </main>
+</div>
 
     <script src="../js/sidebar.js"></script>
     <script src="../js/medicalRecords.js"></script>
