@@ -14,7 +14,7 @@
     <!-- ===== Modal par ver datos =====-->
     <div class="containerModal containerModalClose" id="ViewDevices">
         <form class="modalAdd closeAdd" id="formAddEmployee">
-            <button id="btnClose" type="button" aria-label="Cerrar formulario">
+            <button class="btnClose" id="btnClose" type="button" aria-label="Cerrar formulario">
                 <img src="../media/closeIcon.svg" alt="Cerrar">
             </button>
             <div class="formGrid">
@@ -65,9 +65,9 @@
                 </div>
             </div>
             <div class="inputMaintenance">
-                <a href="DeviceMaintenance.html"><input type="button" class="btn-primary"
+                <a href="DeviceMaintenance.html"><input type="button" class="btnPrimary"
                         style="align-self: flex-end; padding: 15px 40px;" value="Ver mantenimientos"></a>
-                <input type="submit" class="btn-primary" style="align-self: flex-end; padding: 15px 40px;"
+                <input type="submit" class="btnPrimary" style="align-self: flex-end; padding: 15px 40px;"
                     value="Guardar">
             </div>
         </form>
@@ -76,7 +76,7 @@
     <!-- ===== Modal par ver Agregar Dispositivos =====-->
     <div class="containerModal containerModalClose" id="AddDevices">
         <form class="modalAdd closeAdd" id="formAddEmployee">
-            <button id="btnCloseAdd" type="button" aria-label="Cerrar formulario">
+            <button class="btnClose" id="btnCloseAdd" type="button" aria-label="Cerrar formulario">
                 <img src="../media/closeIcon.svg" alt="Cerrar">
             </button>
             <div class="formGrid">
@@ -122,66 +122,57 @@
                     </div>
                 </div>
             </div>
-            <input type="submit" class="btn-primary" style="align-self: flex-end; padding: 15px 40px;" value="Guardar">
+            <input type="submit" class="btnPrimary" style="align-self: flex-end; padding: 15px 40px;" value="Guardar">
         </form>
     </div>
 
-    <main>
-        <div class="contenedor-seccion">
-            <div class="contenedor-sidebar">
-                <nav id="sidebar"></nav>
-            </div>
+    <div class="bodyContainer">
+        <aside id="sidebar"></aside>
 
-            <div class="contenedor-cuerpo">
-                <div class="content">
-
-                    <div class="headerContent">
-                        <div class="topHeader">
-
-                            <nav class="breadcrumb">
-                                <ul>
-                                    <li><a>Control de Dispositivos</a></li>
-                                </ul>
-                            </nav>
-
-                            <div class="icons">
-                                <div class="notifications">
-                                    <button id="btnNotifications">
-                                        <img src="../media/Vector (1).svg" alt="Notificaciones" />
-                                    </button>
-                                </div>
-                                <div class="profile">
-                                    <img src="../media/133866211092483860.jpg" alt="Perfil" class="profilePicture" />
-                                </div>
-                            </div>
+        <main class="content">
+            <div class="headerContent">
+                <div class="topHeader">
+                    <nav class="breadcrumb">
+                        <ul>
+                            <li><a>Control de Dispositivos</a></li>
+                        </ul>
+                    </nav>
+                    <div class="icons">
+                        <div class="notifications">
+                            <button class="btnNotifications">
+                                <img src="../media/Vector (1).svg" alt="Notificaciones" />
+                            </button>
                         </div>
-
-
-                    </div>
-                    <div class="containerDevices">
-                        <div class="tabs">
-                            <button class="tab active" data-tab="todos">Todos</button>
-                            <button class="tab" data-tab="Salud">Salud <img src="../media/Health.svg" alt=""></button>
-                            <button class="tab" data-tab="Sistemas">Sistemas <img src="../media/systems.svg" alt=""></button>
-                        </div>
-                        <hr class="Line">
-                    </div>
-                    <div class="cardContainer">
-                        <div class="pnlContainer" data-tab-content="todos">
-
-                        </div>
-                        <div class="pnlContainer" data-tab-content="Salud" style="display: none;">
-
-                        </div>
-                        <div class="pnlContainer" data-tab-content="Sistemas" style="display: none;">
-
+                        <div class="profile">
+                            <img src="../media/133866211092483860.jpg" alt="Perfil" class="profilePicture" />
                         </div>
                     </div>
-                    <button class="btn-primary AddDevice" id="NewDecives">Agregar dispositivo</button>
                 </div>
             </div>
-        </div>
-    </main>
+
+
+            <div class="cardContainer">
+                <div class="containerDevices">
+                    <div class="tabs">
+                        <button class="tab active" data-tab="todos">Todos</button>
+                        <button class="tab" data-tab="Salud">Salud <img src="../media/Health.svg" alt=""></button>
+                        <button class="tab" data-tab="Sistemas">Sistemas <img src="../media/systems.svg"
+                                alt=""></button>
+                    </div>
+                    <hr class="Line">
+                </div>
+
+                <div class="pnlContainer" data-tab-content="todos"></div>
+                <div class="pnlContainer" data-tab-content="Salud" style="display: none;"></div>
+                <div class="pnlContainer" data-tab-content="Sistemas" style="display: none;"></div>
+            </div>
+
+            <div class="bottomButtons">
+                <button class="btnPrimary AddDevice" id="NewDecives">Agregar dispositivo</button>
+            </div>
+
+        </main>
+    </div>
 
     <script src="../js/sidebar.js"></script>
     <script src="../js/Devices.js"></script>

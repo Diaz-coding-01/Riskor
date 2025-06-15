@@ -1,0 +1,81 @@
+@import url('globalStyles.css');
+
+.regulationLayout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2em;
+    width: 100%;
+    padding: 0 2.7em;
+    box-sizing: border-box;
+    align-items: flex-start;
+}
+
+.formRegulation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em 2em;
+    padding: 2em;
+    background-color: #f4f7fe;
+    border-radius: 12px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup.full {
+    grid-column: 1 / -1;
+}
+
+.txtTextbox,
+.txtTextarea,
+.dropdown {
+    padding: 10px;
+    font-size: var(--font-size-base);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 100%;
+}
+
+.txtTextarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.ContainerFile {
+    border: 2px dashed #81859E;
+    border-radius: 12px;
+    padding: 2em;
+    text-align: center;
+    background-color: white;
+}
+
+
+.btnPrimary {
+    padding: 0.8em 2em;
+}
+
+.btnPrimary.fullWidth {
+    width: 100%;
+}
+
+.sideActions {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    height: 100%;              
+    padding: 2em 0;
+}
+
+.inputFile {
+    display: none;
+}
+
+.labelFileBtn {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
