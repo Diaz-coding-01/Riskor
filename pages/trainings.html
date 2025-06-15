@@ -56,54 +56,61 @@
         </form>
     </div>
 
-    <!-- Modal Ver Capacitación -->
-    <div class="containerModal containerModalTraining hideModal">
-        <form class="modalTraining" id="formTraining">
-            <button class="btnCloseModal" type="button" data-modal="containerModalTraining">
+
+    <div class="containerModal containerModalNotifications hideModal">
+        <div class="notificationBar">
+            <button class="btnClose" type="button" data-modal="containerModalNotifications">
                 <img src="../media/closeIcon.svg" alt="">
             </button>
-            <div class="headerModalTraining">
-                <div>
-                    <h2 id="trainingName"></h2>
+            <div class="headerNotifications">
+                <h2 class="notificationsTitle">Notificaciones</h2>
+                <button class="btnDeleteAllNoti">Eliminar todas</button>
+            </div>
+            <div class="bodyNotifications">
+                <div class="notification">
+                    <button class="btnClose" type="button" data-modal="notification">
+                        <img src="../media/closeIcon.svg" alt="">
+                    </button>
+                    <span class="notificationMessage">Se te ha agregado a la capacitación “Ética Laboral 1”.</span>
                 </div>
-                <div style="padding-right: 30px;">
-                    <h4 class="trainer">Capacitador: <span class="trainerName">Luis Gonzales</span></h4>
+                <div class="notification">
+                    <button class="btnClose" type="button" data-modal="notification">
+                        <img src="../media/closeIcon.svg" alt="">
+                    </button>
+                    <span class="notificationMessage">Se te ha agregado a la capacitación “Ética Laboral 1”.</span>
+                </div>
+                <div class="notification">
+                    <button class="btnClose" type="button" data-modal="notification">
+                        <img src="../media/closeIcon.svg" alt="">
+                    </button>
+                    <span class="notificationMessage">Se te ha agregado a la capacitación “Ética Laboral 1”.</span>
+                </div>
+                <div class="notification">
+                    <button class="btnClose" type="button" data-modal="notification">
+                        <img src="../media/closeIcon.svg" alt="">
+                    </button>
+                    <span class="notificationMessage">Se te ha agregado a la capacitación “Ética Laboral 1”.</span>
+                </div>
+                <div class="notification">
+                    <button class="btnClose" type="button" data-modal="notification">
+                        <img src="../media/closeIcon.svg" alt="">
+                    </button>
+                    <span class="notificationMessage">Se te ha agregado a la capacitación “Ética Laboral 1”.</span>
+                </div>
+                <div class="notification">
+                    <button class="btnClose" type="button" data-modal="notification">
+                        <img src="../media/closeIcon.svg" alt="">
+                    </button>
+                    <span class="notificationMessage">Se te ha agregado a la capacitación “Ética Laboral 1”.</span>
+                </div>
+                <div class="notification">
+                    <button class="btnClose" type="button" data-modal="notification">
+                        <img src="../media/closeIcon.svg" alt="">
+                    </button>
+                    <span class="notificationMessage">Se te ha agregado a la capacitación “Ética Laboral 1”.</span>
                 </div>
             </div>
-            <div class="bodyModalTraining">
-                <div>
-                    <div class="containerInputAddTraining">
-                        <label for="txtTrainingDescription">Descripción</label>
-                        <input type="text" id="txtTrainingDescription">
-                    </div>
-                </div>
-                <div>
-                    <div class="containerInputAddTraining">
-                        <label for="cmbTrainingModality">Modalidad</label>
-                        <select id="cmbTrainingModality"></select>
-                    </div>
-                    <div class="containerInputAddTraining">
-                        <label for="dtTrainingDate">Fecha</label>
-                        <input type="date" id="dtTrainingDate">
-                    </div>
-                    <div class="containerInputAddTraining">
-                        <label for="tmTrainingDuration">Duración</label>
-                        <input type="time" id="tmTrainingDuration">
-                    </div>
-                </div>
-                <div>
-                    <div class="containerInputAddTraining">
-                        <label for="txtTrainingPlace">Lugar</label>
-                        <input type="text" id="txtTrainingPlace">
-                    </div>
-                </div>
-                <div class="containerButtonsModalTraining">
-                    <a class="btnPrimary" href="trainingAsistenceData.html"
-                        style="text-decoration: none;">Asistencia</a>
-                    <button class="btnPrimary" type="button">Listo</button>
-                </div>
-            </div>
-        </form>
+        </div>
     </div>
 
     <div class="bodyContainer">
@@ -111,11 +118,23 @@
 
         <main class="content">
             <div class="headerContent">
-                <nav class="breadcrumb">
-                    <ul>
-                        <li><a>Capacitaciones</a></li>
-                    </ul>
-                </nav>
+                <div class="topHeader">
+                    <nav class="breadcrumb">
+                        <ul>
+                            <li><a>Capacitaciones</a></li>
+                        </ul>
+                    </nav>
+                    <div class="icons">
+                        <div class="notifications">
+                            <button class="btnNotifications">
+                                <img src="../media/Vector (1).svg" alt="Notificaciones" />
+                            </button>
+                        </div>
+                        <div class="profile">
+                            <img src="../media/133866211092483860.jpg" alt="Perfil" class="profilePicture" />
+                        </div>
+                    </div>
+                </div>
                 <div class="headerContentButtons">
                     <div class="searchContainer">
                         <input type="text" class="txtSearch">

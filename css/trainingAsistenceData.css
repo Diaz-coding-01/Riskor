@@ -38,12 +38,6 @@ body{
 }
 
 .containerInputUpdateTraining label + *{
-    font-weight: var(--font-weight-Medium);
-    font-size: var(--font-size-base);
-    color: var(--color-txt-title);
-    padding: 7px;
-    border-radius: 3px;
-    border: solid 1px #7B96C7;
     height: clamp(25px, 100%, 40px);
 }
 
@@ -157,6 +151,7 @@ body{
     color: #fff;
 }
 
+
 /*Modal empleados*/
 
 .modalEmployees{
@@ -164,6 +159,7 @@ body{
     flex-direction: column;
     align-items: center;
     position: relative;
+    z-index: 50;
     border-radius: 12px;
     padding: 35px;
     box-sizing: border-box;
@@ -250,6 +246,65 @@ body{
     height: 100%;
     width: 100%;
     border-radius: 50%;
+}
+
+.chEmployee{
+    border: solid 1px #5666FF;
+    border-radius: 50%;
+    transform: scale(1.4);
+}
+
+.chEmployee:checked{
+    background-color: #5666FF;
+    transition: .6s;
+}
+
+/*Pestaña de filtros*/
+
+.tabFilter{
+    background-color: var(--color-neutral);
+    position: absolute;
+    border-radius: 10px;
+    z-index: 60;
+    width: 260px;
+    height: 270px;
+    padding: 20px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.tabFilter div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tabFilter::before{
+    content: '';
+    background-color: var(--color-neutral);
+    display: block;
+    position: absolute;
+    clip-path: polygon(73% 2%, 81% 1%, 88% 3%, 96% 8%, 100% 19%, 100% 100%, 0 100%, 28% 55%, 59% 9%, 66% 5%);
+    width: 30px;
+    height: 30px;
+    top: -20px;
+    right: 0;
+}
+
+.tbFilterTitle{
+    font-size: var(--font-size-base);
+    color: var(--color-txt-title);
+    margin: 0;
+}
+
+.containerSelectFilter{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--color-txt);
+    font-weight: var(--font-weight-Medium);
 }
 
 /*acciones de modales*/

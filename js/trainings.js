@@ -6,6 +6,8 @@ let modalAddTraining = document.querySelector('.containerModalAddTraining');
 let containerTrainings = document.querySelector('.pnlContainer');
 let btnAddTraining = document.getElementById('btnAddTraining');
 let modalEmployees = document.querySelector('.containerModalEmployees');
+let btnNotifications = document.querySelector('.btnNotifications');
+let modalNotifications = document.querySelector('.containerModalNotifications');
 
 // Mostrar modal de empleados al hacer click en "Añadir empleados"
 btnAddTraining.addEventListener('click', () => {
@@ -38,8 +40,14 @@ document.addEventListener('click', (e) => {
         modalAddTraining.classList.replace('showModal', 'hideModal');
     } else if (e.target === modalEmployees) {
         modalEmployees.classList.replace('showModal', 'hideModal');
+    } else if (e.target === modalNotifications){
+        modalNotifications.classList.replace('showModal', 'hideModal');
     }
 });
+
+btnNotifications.addEventListener('click', () => {
+    modalNotifications.classList.replace('hideModal', 'showModal');
+})
 
 /*Mandar a llamar a una api*/
 document.addEventListener('DOMContentLoaded', () => {
@@ -56,57 +64,6 @@ let getTrainings = async () => {
     }
 };
 
-let loadDataEmployeesModal = (employees) => {
-    let bodyModalEmployees = document.querySelector('.bodyModalEmployees');
-    let fragment = document.createDocumentFragment();
-    bodyModalEmployees.innerHTML = ''; // Clear previous content
-
-    employees.forEach(employee => {
-        let employeeElement = document.createElement('div');
-        let containerEmployeeImage = document.createElement('div');
-        let employeeImage = document.createElement('img');
-        let containerEmployeeName = document.createElement('div');
-        let employeeName = document.createElement('span');
-        let containerCh = document.createElement('div');
-        let chEmployee = document.createElement('input');
-
-        employeeImage.setAttribute('src', employee.image || '../media/Frame 59.png');
-        employeeName.textContent = employee.name || 'Unknown Employee';
-
-        employeeElement.classList.add('employee');
-        containerEmployeeImage.classList.add('containerEmployeeImage');
-        employeeImage.classList.add('employeeImage');
-        chEmployee.setAttribute('type', 'checkbox');
-        chEmployee.classList.add('chEmployee', 'checks');
-        chEmployee.style.cssText = 'border-radius: 50%; transform: scale(1.4);';
-        containerEmployeeName.style.flex = '1';
-
-        containerEmployeeName.appendChild(employeeName);
-        containerEmployeeImage.appendChild(employeeImage);
-        containerCh.appendChild(chEmployee);
-        employeeElement.appendChild(containerEmployeeImage);
-        employeeElement.appendChild(containerEmployeeName);
-        employeeElement.appendChild(containerCh);
-
-        fragment.appendChild(employeeElement);
-    });
-    bodyModalEmployees.appendChild(fragment);
-};
-
-let loadEmployeesTraining = async (id) => {
-    try {
-        let response = await fetch(`https://retoolapi.dev/NpDyIE/data/${id}`);
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        let trainingData = await response.json();
-
-        loadDataEmployeesModal(JSON.parse(trainingData.employees));    
-    } catch (error) {
-        console.error('Error loading employees for training:', error);
-    }
-};
-
 /*Insertar capacitaciones en el DOM*/
 let insertTrainings = (data) => {
     let trainingContainer = document.querySelector('.pnlContainer');
@@ -120,8 +77,7 @@ let insertTrainings = (data) => {
         let containerTrainingUsers = document.createElement('div');
         let arrowIcon = document.createElement('img');
 
-        trainingElement.setAttribute('href', '../pages/trainingAsistenceData.html');
-        trainingElement.setAttribute('data-id', training.id);
+        trainingElement.setAttribute('href', `../pages/trainingAsistenceData.html?id=${training.id}`);
 
         trainingName.textContent = training.trainingName;
 
