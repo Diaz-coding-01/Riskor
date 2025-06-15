@@ -33,7 +33,6 @@
     min-height: 300px !important;
     align-content: flex-start; 
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-
 }
 
 .bottomButtons{

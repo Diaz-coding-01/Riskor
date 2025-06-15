@@ -10,61 +10,48 @@
 </head>
 
 <body>
-    <main>
-        <!--Clase contenedor para la seccion-->
-        <div class="contenedor-seccion">
-            <!--Clase contenedor para sidebar-->
-            <div class="contenedor-sidebar">
-                <nav id="sidebar"></nav>
-            </div>
-
-            <!--Clase contenedor para el cuerpo-->
-            <div class="contenedor-cuerpo">
-                <!--Contenido-->
-                <div class="content">
-
-                    <div class="headerContent">
-                        <!--Creación de la clase breadcrumb el cual servira para indicar la ruta que ha seguido el usuario para llegar a esa página-->
-                        <div class="topHeader">
-                            <nav class="breadcrumb">
-                                <ul>
-                                    <li><a>Accidentes</a></li>
-                                </ul>
-                            </nav>
-                            <div class="icons">
-                                <div class="notifications">
-                                    <img src="../media/Vector (1).svg" alt="Notificaciones" />
-                                </div>
-                                <div class="profile">
-                                    <img src="../media/133866211092483860.jpg" alt="Perfil" class="profilePicture" />
-                                </div>
-                            </div>
+    <div class="bodyContainer">
+        <aside id="sidebar"></aside>
+        <main class="content">
+            <div class="headerContent">
+                <!-- Breadcrumb y perfil/notificaciones -->
+                <div class="topHeader">
+                    <nav class="breadcrumb">
+                        <ul>
+                            <li><a>Accidentes</a></li>
+                        </ul>
+                    </nav>
+                    <div class="icons">
+                        <div class="notifications">
+                            <img src="../media/Vector (1).svg" alt="Notificaciones" />
                         </div>
-
-                        <!--Contenedor de las cartas-->
-                        <div class="cardContainer">
-
-                            <!-- Tarjeta 1 Accidentes reportados -->
-                            <div class="card">
-                                <div class="card-content">
-                                    <span class="badge red">10</span>
-                                    <p class="label">Accidentes reportados</p>
-                                </div>
-                                <span class="arrow">›</span>
-                            </div>
-
-                            <!-- Tarjeta 2 Accidentes verificados -->
-                            <div class="card">
-                                <div class="card-content">
-                                    <span class="badge blue">15</span>
-                                    <p class="label">Accidentes verificados</p>
-                                </div>
-                                <span class="arrow">›</span>
-                            </div>
-
-
-
-    </main>
+                        <div class="profile">
+                            <img src="../media/133866211092483860.jpg" alt="Perfil" class="profilePicture" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Contenedor de las cartas -->
+            <div class="cardContainer">
+                <!-- Tarjeta 1 Accidentes reportados -->
+                <div class="card">
+                    <div class="card-content">
+                        <span class="badge red">10</span>
+                        <p class="label">Accidentes reportados</p>
+                    </div>
+                    <span class="arrow">›</span>
+                </div>
+                <!-- Tarjeta 2 Accidentes verificados -->
+                <div class="card">
+                    <div class="card-content">
+                        <span class="badge blue">15</span>
+                        <p class="label">Accidentes verificados</p>
+                    </div>
+                    <span class="arrow">›</span>
+                </div>
+            </div>
+        </main>
+    </div>
     <script src="../js/sidebar.js"></script>
     <script src="../js/accidents.js"></script>
 </body>

@@ -1,21 +1,9 @@
 @import url('globalStyles.css'); /*Se importa el estilo principal del sitio web*/
 
-body {
-  color: #81859E;
-  font-size: 14px;
-}
-
-
-h2{
-  text-decoration: none;                                      
-    color: var(--color-breadcrumb);       
-}
-
 .topHeader{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1%;
 }
 
 .profilePicture{
@@ -35,7 +23,7 @@ h2{
     box-shadow: none;
 }
 
-.btn-primary{
+.btnPrimary{
   border-radius: 8px;
   height: 2.7em; 
   width: 13em;
@@ -62,6 +50,7 @@ h2{
 
 .card {
   position: relative;
+  box-sizing: border-box;
   width: 100%;
   background-color: white;
   border-radius: 0.75rem;
