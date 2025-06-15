@@ -16,7 +16,7 @@
         <div class="containerModal containerModalTabFilter hideModal" style="background-color: transparent;"></div>
         <div class="tabFilter hideModal">
             <h3 class="tbFilterTitle">Filtrar:</h3>
-            <div>
+            <form id="frmFilter">
                 <div class="containerSelectFilter">
                     <label for="cmbProfesionalArea">Área profesional</label>
                     <select id="cmbProfesionalArea" class="txtTextbox"></select>
@@ -25,7 +25,8 @@
                     <label for="cmbProfesionalAreaSecondary">Área profesional (Secundario)</label>
                     <select id="cmbProfesionalAreaSecondary" class="txtTextbox"></select>
                 </div>
-            </div>
+            </form>
+            <input type="submit" class="btnPrimary" value="Aplicar" form="frmFilter">
         </div>
         <form class="modalEmployees">
             <button class="btnClose" type="button" data-modal="containerModalEmployees">

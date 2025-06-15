@@ -40,7 +40,7 @@ btnFilterEmployees.addEventListener('click', () => {
 
     console.log(window.scrollX, rect.left, scrollY, rect.bottom, styles.width)
     tabFilterEmployees.style.top = `${rect.bottom + 20}px`;
-    tabFilterEmployees.style.left = `${rect.left - parseFloat(styles.width) - 10}px`;
+    tabFilterEmployees.style.left = `${rect.left - parseFloat(styles.width) - 15}px`;
 
     modalTabFilterEmployees.classList.replace('hideModal', 'showModal');
     tabFilterEmployees.classList.replace('hideModal', 'showModal');

@@ -266,16 +266,16 @@ body{
     position: absolute;
     border-radius: 10px;
     z-index: 60;
-    width: 260px;
-    height: 270px;
-    padding: 20px;
+    width: 300px;
+    height: 280px;
     gap: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
 }
 
-.tabFilter div{
+.tabFilter > form{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -286,7 +286,7 @@ body{
     background-color: var(--color-neutral);
     display: block;
     position: absolute;
-    clip-path: polygon(73% 2%, 81% 1%, 88% 3%, 96% 8%, 100% 19%, 100% 100%, 0 100%, 28% 55%, 59% 9%, 66% 5%);
+    clip-path: polygon(85% 6%, 93% 6%, 97% 8%, 100% 12%, 100% 19%, 100% 100%, 0 100%, 31% 63%, 72% 16%, 78% 10%);
     width: 30px;
     height: 30px;
     top: -20px;
@@ -294,15 +294,23 @@ body{
 }
 
 .tbFilterTitle{
-    font-size: var(--font-size-base);
+    font-size: 1em;
     color: var(--color-txt-title);
     margin: 0;
+}
+
+.tabFilter input[type="submit"]{
+    align-self: end;
+    width: 60%;
+    height: 2.5em;
+    box-shadow: none;
+    margin-top: 10px;
 }
 
 .containerSelectFilter{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     color: var(--color-txt);
     font-weight: var(--font-weight-Medium);
 }
