@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regulaciones empresariales</title>
+    <link rel="stylesheet" href="../css/RegulatoryInformation.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+</head>
+
+<body>
+
+    <div class="bodyContainer">
+        <aside id="sidebar"></aside>
+
+        <main class="content">
+            <div class="headerContent">
+                <div class="topHeader">
+                    <nav class="breadcrumb">
+                        <ul>
+                            <li><a href="regulations.html">Regulaciones empresariales ></a></li>
+                            <li><a>Nueva regulación</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="regulationLayout">
+                <form class="formRegulation">
+                    <div class="formGroup full">
+                        <label class="lbl" for="titulo">Título</label>
+                        <input class="txtTextbox" type="text" id="titulo" name="titulo" />
+                    </div>
+
+                    <div class="formGroup full">
+                        <label class="lbl" for="descripcion">Descripción</label>
+                        <textarea class="txtTextarea" id="descripcion" name="descripcion"></textarea>
+                    </div>
+
+                    <div class="formGroup">
+                        <label class="lbl" for="estatus">Estatus de riesgo</label>
+                        <select class="dropdown" id="estatus" name="estatus">
+                            <option>Trivial (T)</option>
+                        </select>
+                    </div>
+
+                    <div class="formGroup">
+                        <label class="lbl" for="categoria">Categoría</label>
+                        <select class="dropdown" id="categoria" name="categoria">
+                            <option>Normativa interna</option>
+                        </select>
+                    </div>
+
+                    <div class="formGroup">
+                        <label class="lbl" for="area">Área</label>
+                        <select class="dropdown" id="area" name="area">
+                            <option>Edificio 1-A</option>
+                        </select>
+                    </div>
+
+                    <div class="formGroup">
+                        <label class="lbl" for="nivel">Nivel de Riesgo</label>
+                        <select class="dropdown" id="nivel" name="nivel">
+                            <option>Ligeramente dañado (LD)</option>
+                        </select>
+                    </div>
+
+                    <div class="formGroup full">
+                        <label class="lbl">Área</label>
+                        <div class="ContainerFile">
+                            <input type="file" id="fileInput" class="inputFile">
+                            <label for="fileInput" class="btnPrimary labelFileBtn">
+                                Examinar
+                            </label>
+                            <p>o arrastra tu archivo aquí</p>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="sideActions">
+                    <button class="btnPrimary fullWidth" type="file">Guardar</button>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="../js/DeviceMaintenance.js"></script>
+    <script src="../js/sidebar.js"></script>
+</body>
+
+</html>

@@ -61,6 +61,41 @@ const dispositivos = [
     fecha: '19-08-2025',
     categoriaId: 1
   },
+  {
+    titulo: 'Set de chalecos 1',
+    fecha: '19-08-2025',
+    categoriaId: 1
+  },
+  {
+    titulo: 'Set de chalecos 1',
+    fecha: '19-08-2025',
+    categoriaId: 1
+  },
+  {
+    titulo: 'Botiquín 12',
+    fecha: '21-05-2025',
+    categoriaId: 1
+  },
+  {
+    titulo: 'Caja N°9',
+    fecha: '5-02-2025',
+    categoriaId: 2
+  },
+  {
+    titulo: 'Set de chalecos 1',
+    fecha: '19-08-2025',
+    categoriaId: 1
+  },
+  {
+    titulo: 'Set de chalecos 1',
+    fecha: '19-08-2025',
+    categoriaId: 1
+  },
+  {
+    titulo: 'Set de chalecos 1',
+    fecha: '19-08-2025',
+    categoriaId: 1
+  },
 ];
 
 const iconosPorId = {
