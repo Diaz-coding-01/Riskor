@@ -307,7 +307,7 @@ h2, ul, li {
 
 .txtSearch{
     background-image: url('../media/globalMedia/searchbar-icon.svg');
-    background-position: 12px 12px; 
+    background-position: 12px center; 
     background-repeat: no-repeat;
     padding: 12px;
     border-radius: 5px;
@@ -471,15 +471,17 @@ h2, ul, li {
 */
 
 .tableContainer {
+  --color-neutral: #ffffffc7;
   background-color: var(--color-neutral);
-  box-shadow: 0px 4px 8px 0px rgba(49, 58, 141, 0.25);
+  box-shadow: 0px 4px 12px rgba(95, 104, 182, 0.15);
   overflow-x: auto;
   width: 90%;
   max-width: 100%;
-  border: 1px solid var(--color-txt);
   margin: 0 auto; /* Centrado */
   overflow: hidden;
   min-height: var(--height-container);
+  border-radius: 15px;
+  padding: 0 1.5em; /*Distancia de la línea divisora*/
 }
 
 table {
@@ -488,7 +490,6 @@ table {
   border-collapse: collapse;
   font-size: var(--font-size-base);
   color: var(--color-txt-title);
-  border-radius: 5px;
   margin-top: 0.2em;
 }
 
@@ -510,20 +511,13 @@ th, td {
   padding: 1.2em;               /* Espaciado interno uniforme */
 }
 
-td:last-child {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 0.8em;
-}
-
 td img {
   cursor: pointer;            
   width: 1em;                /* Tamaño reducido para íconos de acción */
   margin-left: 0.3em;
 }
 
-tr:hover {
+tbody tr:hover {
   background-color: #f9f9f9;  /* Cambio de fondo al pasar el ratón por encima */
 }
 

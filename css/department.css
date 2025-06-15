@@ -1,6 +1,32 @@
 @import url('globalStyles.css');
 
-.btn-primary{
+.cardContainer{
+    flex-direction: column;
+}
+
+.topInterface{
+    display: flex;
+    align-items: center;
+}
+
+.departmentMap{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    padding: 15px;
+    height: 450px;
+    width: 450px;
+    border-radius: var(--border-radius);
+    background-color: var(--color-btn-text);
+    box-shadow: var(--shadow-pnl);
+}
+
+.bottomInterface{
+    margin-left: auto;
+}
+
+.btnPrimary{
     height: 3.5em; 
     width: 12em;
 }

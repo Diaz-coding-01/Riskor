@@ -59,11 +59,6 @@
   width: 100%;
 }
 
-.treatmentContainer textarea {
-  padding: 1rem;
-  border-radius: 5px;
-}
-
 .colLeft {
   flex: 2;
   display: flex;
@@ -108,7 +103,7 @@
 
   Botónes del fondo de la interfaz
 */
-.btn-primary{
+.btnPrimary{
     --border-radius: 5px;
     width: 13em;
     height: 3em;

@@ -11,7 +11,7 @@
 <body>
     <div class="containerModalAdd containerModalClose">
         <form class="modalAdd closeAdd" id="addRecord">
-            <button id="btnCloseAdd" type="button">
+            <button id="btnCloseAdd" class="btnCloseAdd" type="button">
                 <img src="../media/closeIcon.svg" alt="cerrarModal">
             </button>
             <div>
@@ -20,42 +20,42 @@
             <div class="leftForm">
                 <div class="firstRow">
                     <div class="formField">
-                        <label for="txtEmployee">Empleado</label>
+                        <label for="txtEmployee" class="lbl">Empleado</label>
                         <input type="text" name="" id="txtEmployee" class="txtTextboxBig">
                     </div>
                     <div class="formField">
-                        <label for="txtEmployeeDocument">DUI del empleado</label>
+                        <label for="txtEmployeeDocument" class="lbl">DUI del empleado</label>
                         <input type="number" name="" id="txtEmployeeDocument" class="txtTextbox">
                     </div>
                 </div>
 
                 <div class="secRow">
                     <div class="formField">
-                        <label for="txtEmergencyContact">Persona de contacto</label>
+                        <label for="txtEmergencyContact" class="lbl">Persona de contacto</label>
                         <input type="text" name="" id="txtEmergencyContact" class="txtTextboxBig">
                     </div>
                     <div class="formField">
-                        <label for="txtEmergencyContact">Número de contacto</label>
+                        <label for="txtEmergencyContact" class="lbl">Número de contacto</label>
                         <input type="number" name="" id="txtEmergencyNumber" class="txtTextbox">
                     </div>
                 </div>
 
                 <div class="thirdRow">
                     <div class="formField">
-                        <label for="txtAllergies">Alergias</label>
+                        <label for="txtAllergies" class="lbl">Alergias</label>
                         <input type="text" name="" id="txtAllergies" class="txtTextboxBig">
                     </div>
                     <div class="formField">
-                        <label for="combobox">Sangre</label>
-                        <select name="" id="combobox"></select class="txtTextbox">
+                        <label for="cmbBloodType" class="lbl">Sangre</label>
+                        <select name="" id="cmbBloodType" class="dropdown"></select>
                     </div>
                 </div>
                 <div class="formField">
-                    <label for="txtSpecialNeeds">Necesidades especiales</label> 
-                    <textarea type="text" name="" id="txtSpecialNeeds" class="txtTextbox" style="width: auto; resize: none;"> </textarea>
+                    <label for="txtSpecialNeeds" class="lbl">Necesidades especiales</label> 
+                    <textarea type="text" name="" id="txtSpecialNeeds" class="txtTextarea"></textarea>
                 </div>
                 <div class="btnContainer">
-                    <input type="submit" class="btn-primary" style="border-radius: 5px; width: 10em; height: 3em; box-shadow: none;" class="txtTextbox">
+                    <input type="submit" class="btnPrimary" style="width: 10em; height: 3em;" class="txtTextbox">
                 </div>
             </div>
 
