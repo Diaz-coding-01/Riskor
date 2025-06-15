@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../css/trainingAsistenceData.css">
     <link rel="stylesheet" href="../css/sidebar.css">
 </head>
+
 <body>
 
     <!-- Modal Empleados -->
@@ -38,109 +40,117 @@
                         <span class="employeeName">Luis Gonzales</span>
                     </div>
                     <div>
-                        <input type="checkbox" class="chEmployee checks" style="border-radius: 50%; transform: scale(1.4);">
+                        <input type="checkbox" class="chEmployee checks"
+                            style="border-radius: 50%; transform: scale(1.4);">
                     </div>
                 </div>
                 <!-- ...más empleados... -->
             </div>
-            <input type="submit" value="Listo" class="btnPrimary" id="btnAddEmployees" style="align-self: end; border-radius: 5px; box-shadow: none; padding: 10px 60px; margin: 10px;">
+            <input type="submit" value="Listo" class="btnPrimary" id="btnAddEmployees"
+                style="align-self: end; border-radius: 5px; box-shadow: none; padding: 10px 60px; margin: 10px;">
         </form>
     </div>
 
-    <main>
-        <div class="contenedor-seccion">
-            <div class="contenedor-sidebar">
-                <aside id="sidebar"></aside>
-            </div>
-            <div class="contenedor-cuerpo">
-                <div class="content" style="overflow: auto; height: 100dvh; box-sizing: border-box;">
-                    <div class="headerContent">
-                        <div class="topHeader">
-                            <nav class="breadcrumb">
-                                <ul>
-                                    <li><a href="trainings.html">Capacitaciones ></a></li>
-                                    <li><a>Nombre de la capacitacion</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="bodyContent">
-                        <div class="containerDataTraining">
-                            <form id="frmTrainingInfo">
-                                <div class="rowForm">
-                                    <div class="containerInputUpdateTraining" style="flex: 2;">
-                                        <label for="txtTrainingDescription">Descripción</label>
-                                        <input type="text" id="txtTrainingDescription">
-                                    </div>
-                                    <div class="containerInputUpdateTraining">
-                                        <label for="cmbTrainingModality">Modalidad</label>
-                                        <select id="cmbTrainingModality"></select>
-                                    </div>
-                                </div>
-                                <div class="rowForm">
-                                    <div class="containerInputUpdateTraining">
-                                        <label for="txtTrainingPlace">Lugar</label>
-                                        <input type="text" id="txtAddTrainingPlace">
-                                    </div>
-                                    <div class="containerInputUpdateTraining">
-                                        <label for="dtTrainingDate">Fecha</label>
-                                        <input type="date" id="dtAddTrainingDate">
-                                    </div>
-                                    <div class="containerInputUpdateTraining">
-                                        <label for="tmTrainingDuration">Duración</label>
-                                        <input type="time" id="tmAddTrainingDuration">
-                                    </div>
-                                </div>
-                                <input type="submit" value="Guardar" id="btnUpdateTraining" class="btnPrimary" style="align-self: end;">
-                            </form>
-                        </div>
-                        <div class="containerDataEmployees">
-                            <div class="headerDataEmployees">
-                                <span class="titleEmployees">Participantes</span>
-                                <div class="lineDivision"></div>
-                            </div>
-                            <div class="containerSearchEmployees">
-                                <input type="text" class="txtSearch" placeholder="">
-                                <button id="btnOpenModalEmployee" class="btnPrimary">Ver participantes</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tableContainer">
-                        <table id="tblEmployees">
-                            <thead>
-                                <tr>
-                                    <th><img src="../media/Frame 59.png" class="imgEmployeeTable"></th>
-                                    <th>Nombre completo</th>
-                                    <th>Dui</th>
-                                    <th class="tdChecks">Presente</th>
-                                    <th class="tdChecks">Ausente</th>
-                                </tr>
-                            </thead>
-                            <tbody id="tbodyEmployees">
-                                <!-- Aquí se llenarán los datos de los empleados -->
-                                <tr>
-                                    <td><img src="../media/Frame 59.png" class="imgEmployeeTable"></td>
-                                    <td>Juan Pérez</td>
-                                    <td>12345678-9</td>
-                                    <td><div class="containerCheck"><input type="checkbox" class="chkPresent checks tdChecks"></div></td>
-                                    <td><div class="containerCheck"><input type="checkbox" class="chkAbsent checks tdChecks"></div></td>
-                                </tr>
-                                <tr>
-                                    <td><img src="../media/Frame 59.png" class="imgEmployeeTable"></td>
-                                    <td>María López</td>
-                                    <td>98765432-1</td>
-                                    <td><div class="containerCheck"><input type="checkbox" class="chkPresent checks"></div></td>
-                                    <td><div class="containerCheck"><input type="checkbox" class="chkAbsent checks"></div></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+    <div class="bodyContainer">
+        <aside id="sidebar"></aside>
+        <main class="content">
+            <div class="headerContent">
+                <div class="topHeader">
+                    <nav class="breadcrumb">
+                        <ul>
+                            <li><a href="trainings.html">Capacitaciones ></a></li>
+                            <li><a>Nombre de la capacitacion</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-        </div>
-    </main>
+            <div class="bodyContent">
+                <div class="containerDataTraining">
+                    <form id="frmTrainingInfo">
+                        <div class="rowForm">
+                            <div class="containerInputUpdateTraining" style="flex: 2;">
+                                <label for="txtTrainingDescription">Descripción</label>
+                                <input type="text" id="txtTrainingDescription">
+                            </div>
+                            <div class="containerInputUpdateTraining">
+                                <label for="cmbTrainingModality">Modalidad</label>
+                                <select id="cmbTrainingModality"></select>
+                            </div>
+                        </div>
+                        <div class="rowForm">
+                            <div class="containerInputUpdateTraining">
+                                <label for="txtTrainingPlace">Lugar</label>
+                                <input type="text" id="txtAddTrainingPlace">
+                            </div>
+                            <div class="containerInputUpdateTraining">
+                                <label for="dtTrainingDate">Fecha</label>
+                                <input type="date" id="dtAddTrainingDate">
+                            </div>
+                            <div class="containerInputUpdateTraining">
+                                <label for="tmTrainingDuration">Duración</label>
+                                <input type="time" id="tmAddTrainingDuration">
+                            </div>
+                        </div>
+                        <input type="submit" value="Guardar" id="btnUpdateTraining" class="btnPrimary"
+                            style="align-self: end;">
+                    </form>
+                </div>
+                <div class="containerDataEmployees">
+                    <div class="headerDataEmployees">
+                        <span class="titleEmployees">Participantes</span>
+                        <div class="lineDivision"></div>
+                    </div>
+                    <div class="containerSearchEmployees">
+                        <input type="text" class="txtSearch" placeholder="">
+                        <button id="btnOpenModalEmployee" class="btnPrimary">Ver participantes</button>
+                    </div>
+                </div>
+                <div class="tableContainer">
+                    <table id="tblEmployees">
+                        <thead>
+                            <tr>
+                                <th><img src="../media/Frame 59.png" class="imgEmployeeTable"></th>
+                                <th>Nombre completo</th>
+                                <th>Dui</th>
+                                <th class="tdChecks">Presente</th>
+                                <th class="tdChecks">Ausente</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyEmployees">
+                            <!-- Aquí se llenarán los datos de los empleados -->
+                            <tr>
+                                <td><img src="../media/Frame 59.png" class="imgEmployeeTable"></td>
+                                <td>Juan Pérez</td>
+                                <td>12345678-9</td>
+                                <td>
+                                    <div class="containerCheck"><input type="checkbox"
+                                            class="chkPresent checks tdChecks"></div>
+                                </td>
+                                <td>
+                                    <div class="containerCheck"><input type="checkbox"
+                                            class="chkAbsent checks tdChecks"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="../media/Frame 59.png" class="imgEmployeeTable"></td>
+                                <td>María López</td>
+                                <td>98765432-1</td>
+                                <td>
+                                    <div class="containerCheck"><input type="checkbox" class="chkPresent checks"></div>
+                                </td>
+                                <td>
+                                    <div class="containerCheck"><input type="checkbox" class="chkAbsent checks"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
 
     <script src="../js/trainingAsistenceData.js"></script>
     <script src="../js/sidebar.js"></script>
 </body>
+
 </html>

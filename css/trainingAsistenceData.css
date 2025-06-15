@@ -104,8 +104,9 @@ body{
     object-fit: cover;
 }
 
-.table-container{
+.tableContainer{
     padding: 0 15px;
+    width: 100% !important;
     box-sizing: border-box;
 }
 
